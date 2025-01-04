@@ -4,6 +4,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+
 import java.io.IOException;
 
 public class Application extends javafx.application.Application {
@@ -16,10 +17,10 @@ public class Application extends javafx.application.Application {
         stage.setMinWidth(1280);
         stage.getIcons().add(ic);
         stage.setTitle("Grand Shop Auto");
-        //scene.getStylesheets().add(getClass().getResource("app.css").toExternalForm());
         stage.setScene(scene1);
-
         stage.show();
+        FXMLLoader root2 = new FXMLLoader(Application.class.getResource("root2.fxml"));
+        Scene scene2 = new Scene(root2.load(), 1280, 720);
     }
 
     public static void main(String[] args) {
