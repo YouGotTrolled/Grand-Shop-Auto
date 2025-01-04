@@ -3,7 +3,7 @@ package com.example.grandshopauto;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-public class HelloController {
+public class Controller1 {
     @FXML
     private Label welcomeText;
 
