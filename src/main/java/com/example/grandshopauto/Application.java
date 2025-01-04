@@ -24,7 +24,7 @@ public class Application extends javafx.application.Application {
         stage.show();
         FXMLLoader root2 = new FXMLLoader(Application.class.getResource("root2.fxml"));
         Scene scene2 = new Scene(root2.load(), 1280, 720);
-        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(5000), event -> {
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(3000), event -> {
             stage.setScene(scene2);
         }));
         timeline.play();
