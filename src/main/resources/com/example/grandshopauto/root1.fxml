@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
    <center>
       <ImageView fitHeight="180.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
@@ -20,7 +19,7 @@
       </ImageView>
    </center>
    <bottom>
-      <Label prefHeight="94.0" prefWidth="369.0" text="Grand shop Auto" textFill="#f4f1f1" BorderPane.alignment="CENTER">
+      <Label fx:id="title" prefHeight="94.0" prefWidth="369.0" text="Grand shop Auto" textFill="#f4f1f1" BorderPane.alignment="CENTER">
          <font>
             <Font size="48.0" />
          </font>
