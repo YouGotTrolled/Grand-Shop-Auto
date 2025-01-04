@@ -2,15 +2,31 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.grandshopauto.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: Black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <ImageView fitHeight="180.0" fitWidth="176.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+         <image>
+            <Image url="@../../../u.png" />
+         </image>
+         <BorderPane.margin>
+            <Insets top="200.0" />
+         </BorderPane.margin>
+      </ImageView>
+   </center>
+   <bottom>
+      <Label prefHeight="94.0" prefWidth="369.0" text="Grand shop Auto" textFill="#f4f1f1" BorderPane.alignment="CENTER">
+         <font>
+            <Font size="48.0" />
+         </font>
+         <BorderPane.margin>
+            <Insets bottom="200.0" />
+         </BorderPane.margin>
+      </Label>
+   </bottom>
+</BorderPane>
