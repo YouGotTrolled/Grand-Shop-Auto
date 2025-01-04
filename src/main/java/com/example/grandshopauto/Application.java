@@ -1,9 +1,12 @@
 package com.example.grandshopauto;
 
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 
@@ -21,6 +24,10 @@ public class Application extends javafx.application.Application {
         stage.show();
         FXMLLoader root2 = new FXMLLoader(Application.class.getResource("root2.fxml"));
         Scene scene2 = new Scene(root2.load(), 1280, 720);
+        Timeline timeline = new Timeline(new KeyFrame(Duration.millis(5000), event -> {
+            stage.setScene(scene2);
+        }));
+        timeline.play();
     }
 
     public static void main(String[] args) {
