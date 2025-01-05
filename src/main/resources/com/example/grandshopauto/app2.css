@@ -1,0 +1,37 @@
+#sabad {
+    -fx-background-radius:100%;
+}
+#car{
+    -fx-background-radius:15px 15px 0 0;
+    -fx-background-color: linear-gradient(to bottom, #03e8fc ,#04b3c2);
+}
+#bike{
+    -fx-background-radius:0 0 15px 15px;
+    -fx-background-color: linear-gradient(to bottom, #026069 ,#013438);
+}
+#kamion{
+    -fx-background-radius:0 0 0 0;
+    -fx-background-color: linear-gradient(to bottom, #04b3c2 ,#038894);
+
+}
+#vanet{
+    -fx-background-radius:0 0 0 0;
+    -fx-background-color: linear-gradient(to bottom, #038894 ,#026069);
+}
+#page2{
+    /*-fx-background-color: linear-gradient( to bottom, #bcf2f7, #f2f7f7);
+    -fx-background-color: linear-gradient(to right, #bcf2f7 50%, transparent 50%), linear-gradient(to left,  #bcf2f7 50%, transparent 50%);
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;*/
+    -fx-background-color: linear-gradient(to right, #3498db 0%, #ffffff 50%, transparent 50%), linear-gradient(to left, #3498db 0%, #ffffff 50%, transparent 50%);
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+#up1{
+    -fx-background-color: linear-gradient( to bottom, #000108 , #020c52);
+}
+#up2{
+    -fx-background-color: linear-gradient( to bottom, #000108 , #020c52);
+}
