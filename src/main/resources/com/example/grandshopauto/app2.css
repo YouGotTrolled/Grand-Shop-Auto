@@ -23,15 +23,22 @@
     -fx-background-color: linear-gradient(to right, #bcf2f7 50%, transparent 50%), linear-gradient(to left,  #bcf2f7 50%, transparent 50%);
     -fx-background-size: 100% 100%;
     -fx-background-position: center;
-    -fx-background-repeat: no-repeat;*/
-    -fx-background-color: linear-gradient(to right, #3498db 0%, #ffffff 50%, transparent 50%), linear-gradient(to left, #3498db 0%, #ffffff 50%, transparent 50%);
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: linear-gradient(to right, #bcc4c4 0%, #ffffff 50%, transparent 50%), linear-gradient(to left, #bcc4c4 0%, #ffffff 50%, transparent 50%);
     -fx-background-size: 100% 100%;
     -fx-background-position: center;
-    -fx-background-repeat: no-repeat;
+    -fx-background-repeat: no-repeat;*/
+    -fx-background-color: linear-gradient(to bottom, #bcc4c4 ,#bcc4c4);
 }
 #up1{
-    -fx-background-color: linear-gradient( to bottom, #000108 , #020c52);
+    -fx-background-color: linear-gradient( to bottom, #969999 , #bbbdbd);
 }
 #up2{
     -fx-background-color: linear-gradient( to bottom, #000108 , #020c52);
+}
+#border{
+    -fx-background-color: linear-gradient(to right, #bcc4c4 0%, #ffffff 50%, transparent 50%), linear-gradient(to left, #bcc4c4 0%, #ffffff 50%, transparent 50%);
+    -fx-background-size: 100% 100%;
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
 }
