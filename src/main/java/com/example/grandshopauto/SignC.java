@@ -57,10 +57,13 @@ public class SignC {
             String ttuser;
             String pass = pas.getText();
             String bob="نام کاربری تکراری است";
+            if(checker.readLine()==null) {
+                flag=false;
+            }
             while(flag&&checker.readLine()!=null) {
                 spt = new StringTokenizer(checker.readLine(), ",[]");
                 ttuser = spt.nextToken();
-                if (tuser.equals(ttuser)) {
+                if (!tuser.equals(ttuser)) {
                     flag = false;
                 }
             }
@@ -91,7 +94,7 @@ public class SignC {
 
                 }
             }
-            if(flagg&&!flagg){
+            if(flaggg&&!flagg){
                 if(!(pass.equals(Tpas.getText()))){
                     bob="رمز ها یکی نیستن";
                 }
