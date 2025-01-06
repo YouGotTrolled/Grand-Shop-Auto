@@ -13,13 +13,13 @@ public class Controller1 {
     private ImageView logo;
     @FXML
     private void initialize() {
-        FadeTransition fadeIn = new FadeTransition(Duration.millis(2500), title);
+        FadeTransition fadeIn = new FadeTransition(Duration.millis(3000), title);
         fadeIn.setFromValue(0.0);
         fadeIn.setToValue(1.0);
         fadeIn.setCycleCount(1);
         fadeIn.setAutoReverse(false);
         fadeIn.play();
-        FadeTransition fadeIn1 = new FadeTransition(Duration.millis(2500), logo);
+        FadeTransition fadeIn1 = new FadeTransition(Duration.millis(3000), logo);
         fadeIn1.setFromValue(0.0);
         fadeIn1.setToValue(1.0);
         fadeIn1.setCycleCount(1);
