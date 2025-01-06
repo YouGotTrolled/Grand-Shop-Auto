@@ -18,9 +18,9 @@ public class signC {
             Parent root2 = FXMLLoader.load(getClass().getResource("root2.fxml"));
             Scene scene=new Scene(root2,1280,720);
             scene.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());
-            Stage sign = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            sign.setScene(scene);
-            sign.show();
+            Stage login = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            login.setScene(scene);
+            login.show();
         }
         catch (IOException e) {
             e.printStackTrace();

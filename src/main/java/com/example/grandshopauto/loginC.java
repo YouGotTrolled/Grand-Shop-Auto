@@ -17,7 +17,7 @@ public class loginC {
         try {
             Parent sign = FXMLLoader.load(getClass().getResource("sign.fxml"));
             Scene scene=new Scene(sign,1280,720);
-            scene.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("signCSS.css").toExternalForm());
             Stage sign1 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             sign1.setScene(scene);
             sign1.show();
