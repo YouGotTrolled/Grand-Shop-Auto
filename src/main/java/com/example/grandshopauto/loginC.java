@@ -15,9 +15,9 @@ public class loginC {
     @FXML
     public void signUp(ActionEvent actionEvent) {
         try {
-            Parent sign = FXMLLoader.load(getClass().getResource("sign.fxml"));
+            Parent sign = FXMLLoader.load(getClass().getResource("Sign.fxml"));
             Scene scene=new Scene(sign,1280,720);
-            scene.getStylesheets().add(getClass().getResource("signCSS.css").toExternalForm());
+            scene.getStylesheets().add(getClass().getResource("SignCSS.css").toExternalForm());
             Stage sign1 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             sign1.setScene(scene);
             sign1.show();

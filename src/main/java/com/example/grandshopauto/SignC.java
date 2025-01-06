@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class signC {
+public class SignC {
 
     @FXML
     public void signUp(ActionEvent actionEvent) {

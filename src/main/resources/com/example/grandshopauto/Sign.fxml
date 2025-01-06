@@ -11,33 +11,40 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grandshopauto.SignC">
    <center>
       <HBox alignment="TOP_RIGHT" prefHeight="720.0" prefWidth="882.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="500.0" prefWidth="250.0">
+            <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="674.0" prefWidth="368.0">
                <children>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="Lname" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
                      <VBox.margin>
-                        <Insets top="185.0" />
+                        <Insets left="150.0" top="185.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="num" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
                      <VBox.margin>
-                        <Insets top="25.0" />
+                        <Insets left="150.0" top="25.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="DOB" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
                      <VBox.margin>
-                        <Insets top="25.0" />
+                        <Insets left="150.0" top="25.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="Tpas" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
                      <VBox.margin>
-                        <Insets top="25.0" />
+                        <Insets left="150.0" top="25.0" />
                      </VBox.margin>
                   </TextField>
+                  <Button fx:id="SABT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#sub" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #00eeff;" text="ثبت">
+                     <VBox.margin>
+                        <Insets right="150.0" top="150.0" />
+                     </VBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
@@ -66,29 +73,29 @@
             </VBox>
             <VBox alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="500.0" prefWidth="250.0">
                <children>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="name" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
                      <VBox.margin>
-                        <Insets top="175.0" />
+                        <Insets left="50.0" top="175.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="ADD" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
                      <VBox.margin>
-                        <Insets top="25.0" />
+                        <Insets left="50.0" top="25.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="ID" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
                      <VBox.margin>
-                        <Insets top="25.0" />
+                        <Insets left="50.0" top="25.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="user" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
                      <VBox.margin>
-                        <Insets top="25.0" />
+                        <Insets left="50.0" top="25.0" />
                      </VBox.margin>
                   </TextField>
-                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="pas" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
                      <VBox.margin>
-                        <Insets top="25.0" />
+                        <Insets left="50.0" top="25.0" />
                      </VBox.margin>
                   </TextField>
                </children>
