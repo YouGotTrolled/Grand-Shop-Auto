@@ -24,7 +24,7 @@ public class loginC {
         }
         catch (IOException e) {
             e.printStackTrace();
-            System.out.println("ll");
+            System.out.println("error");
         }
     }
 }
