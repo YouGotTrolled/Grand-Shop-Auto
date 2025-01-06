@@ -50,7 +50,7 @@ public class Application extends javafx.application.Application {
         }catch(Exception e) {
             e.printStackTrace();
             System.out.println("error");
-            loger.println("("+LocalDateTime.now()+"):"+e.getMessage());
+            loger.println("("+LocalDateTime.now()+"):\""+e.getMessage()+"\"in application.java");
         }
     }
 
