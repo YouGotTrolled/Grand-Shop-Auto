@@ -18,7 +18,7 @@ import java.util.StringTokenizer;
 public class SignC {
     private PrintWriter loger;
 
-    private Scanner checker;
+    private BufferedReader checker;
 
     private PrintWriter adder;
 
@@ -48,33 +48,77 @@ public class SignC {
     public void sub(ActionEvent actionEvent) {
         try {
             boolean flag = true;
+            boolean flagg = true;
+            boolean flaggg = true;
+            boolean flagggg = true;
             loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream("log.txt",true)));
-            checker=new Scanner("userInfo.txt");
+            checker=new BufferedReader(new FileReader("userInfo.txt"));
             String tuser=user.getText();
             String ttuser;
-            while(!flag&&checker.hasNextLine()){
-                spt=new StringTokenizer(checker.nextLine()," ,[]");
-                ttuser= spt.nextToken();
-                if(tuser.equals(ttuser)){
-                    flag=false;
+            String pass = pas.getText();
+            String bob="نام کاربری تکراری است";
+            while(flag&&checker.readLine()!=null) {
+                spt = new StringTokenizer(checker.readLine(), ",[]");
+                ttuser = spt.nextToken();
+                if (tuser.equals(ttuser)) {
+                    flag = false;
                 }
             }
-            if(flag){
-                
+            if(flagg&&!flag){
+                for(int i=0;i<pass.length();i++){
+                    if((int) pass.charAt(i) >57&&(int)pass.charAt(i)<48){
+                        bob="رمز عدد ندارد";
+                        flagg=false;
+                    }
+                    if((int) pass.charAt(i) >122&&(int)pass.charAt(i)<97){
+                        bob = "رمز حرف کوچک ندارد";
+                        flagg=false;
+                    }
+                    if((int) pass.charAt(i) >90&&(int)pass.charAt(i)<65){
+                        bob="رمز حرف بزرگ ندارد";
+                        flagg=false;
+                    }
+                    if((int) pass.charAt(i) >38&&(int)pass.charAt(i)<33){
+                        bob="رمز کاراکتر خاص ندارد ندارد";
+                        flagg=false;
+                    }
+                    if(!flagg){
+                        flagg=true;
+                    }
+                    else{
+                        flagg=false;
+                    }
 
+                }
             }
-            else{
-                label.setText("نام کاربری تکراری است");
-                loger.println("("+ LocalDateTime.now()+"):"+tuser+"دوباره تلاش کرد که ثبت نام کند");
+            if(flagg&&!flagg){
+                if(!(pass.equals(Tpas.getText()))){
+                    bob="رمز ها یکی نیستن";
+                }
+                else {
+                    flagggg=false;
+                }
             }
-
-
-
-
+            label.setText(bob);
+            if(!flagggg){
+                checker.close();
+                adder=new PrintWriter(new BufferedOutputStream(new FileOutputStream("userInfo.txt",true)));
+                adder.println("["+user.getText()+","+pas.getText()+","+ID.getText()+","+DOB.getText()+","+ADD.getText()+","+num.getText()+","+name.getText()+","+Lname.getText()+"]");
+                adder.close();
+                bob="ثبت نام با موفقیت انجام شد با اطلاعات:"+"["+user.getText()+","+pas.getText()+","+ID.getText()+","+DOB.getText()+","+ADD.getText()+","+num.getText()+","+name.getText()+","+Lname.getText()+"]";
+                Parent sign = FXMLLoader.load(getClass().getResource("root2.fxml"));
+                Scene scene=new Scene(sign,1280,720);
+                scene.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());
+                Stage sign1 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+                sign1.setScene(scene);
+                sign1.show();
+            }
+            loger.println("("+LocalDateTime.now()+"):"+tuser+":\""+bob+"\"");
             loger.close();
         }catch(FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("error in file finding");
+            loger.println("("+ LocalDateTime.now()+"):\""+e.getMessage()+"\"in SingC.java");
         }catch(Exception e) {
             e.printStackTrace();
             System.out.println("error");
