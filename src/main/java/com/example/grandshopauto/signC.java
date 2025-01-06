@@ -10,17 +10,17 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class loginC {
+public class signC {
 
     @FXML
     public void signUp(ActionEvent actionEvent) {
         try {
-            Parent sign = FXMLLoader.load(getClass().getResource("sign.fxml"));
-            Scene scene=new Scene(sign,1280,720);
+            Parent root2 = FXMLLoader.load(getClass().getResource("root2.fxml"));
+            Scene scene=new Scene(root2,1280,720);
             scene.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());
-            Stage sign1 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            sign1.setScene(scene);
-            sign1.show();
+            Stage sign = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
+            sign.setScene(scene);
+            sign.show();
         }
         catch (IOException e) {
             e.printStackTrace();
