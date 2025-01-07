@@ -11,15 +11,16 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.awt.*;
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.time.LocalDateTime;
 import java.util.StringTokenizer;
 
 public class loginC {
 
+    private PrintWriter loger;
     private BufferedReader checker;
     private StringTokenizer tokenizer;
+
 
     @FXML
     private TextField username;
@@ -49,8 +50,10 @@ public class loginC {
     @FXML
     public void login(ActionEvent actionEvent)  {
         try {
+            String bob="";
             boolean tpas = false;
             boolean tekrar = false;
+            loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream("log.txt",true)));
             checker = new BufferedReader(new FileReader("userInfo.txt"));
             String user = username.getText();
             String pass = pasword.getText();
@@ -74,12 +77,15 @@ public class loginC {
                 }
                 if (!tekrar){
                     label.setText("حسابی با این مشخصات وجود ندارد ، از طریق بخش  ثبت نام یکی ایجاد کنید");
+                    bob="حسابی با این مشخصات وجود ندارد ، از طریق بخش  ثبت نام یکی ایجاد کنید";
                 }
                 else if (!tpas) {
                     label.setText("رمز عبور اشتباه است ");
+                    bob="رمز عبور اشتباه است ";
                 }
                 else  {
                     if (tekrar && tpas ) {
+                        bob="با موفقیت وارد سیستم شد";
                         Parent root2= FXMLLoader.load(getClass().getResource("root2.fxml"));
                         Scene scene=new Scene(root2,1280,720);
                         scene.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());
@@ -89,10 +95,16 @@ public class loginC {
                     }
                 }
             }
-        }
-        catch (Exception e){
+            loger.println("("+LocalDateTime.now()+"):"+username.getText()+":\""+bob+"\"");
+            loger.close();
+        }catch(FileNotFoundException e) {
+            e.printStackTrace();
+            System.out.println("error in file finding");
+            loger.println("("+ LocalDateTime.now()+"):\""+e.getMessage()+"\"in loginC.java");
+        }catch(Exception e) {
             e.printStackTrace();
             System.out.println("error");
+            loger.println("("+ LocalDateTime.now()+"):\""+e.getMessage()+"\"in loginC.java");
         }
     }
 }
