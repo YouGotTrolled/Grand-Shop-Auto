@@ -34,7 +34,7 @@
                   </TextField>
                   <TextField fx:id="Tpas" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
                      <VBox.margin>
-                        <Insets left="150.0" top="25.0" />
+                        <Insets left="150.0" top="79.0" />
                      </VBox.margin>
                   </TextField>
                   <Label fx:id="label">
@@ -44,7 +44,7 @@
                   </Label>
                   <Button fx:id="SABT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#sub" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #00eeff;" text="ثبت">
                      <VBox.margin>
-                        <Insets right="150.0" top="150.0" />
+                        <Insets right="150.0" top="100.0" />
                      </VBox.margin>
                      <font>
                         <Font size="14.0" />
@@ -71,7 +71,7 @@
                   </Label>
                   <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="تکرار رمز عبور :">
                      <VBox.margin>
-                        <Insets top="25.0" />
+                        <Insets top="80.0" />
                      </VBox.margin>
                   </Label>
                </children>

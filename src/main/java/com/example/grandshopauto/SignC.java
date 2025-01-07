@@ -57,16 +57,20 @@ public class SignC {
             String ttuser;
             String pass = pas.getText();
             String bob="نام کاربری تکراری است";
+
+            //
             if(checker.readLine()==null) {
                 flag=false;
             }
-            while(flag&&checker.readLine()!=null) {
+            while(flag && checker.readLine()!=null) {
                 spt = new StringTokenizer(checker.readLine(), ",[]");
                 ttuser = spt.nextToken();
                 if (!tuser.equals(ttuser)) {
                     flag = false;
                 }
             }
+            //
+
             if(flagg&&!flag){
                 for(int i=0;i<pass.length();i++){
                     if((int) pass.charAt(i) >57&&(int)pass.charAt(i)<48){
@@ -81,19 +85,24 @@ public class SignC {
                         bob="رمز حرف بزرگ ندارد";
                         flagg=false;
                     }
+                    //
                     if((int) pass.charAt(i) >38&&(int)pass.charAt(i)<33){
                         bob="رمز کاراکتر خاص ندارد ندارد";
                         flagg=false;
                     }
+                    //
                     if(!flagg){
                         flagg=true;
                     }
+                    //
                     else{
                         flagg=false;
                     }
+                    //
 
                 }
             }
+            //
             if(flaggg&&!flagg){
                 if(!(pass.equals(Tpas.getText()))){
                     bob="رمز ها یکی نیستن";
@@ -102,14 +111,19 @@ public class SignC {
                     flagggg=false;
                 }
             }
+            //
             label.setText(bob);
             if(!flagggg){
                 checker.close();
+                //
                 adder=new PrintWriter(new BufferedOutputStream(new FileOutputStream("userInfo.txt",true)));
+                //
                 adder.println("["+user.getText()+","+pas.getText()+","+ID.getText()+","+DOB.getText()+","+ADD.getText()+","+num.getText()+","+name.getText()+","+Lname.getText()+"]");
                 adder.close();
                 bob="ثبت نام با موفقیت انجام شد با اطلاعات:"+"["+user.getText()+","+pas.getText()+","+ID.getText()+","+DOB.getText()+","+ADD.getText()+","+num.getText()+","+name.getText()+","+Lname.getText()+"]";
+                //
                 Parent sign = FXMLLoader.load(getClass().getResource("root2.fxml"));
+                //
                 Scene scene=new Scene(sign,1280,720);
                 scene.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());
                 Stage sign1 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
