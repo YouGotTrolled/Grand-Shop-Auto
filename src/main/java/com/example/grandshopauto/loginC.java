@@ -1,6 +1,5 @@
 package com.example.grandshopauto;
 
-import javafx.animation.FadeTransition;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
@@ -14,13 +13,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
-import javafx.scene.shape.Circle;
-import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import javafx.animation.FadeTransition;
-
-import java.awt.*;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.util.StringTokenizer;
@@ -61,6 +55,8 @@ public class loginC {
 
     @FXML
     private ImageView image;
+
+    private String pUser;
 
     @FXML
     private void initialize() {
@@ -206,6 +202,7 @@ public class loginC {
                 else  {
                     if (tekrar && tpas ) {
                         bob="با موفقیت وارد سیستم شد";
+                        pUser = username.getText();
                         Parent root2= FXMLLoader.load(getClass().getResource("root2.fxml"));
                         Scene scene=new Scene(root2,1280,720);
                         scene.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());
@@ -227,4 +224,11 @@ public class loginC {
             loger.println("("+ LocalDateTime.now()+"):\""+e.getMessage()+"\"in loginC.java");
         }
     }
+    public String getUser(){
+        return pUser;
+    }
+    public void setUser(String a){
+        pUser=a;
+    }
+
 }
