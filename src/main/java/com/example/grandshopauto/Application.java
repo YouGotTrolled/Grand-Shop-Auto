@@ -32,6 +32,7 @@ public class Application extends javafx.application.Application {
 
             loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream("log.txt",true)));
 
+            int i = 0;
             Image ic = new Image("u.png");
             stage.setMinHeight(720);
             stage.setMinWidth(1280);
@@ -39,9 +40,8 @@ public class Application extends javafx.application.Application {
             stage.setTitle("Grand Shop Auto");
             stage.setScene(scene1);
             stage.show();
-            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(4000), event -> {
-                stage.setScene(scene2);
-            }));
+            Timeline timeline = new Timeline(new KeyFrame(Duration.millis(4000), event -> {stage.setScene(scene2);}));
+
             timeline.play();
             loger.close();
         }catch(FileNotFoundException e) {

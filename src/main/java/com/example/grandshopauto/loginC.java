@@ -1,5 +1,8 @@
 package com.example.grandshopauto;
 
+import javafx.animation.FadeTransition;
+import javafx.animation.KeyFrame;
+import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -9,7 +12,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.Pane;
+import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
+import javafx.util.Duration;
+import javafx.animation.FadeTransition;
 
 import java.awt.*;
 import java.io.*;
@@ -31,10 +40,109 @@ public class loginC {
     private Label label;
     @FXML
     private Button fp;
+    @FXML
+    private Pane noor;
+    @FXML
+    private Pane noor2;
+    @FXML
+    private Pane noor3;
+    @FXML
+    private Pane vnoor;
+    @FXML
+    private Pane vnoor2;
+    @FXML
+    private Pane vnoor3;
+    @FXML
+    private Pane hnoor;
+    @FXML
+    private Pane hnoor2;
+    @FXML
+    private Pane hnoor3;
 
     @FXML
-    private void initialize(){
+    private ImageView image;
+
+    @FXML
+    private void initialize() {
         fp.setVisible(false);
+        Timeline t1 = new Timeline(new KeyFrame(Duration.millis(3000), event -> {
+            int j =-1000;
+            for(int i = 0 ; i < 8000 ; ) {
+                j+=1000;
+                if (i%8==0) {
+                    Timeline t2 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { noor.setVisible(true);}));
+                    t2.play();
+                    Timeline vt2 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor.setVisible(true);}));
+                    vt2.play();
+                    Timeline ht2 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor.setVisible(true);}));
+                    ht2.play();
+
+                    Timeline t3 = new Timeline(new KeyFrame(Duration.millis(j), event3 -> { noor2.setVisible(false);}));
+                    t3.play();
+                    Timeline vt3 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor2.setVisible(false);}));
+                    vt3.play();
+                    Timeline ht3 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor2.setVisible(false);}));
+                    ht3.play();
+
+                    Timeline t4 = new Timeline(new KeyFrame(Duration.millis(j), event3 -> { noor3.setVisible(false);}));
+                    t4.play();
+                    Timeline vt4 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor3.setVisible(false);}));
+                    vt4.play();
+                    Timeline ht4 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor3.setVisible(false);}));
+                    ht4.play();
+                }
+                else{
+                    if (i%4==0) {
+                        Timeline t22 = new Timeline(new KeyFrame(Duration.millis(j), event4 -> { noor.setVisible(false);}));
+                        t22.play();
+                        Timeline vt22 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor.setVisible(false);}));
+                        vt22.play();
+                        Timeline ht22 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor.setVisible(false);}));
+                        ht22.play();
+
+                        Timeline t33 = new Timeline(new KeyFrame(Duration.millis(j), event5 -> { noor2.setVisible(true);}));
+                        t33.play();
+                        Timeline vt33 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor2.setVisible(true);}));
+                        vt33.play();
+                        Timeline ht33 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor2.setVisible(true);}));
+                        ht33.play();
+
+                        Timeline t44 = new Timeline(new KeyFrame(Duration.millis(j), event6 -> { noor3.setVisible(false);}));
+                        t44.play();
+                        Timeline vt44 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor3.setVisible(false);}));
+                        vt44.play();
+                        Timeline ht44 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor3.setVisible(false);}));
+                        ht44.play();
+                    }
+                    else {
+                    if (i%2==0) {
+                        Timeline t222 = new Timeline(new KeyFrame(Duration.millis(j), event7 -> {noor.setVisible(false);}));
+                        t222.play();
+                        Timeline vt222 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor.setVisible(false);}));
+                        vt222.play();
+                        Timeline ht222 = new Timeline(new KeyFrame(Duration.millis(j), event4 -> { noor.setVisible(false);}));
+                        ht222.play();
+
+                        Timeline t333 = new Timeline(new KeyFrame(Duration.millis(j), event8 -> {noor2.setVisible(false);}));
+                        t333.play();
+                        Timeline vt333 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor2.setVisible(false);}));
+                        vt333.play();
+                        Timeline ht333 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor2.setVisible(false);}));
+                        ht333.play();
+
+                        Timeline t444 = new Timeline(new KeyFrame(Duration.millis(j), event9 -> {noor3.setVisible(true);}));
+                        t444.play();
+                        Timeline vt444 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor3.setVisible(true);}));
+                        vt444.play();
+                        Timeline ht444 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor3.setVisible(true);}));
+                        ht444.play();
+                        }
+                    }
+                }
+                i+=2;
+            }
+        }));
+        t1.play();
     }
     @FXML
     private void forget(ActionEvent event) {
@@ -87,8 +195,8 @@ public class loginC {
                     }
                 }
                 if (!tekrar){
-                    label.setText("حسابی با این مشخصات وجود ندارد ، از طریق بخش  ثبت نام یکی ایجاد کنید");
-                    bob="حسابی با این مشخصات وجود ندارد ، از طریق بخش  ثبت نام یکی ایجاد کنید";
+                    label.setText("حسابی با این مشخصات وجود ندارد ، از بخش  ثبت نام یکی ایجاد کنید");
+                    bob="حسابی با این مشخصات وجود ندارد ، از بخش  ثبت نام یکی ایجاد کنید";
                 }
                 else if (!tpas) {
                     label.setText("رمز عبور اشتباه است ");
