@@ -34,7 +34,11 @@ public class loginC {
 
     @FXML
     private void initialize(){
-        
+        fp.setVisible(false);
+    }
+    @FXML
+    private void forget(ActionEvent event) {
+
     }
 
     @FXML
@@ -89,6 +93,7 @@ public class loginC {
                 else if (!tpas) {
                     label.setText("رمز عبور اشتباه است ");
                     bob="رمز عبور اشتباه است ";
+                    fp.setVisible(true);
                 }
                 else  {
                     if (tekrar && tpas ) {
