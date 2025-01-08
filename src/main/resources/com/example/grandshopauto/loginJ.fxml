@@ -178,11 +178,11 @@
                         <Insets right="15.0" />
                      </HBox.margin>
                   </Rectangle>
-                  <Label fx:id="label" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="180.0" textFill="#fa0000">
+                  <Button fx:id="fp" minHeight="30.0" minWidth="90.0" mnemonicParsing="false" onAction="#forget" prefHeight="30.0" prefWidth="90.0" text="فراموشی رمز" textAlignment="CENTER">
                      <HBox.margin>
-                        <Insets right="30.0" top="15.0" />
+                        <Insets right="165.0" top="15.0" />
                      </HBox.margin>
-                  </Label>
+                  </Button>
                   <Button minHeight="30.0" minWidth="90.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="90.0" text="ورود">
                      <HBox.margin>
                         <Insets right="50.0" top="15.0" />
@@ -200,6 +200,15 @@
                   <Insets right="250.0" />
                </VBox.margin>
             </Rectangle>
+            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label fx:id="label" alignment="CENTER_RIGHT" maxHeight="30.0" maxWidth="500.0" minWidth="500.0" prefHeight="30.0" prefWidth="500.0" textAlignment="RIGHT" textFill="#fa0000">
+                     <HBox.margin>
+                        <Insets right="105.0" top="15.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
             <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
                <VBox.margin>
                   <Insets right="450.0" top="5.0" />
