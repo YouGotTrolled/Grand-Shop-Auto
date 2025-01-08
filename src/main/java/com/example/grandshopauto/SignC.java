@@ -135,11 +135,12 @@ public class SignC {
             if(flag){
                 if(ADD.getText().isEmpty()){
                     flag=false;
+                    bob ="ادرس داده نشد";
                 }
                 for(int i=0;flag&&i<ADD.getText().length();i++) {
                     if (ADD.getText().charAt(i) == '[' || ADD.getText().charAt(i) == ']' || ADD.getText().charAt(i) == ',') {
                         flag = false;
-                        bob = "از کاراکتر های غیر مجاز در ادرس استفاده نکنید یا ادرس داده نشد";
+                        bob = "از کاراکتر های غیر مجاز در ادرس استفاده نکنید";
                     }
                 }
             }
