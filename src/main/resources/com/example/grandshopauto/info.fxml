@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.Avatar?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
@@ -22,10 +22,10 @@
       </VBox>
    </right>
    <left>
-      <Avatar radius="200.0" BorderPane.alignment="CENTER">
+      <ImageView fitHeight="305.0" fitWidth="329.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
          <image>
             <Image url="@../../../user.png" />
          </image>
-      </Avatar>
+      </ImageView>
    </left>
 </BorderPane>

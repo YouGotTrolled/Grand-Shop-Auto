@@ -235,11 +235,5 @@ public class loginC {
             loger.println("("+ LocalDateTime.now()+"):\""+e.getMessage()+"\"in loginC.java");
         }
     }
-    public String getUser(){
-        return pUser;
-    }
-    public void setUser(String a){
-        pUser=a;
-    }
 
 }

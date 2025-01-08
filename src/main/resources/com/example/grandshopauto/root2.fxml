@@ -32,7 +32,7 @@
             </VBox>
             <VBox alignment="TOP_RIGHT" prefHeight="150.0" prefWidth="911.0">
                <children>
-                  <Button alignment="CENTER" maxHeight="50.0" maxWidth="150.0" minHeight="50.0" minWidth="150.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #bcc4c4;" text="ورود">
+                  <Button fx:id="info" alignment="CENTER" maxHeight="50.0" maxWidth="150.0" minHeight="50.0" minWidth="150.0" mnemonicParsing="false" onAction="#infoGo" prefHeight="50.0" prefWidth="150.0" style="-fx-background-color: #bcc4c4;">
                      <font>
                         <Font size="25.0" />
                      </font>
