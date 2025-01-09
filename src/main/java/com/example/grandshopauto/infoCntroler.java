@@ -7,22 +7,27 @@ public class infoCntroler {
         try {
             File temp =new File("temp.txt");
             temp.createNewFile();
-            BufferedReader reader=new BufferedReader(new FileReader("file"));
+            BufferedReader reader=new BufferedReader(new FileReader(file));
             PrintWriter adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream("temp.txt")));
-            while(reader.read()!=-1){
-                adder.println(reader.readLine());
+            String read =reader.readLine();
+            while(read!=null){
+                adder.println(read);
+                read =reader.readLine();
             }
             reader.close();
             adder.close();
             reader=new BufferedReader(new FileReader("temp.txt"));
-            adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream("file")));
+            adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream(file)));
             int i=1;
-            while(reader.read()!=-1){
+            read =reader.readLine();
+            while(read!=null){
                 if(i!=lineNum){
-                    adder.println(reader.readLine());
+                    adder.println(read);
+                    read =reader.readLine();
                 }
                 else{
                     adder.println(replacement);
+                    read =reader.readLine();
                 }
                 i++;
             }
