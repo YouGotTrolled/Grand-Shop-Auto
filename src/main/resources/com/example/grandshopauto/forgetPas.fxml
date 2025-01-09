@@ -10,532 +10,244 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grandshopauto.loginC">
-   <center>
-      <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
-         <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="450.0" top="25.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="50.0" top="25.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="400.0" top="15.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="15.0" top="15.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="250.0" top="10.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="550.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="350.0" text="Grand Shop Auto" textFill="WHITE">
-               <font>
-                  <Font size="30.0" />
-               </font>
-               <VBox.margin>
-                  <Insets right="140.0" top="10.0" />
-               </VBox.margin>
-            </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="85.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="510.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Label alignment="CENTER" prefHeight="50.0" prefWidth="350.0" text="خریدی مطمئن و آسان" textFill="WHITE">
-               <VBox.margin>
-                  <Insets right="140.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="30.0" />
-               </font>
-            </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="150.0" top="5.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="550.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Label prefHeight="46.0" prefWidth="526.0" text="برای استفاده از برنامه ابتدا وارد حساب خود شوید ، در صورت نداشتن حساب یکی ایجاد کنید" textFill="WHITE">
-               <VBox.margin>
-                  <Insets right="25.0" top="15.0" />
-               </VBox.margin>
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets bottom="5.0" right="150.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="500.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="585.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Pane maxHeight="0.0" minHeight="0.0" prefHeight="0.0" prefWidth="7.0">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="125.0" layoutY="-25.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="40.0" layoutY="-35.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="15.0" layoutY="-5.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="-150.0" layoutY="25.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="-97.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutY="80.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="-90.0" layoutY="50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="-65.0" layoutY="65.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="-75.0" layoutY="120.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="135.0" layoutY="45.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="105.0" layoutY="-210.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="140.0" layoutY="-100.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="135.0" layoutY="-45.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="120.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="-45.0" layoutY="-250.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="-15.0" layoutY="-150.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="85.0" layoutY="-350.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="50.0" layoutY="-300.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="45.0" layoutY="145.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="135.0" layoutY="-290.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="125.0" layoutY="-350.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="130.0" layoutY="175.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-               </children>
-            </Pane>
-            <TextField fx:id="username" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="350.0" prefHeight="40.0" prefWidth="350.0" promptText="نام کاربری">
-               <VBox.margin>
-                  <Insets right="100.0" top="5.0" />
-               </VBox.margin>
-            </TextField>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="550.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Pane maxHeight="0.0" minHeight="0.0" prefHeight="0.0" prefWidth="598.0">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="120.0" layoutY="5.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" layoutX="75.0" layoutY="-10.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0" />
-               </children>
-               <padding>
-                  <Insets top="5.0" />
-               </padding>
-               <VBox.margin>
-                  <Insets top="5.0" />
-               </VBox.margin>
-            </Pane>
-            <PasswordField fx:id="pasword" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="350.0" promptText="رمز عبور">
-               <VBox.margin>
-                  <Insets right="100.0" top="25.0" />
-               </VBox.margin>
-            </PasswordField>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="550.0" top="5.0" />
-               </VBox.margin>
-            </Rectangle>
-            <HBox alignment="CENTER_RIGHT" prefHeight="65.0" prefWidth="748.0">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-                     <HBox.margin>
-                        <Insets right="200.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-                     <HBox.margin>
-                        <Insets right="15.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Button fx:id="fp" minHeight="30.0" minWidth="90.0" mnemonicParsing="false" onAction="#forget" prefHeight="30.0" prefWidth="90.0" text="فراموشی رمز" textAlignment="CENTER">
-                     <HBox.margin>
-                        <Insets right="165.0" top="15.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Button minHeight="30.0" minWidth="90.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="90.0" text="ورود">
-                     <HBox.margin>
-                        <Insets right="50.0" top="15.0" />
-                     </HBox.margin>
-                  </Button>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-                     <HBox.margin>
-                        <Insets right="50.0" />
-                     </HBox.margin>
-                  </Rectangle>
-               </children>
-            </HBox>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="250.0" />
-               </VBox.margin>
-            </Rectangle>
-            <HBox alignment="TOP_RIGHT" prefHeight="100.0" prefWidth="200.0">
-               <children>
-                  <Label fx:id="label" alignment="CENTER_RIGHT" maxHeight="30.0" maxWidth="500.0" minWidth="500.0" prefHeight="30.0" prefWidth="500.0" textAlignment="RIGHT" textFill="#fa0000">
-                     <HBox.margin>
-                        <Insets right="105.0" top="15.0" />
-                     </HBox.margin>
-                  </Label>
-               </children>
-            </HBox>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="450.0" top="5.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Button fx:id="signUP" mnemonicParsing="false" onAction="#signUp" prefHeight="30.0" prefWidth="90.0" text="ثبت نام">
-               <VBox.margin>
-                  <Insets right="100.0" top="25.0" />
-               </VBox.margin>
-            </Button>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets bottom="15.0" right="250.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets bottom="15.0" right="580.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets bottom="15.0" right="450.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets right="550.0" />
-               </VBox.margin>
-            </Rectangle>
-         </children>
-      </VBox>
-   </center>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grandshopauto.forgetPasC">
    <left>
       <VBox prefHeight="581.0" prefWidth="582.0" BorderPane.alignment="CENTER">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
+            <ImageView fx:id="image" fitHeight="398.0" fitWidth="398.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../u.png" />
+               </image>
                <VBox.margin>
-                  <Insets left="290.0" top="15.0" />
+                  <Insets left="150.0" top="150.0" />
                </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="180.0" top="15.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="350.0" top="15.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="165.0" top="15.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="85.0" top="25.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="450.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="200.0" />
-               </VBox.margin>
-            </Rectangle>
-            <HBox maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="252.0" prefWidth="450.0">
-               <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-                     <HBox.margin>
-                        <Insets left="20.0" top="390.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-                     <HBox.margin>
-                        <Insets left="20.0" top="160.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-                     <HBox.margin>
-                        <Insets left="20.0" top="75.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-                     <HBox.margin>
-                        <Insets left="20.0" top="300.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-                     <HBox.margin>
-                        <Insets left="20.0" top="5.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-                     <HBox.margin>
-                        <Insets left="20.0" top="100.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-                     <HBox.margin>
-                        <Insets left="20.0" top="180.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-                     <HBox.margin>
-                        <Insets left="20.0" top="340.0" />
-                     </HBox.margin>
-                  </Rectangle>
-                  <ImageView fitHeight="398.0" fitWidth="398.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@../../../u.png" />
-                     </image>
-                     <HBox.margin>
-                        <Insets left="5.0" />
-                     </HBox.margin>
-                  </ImageView>
-               </children>
-            </HBox>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets bottom="15.0" left="420.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets bottom="15.0" left="75.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets bottom="15.0" left="325.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets bottom="15.0" left="145.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets bottom="15.0" left="400.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="200.0" />
-               </VBox.margin>
-            </Rectangle>
+            </ImageView>
          </children>
       </VBox>
    </left>
-   <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="95.0" top="45.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="95.0" top="15.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="95.0" top="85.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="95.0" top="65.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="95.0" top="10.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="95.0" top="100.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="95.0" top="50.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="95.0" top="85.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="95.0" top="25.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="95.0" top="65.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="95.0" top="95.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="95.0" top="25.0" />
-               </HBox.margin>
-            </Rectangle>
-         </children>
-      </HBox>
-   </top>
-   <bottom>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="105.0" top="20.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="105.0" top="60.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="105.0" top="40.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="105.0" top="15.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="105.0" top="45.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="105.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="105.0" top="60.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="105.0" top="10.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="105.0" top="70.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="105.0" top="30.0" />
-               </HBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <HBox.margin>
-                  <Insets left="105.0" top="40.0" />
-               </HBox.margin>
-            </Rectangle>
-         </children>
-      </HBox>
-   </bottom>
    <right>
-      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="720.0" prefWidth="91.0" BorderPane.alignment="CENTER">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="75.0" top="55.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="25.0" top="55.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="65.0" top="55.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="15.0" top="55.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="70.0" top="55.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="40.0" top="55.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets left="80.0" top="55.0" />
-               </VBox.margin>
-            </Rectangle>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="1.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="1.0">
-               <VBox.margin>
-                  <Insets top="55.0" />
-               </VBox.margin>
-            </Rectangle>
+            <Pane fx:id="vnoor" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="50.0" layoutY="100.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="50.0" layoutY="600.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="50.0" layoutY="350.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="75.0" layoutY="250.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="vnoor2" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="25.0" layoutY="425.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="65.0" layoutY="225.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="25.0" layoutY="50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="25.0" layoutY="-100.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="vnoor3" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="65.0" layoutY="150.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="15.0" layoutY="-15.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="50.0" layoutY="-150.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutY="-300.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+               </children>
+            </Pane>
          </children>
       </VBox>
    </right>
+   <center>
+      <StackPane prefHeight="520.0" prefWidth="642.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="noor" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="50.0" layoutY="150.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="450.0" layoutY="225.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="250.0" layoutY="450.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="550.0" layoutY="350.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="150.0" layoutY="200.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="600.0" layoutY="50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="300.0" layoutY="50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="150.0" layoutY="550.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="150.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-250.0" layoutY="50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-50.0" layoutY="75.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-350.0" layoutY="-50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-375.0" layoutY="100.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-500.0" layoutY="550.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-150.0" layoutY="500.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-50.0" layoutY="600.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-300.0" layoutY="450.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="325.0" layoutY="-25.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-475.0" layoutY="55.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-450.0" layoutY="250.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-485.0" layoutY="400.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="50.0" layoutY="450.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="580.0" layoutY="550.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="600.0" layoutY="175.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="noor2" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="50.0" layoutY="150.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="100.0" translateY="50.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="450.0" layoutY="225.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="-50.0" translateY="-75.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="250.0" layoutY="450.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="50.0" translateY="-100.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="550.0" layoutY="350.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="100.0" translateY="50.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="150.0" layoutY="200.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="-50.0" translateY="-75.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="600.0" layoutY="50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="50.0" translateY="-100.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="300.0" layoutY="50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="100.0" translateY="50.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="-50.0" translateY="-75.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="150.0" layoutY="550.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="50.0" translateY="-100.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="150.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="100.0" translateY="50.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-250.0" layoutY="50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="-50.0" translateY="-75.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-50.0" layoutY="75.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="50.0" translateY="-100.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-350.0" layoutY="-50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="100.0" translateY="50.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-375.0" layoutY="100.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="-50.0" translateY="-75.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-500.0" layoutY="550.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="50.0" translateY="-100.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-150.0" layoutY="500.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="100.0" translateY="50.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-50.0" layoutY="600.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="-50.0" translateY="-75.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-300.0" layoutY="450.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="50.0" translateY="-100.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="325.0" layoutY="-25.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-475.0" layoutY="55.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="-50.0" translateY="-75.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-450.0" layoutY="250.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="50.0" translateY="-100.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-485.0" layoutY="400.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="50.0" layoutY="450.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="-50.0" translateY="-75.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="580.0" layoutY="550.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="50.0" translateY="-100.0" width="2.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="noor3" prefHeight="200.0" prefWidth="200.0" translateX="25.0" translateY="25.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="50.0" layoutY="150.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="200.0" translateY="-25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="450.0" layoutY="225.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="25.0" translateY="25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="250.0" layoutY="450.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="200.0" translateY="-25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="550.0" layoutY="350.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="25.0" translateY="25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="150.0" layoutY="200.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="200.0" translateY="-25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="600.0" layoutY="50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="25.0" translateY="25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="300.0" layoutY="50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="200.0" translateY="-25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="25.0" translateY="25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="150.0" layoutY="550.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="200.0" translateY="-25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="150.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="25.0" translateY="25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-250.0" layoutY="50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="200.0" translateY="-25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-50.0" layoutY="75.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="25.0" translateY="25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-350.0" layoutY="-50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="200.0" translateY="-25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-375.0" layoutY="100.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="25.0" translateY="25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-500.0" layoutY="550.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="200.0" translateY="-25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-150.0" layoutY="500.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="25.0" translateY="25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-50.0" layoutY="600.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="200.0" translateY="-25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-300.0" layoutY="450.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="25.0" translateY="25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="325.0" layoutY="-25.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="200.0" translateY="-25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-475.0" layoutY="55.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="25.0" translateY="25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-450.0" layoutY="250.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="200.0" translateY="-25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-485.0" layoutY="400.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="25.0" translateY="25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="50.0" layoutY="450.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="200.0" translateY="-25.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="580.0" layoutY="550.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" translateX="25.0" translateY="25.0" width="2.0" />
+               </children>
+            </Pane>
+            <HBox alignment="CENTER_RIGHT" prefHeight="520.0" prefWidth="646.0">
+               <children>
+                  <VBox alignment="CENTER_RIGHT" prefHeight="536.0" prefWidth="598.0">
+                     <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="51.0" prefWidth="350.0" text="Grand Shop Auto" textFill="WHITE">
+                           <font>
+                              <Font size="40.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="100.0" top="10.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="50.0" prefWidth="350.0" text="خریدی مطمئن و آسان" textFill="WHITE">
+                           <font>
+                              <Font size="32.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets right="100.0" />
+                           </VBox.margin>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="35.0" prefWidth="526.0" text="بجای رمز عبور ، کد ملی خود را وارد کنید" textFill="WHITE">
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Label>
+                        <TextField fx:id="username" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="300.0" prefHeight="35.0" prefWidth="300.0" promptText="نام کاربری">
+                           <VBox.margin>
+                              <Insets right="125.0" top="5.0" />
+                           </VBox.margin>
+                        </TextField>
+                        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="40.0" prefWidth="598.0">
+                           <children>
+                              <PasswordField fx:id="ID" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="30.0" prefWidth="300.0" promptText="کد ملی">
+                                 <HBox.margin>
+                                    <Insets right="125.0" top="15.0" />
+                                 </HBox.margin>
+                              </PasswordField>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="598.0">
+                           <children>
+                              <Button minHeight="30.0" minWidth="90.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="90.0" text="ورود">
+                                 <HBox.margin>
+                                    <Insets right="125.0" top="25.0" />
+                                 </HBox.margin>
+                              </Button>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                        <Label fx:id="label" alignment="CENTER_RIGHT" maxHeight="30.0" maxWidth="450.0" minWidth="450.0" prefHeight="30.0" prefWidth="450.0" textAlignment="RIGHT" textFill="#fa0000">
+                           <VBox.margin>
+                              <Insets right="125.0" top="-5.0" />
+                           </VBox.margin>
+                        </Label>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="50.0" />
+                     </HBox.margin>
+                  </VBox>
+               </children>
+               <StackPane.margin>
+                  <Insets bottom="50.0" />
+               </StackPane.margin>
+            </HBox>
+         </children>
+         <BorderPane.margin>
+            <Insets top="80.0" />
+         </BorderPane.margin>
+      </StackPane>
+   </center>
+   <bottom>
+      <HBox prefHeight="82.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="hnoor" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="100.0" layoutY="25.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="450.0" layoutY="50.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="800.0" layoutY="15.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="1150.0" layoutY="40.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="hnoor2" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-50.0" layoutY="10.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="200.0" layoutY="45.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="550.0" layoutY="25.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="900.0" layoutY="15.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+               </children>
+            </Pane>
+            <Pane fx:id="hnoor3" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-275.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="-50.0" layoutY="25.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="300.0" layoutY="25.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#3be2ff" height="2.0" layoutX="650.0" layoutY="25.0" stroke="RED" strokeType="INSIDE" strokeWidth="0.0" width="2.0" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </bottom>
 </BorderPane>

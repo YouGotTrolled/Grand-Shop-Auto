@@ -30,9 +30,12 @@ public class Application extends javafx.application.Application {
             Scene scene3 = new Scene(root2.load(), 1280, 720);
             scene3.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());
 
+            FXMLLoader forget = new FXMLLoader(Application.class.getResource("forgetPas.fxml"));
+            Scene scene4 = new Scene(forget.load(), 1280, 720);
+            //scene3.getStylesheets().add(getClass().getResource(".css").toExternalForm());
+
             loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream("log.txt",true)));
 
-            int i = 0;
             Image ic = new Image("u.png");
             stage.setMinHeight(720);
             stage.setMinWidth(1280);

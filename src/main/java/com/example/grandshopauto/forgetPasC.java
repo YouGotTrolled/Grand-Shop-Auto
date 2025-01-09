@@ -11,15 +11,15 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+
 import java.io.*;
 import java.time.LocalDateTime;
 import java.util.StringTokenizer;
 
-public class loginC {
+public class forgetPasC {
 
     private PrintWriter loger;
     private BufferedReader checker;
@@ -29,7 +29,7 @@ public class loginC {
     @FXML
     private TextField username;
     @FXML
-    private TextField pasword;
+    private TextField ID;
     @FXML
     private Label label;
     @FXML
@@ -53,14 +53,11 @@ public class loginC {
     @FXML
     private Pane hnoor3;
 
-    @FXML
-    private ImageView image;
-
-    private String pUser;
+   // private String pUser;
 
     @FXML
     private void initialize() {
-        fp.setVisible(false);
+        //fp.setVisible(false);
         Timeline t1 = new Timeline(new KeyFrame(Duration.millis(3000), event -> {
             int j =-1000;
             for(int i = 0 ; i < 8000 ; ) {
@@ -111,27 +108,27 @@ public class loginC {
                         ht44.play();
                     }
                     else {
-                    if (i%2==0) {
-                        Timeline t222 = new Timeline(new KeyFrame(Duration.millis(j), event7 -> {noor.setVisible(false);}));
-                        t222.play();
-                        Timeline vt222 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor.setVisible(false);}));
-                        vt222.play();
-                        Timeline ht222 = new Timeline(new KeyFrame(Duration.millis(j), event4 -> { noor.setVisible(false);}));
-                        ht222.play();
+                        if (i%2==0) {
+                            Timeline t222 = new Timeline(new KeyFrame(Duration.millis(j), event7 -> {noor.setVisible(false);}));
+                            t222.play();
+                            Timeline vt222 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor.setVisible(false);}));
+                            vt222.play();
+                            Timeline ht222 = new Timeline(new KeyFrame(Duration.millis(j), event4 -> { noor.setVisible(false);}));
+                            ht222.play();
 
-                        Timeline t333 = new Timeline(new KeyFrame(Duration.millis(j), event8 -> {noor2.setVisible(false);}));
-                        t333.play();
-                        Timeline vt333 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor2.setVisible(false);}));
-                        vt333.play();
-                        Timeline ht333 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor2.setVisible(false);}));
-                        ht333.play();
+                            Timeline t333 = new Timeline(new KeyFrame(Duration.millis(j), event8 -> {noor2.setVisible(false);}));
+                            t333.play();
+                            Timeline vt333 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor2.setVisible(false);}));
+                            vt333.play();
+                            Timeline ht333 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor2.setVisible(false);}));
+                            ht333.play();
 
-                        Timeline t444 = new Timeline(new KeyFrame(Duration.millis(j), event9 -> {noor3.setVisible(true);}));
-                        t444.play();
-                        Timeline vt444 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor3.setVisible(true);}));
-                        vt444.play();
-                        Timeline ht444 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor3.setVisible(true);}));
-                        ht444.play();
+                            Timeline t444 = new Timeline(new KeyFrame(Duration.millis(j), event9 -> {noor3.setVisible(true);}));
+                            t444.play();
+                            Timeline vt444 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor3.setVisible(true);}));
+                            vt444.play();
+                            Timeline ht444 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor3.setVisible(true);}));
+                            ht444.play();
                         }
                     }
                 }
@@ -140,80 +137,48 @@ public class loginC {
         }));
         t1.play();
     }
-    @FXML
-    private void forget(ActionEvent actionEvent) {
-        try{
-            Parent forget = FXMLLoader.load(getClass().getResource("forgetPas.fxml"));
-            Scene scene=new Scene(forget,1280,720);
-            //scene.getStylesheets().add(getClass().getResource("SignCSS.css").toExternalForm());
-            Stage sign1 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            sign1.setScene(scene);
-            sign1.show();
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("error");
-        }
-    }
-
-    @FXML
-    public void signUp(ActionEvent actionEvent)  {
-        try {
-            Parent sign = FXMLLoader.load(getClass().getResource("Sign.fxml"));
-            Scene scene=new Scene(sign,1280,720);
-            scene.getStylesheets().add(getClass().getResource("SignCSS.css").toExternalForm());
-            Stage sign1 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            sign1.setScene(scene);
-            sign1.show();
-        }
-        catch (IOException e) {
-            e.printStackTrace();
-            System.out.println("error");
-        }
-    }
-
 
     @FXML
     public void login(ActionEvent actionEvent)  {
         try {
             String bob="";
-            boolean tpas = false;
+            boolean tID = false;
             boolean tekrar = false;
             loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream("log.txt",true)));
             checker = new BufferedReader(new FileReader("userInfo.txt"));
             String user = username.getText();
-            String pass = pasword.getText();
+            String ID1 = ID.getText();
             if (user.isEmpty()){
                 label.setText("نام کاربری خود را وارد کنید");
             }
-            else if (pass.equals("")) {
-                label.setText("رمز عبور خود را وارد کنید");
+            else if (ID1.equals("")) {
+                label.setText("کد ملی خود را وارد کنید");
             }
             else {
                 while ((checker.read()) != -1 ) {
                     tokenizer = new StringTokenizer(checker.readLine(), ",[]");
                     if ( user.equals(tokenizer.nextToken()) ) {
-                       tekrar = true;
-                   }
+                        tekrar = true;
+                    }
                     else {
                     }
-                    if ( pass.equals(tokenizer.nextToken()) ) {
-                        tpas = true;
+                    String temp = tokenizer.nextToken();
+                    if ( ID1.equals(tokenizer.nextToken()) ) {
+                        tID = true;
                     }
                 }
                 if (!tekrar){
                     label.setText("حسابی با این مشخصات وجود ندارد ، از بخش  ثبت نام یکی ایجاد کنید");
                     bob="حسابی با این مشخصات وجود ندارد ، از بخش  ثبت نام یکی ایجاد کنید";
                 }
-                else if (!tpas) {
-                    label.setText("رمز عبور اشتباه است ");
-                    bob="رمز عبور اشتباه است ";
+                else if (!tID) {
+                    label.setText("کد ملی اشتباه است ");
+                    bob="کد ملی اشتباه است ";
                     fp.setVisible(true);
                 }
                 else  {
-                    if (tekrar && tpas ) {
+                    if (tekrar && tID ) {
                         bob="با موفقیت وارد سیستم شد";
-                        pUser = username.getText();
                         Parent root2= FXMLLoader.load(getClass().getResource("root2.fxml"));
                         Scene scene=new Scene(root2,1280,720);
                         scene.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());
@@ -223,7 +188,7 @@ public class loginC {
                     }
                 }
             }
-            loger.println("("+LocalDateTime.now()+"):"+username.getText()+":\""+bob+"\"");
+            loger.println("("+ LocalDateTime.now()+"):"+username.getText()+":\""+bob+"\"");
             loger.close();
         }catch(FileNotFoundException e) {
             e.printStackTrace();
