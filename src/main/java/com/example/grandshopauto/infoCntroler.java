@@ -1,8 +1,42 @@
 package com.example.grandshopauto;
 
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+
 import java.io.*;
 
 public class infoCntroler {
+    @FXML
+    private Label DOB;
+
+    @FXML
+    private Label Id;
+
+    @FXML
+    private Label addr;
+
+    @FXML
+    private Label dobAge;
+
+    @FXML
+    private Label lastName;
+
+    @FXML
+    private Label name;
+
+    @FXML
+    private Label num;
+
+    @FXML
+    void info(ActionEvent event) {
+
+    }
+
+    @FXML
+    public static void initialize(){
+
+    }
     public static void changeFile(int lineNum, String replacement, String file){
         try {
             File temp =new File("temp.txt");

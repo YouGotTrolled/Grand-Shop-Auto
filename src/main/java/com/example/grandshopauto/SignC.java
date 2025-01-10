@@ -121,7 +121,7 @@ public class SignC {
                 }
             }
             if(flag){
-                flag=!(((charCheckOut(DOB.getText(),57,48)&&!charCheck(DOB.getText(),47,47))) || DOB.getText().isEmpty()) || DOB.getText().charAt(5)!='/'|| DOB.getText().charAt(8)!='/';
+                flag=!(((charCheckOut(DOB.getText(),57,48)&&!charCheck(DOB.getText(),47,47))) || DOB.getText().isEmpty()) || !(DOB.getText().charAt(5)!='/')|| !(DOB.getText().charAt(8)!='/');
                 if(!flag){
                     bob="تاریخ تولد فقط باید عدد و / باشد";
                 }
