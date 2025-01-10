@@ -17,25 +17,37 @@
          <children>
             <VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="674.0" prefWidth="368.0">
                <children>
-                  <TextField fx:id="Lname" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="Lname" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="نام خانوادگی خود را وارد کنید">
                      <VBox.margin>
                         <Insets left="150.0" top="185.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="15.0" />
+                     </font>
                   </TextField>
-                  <TextField fx:id="num" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="num" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="شماره تماس خود را وارد کنید">
                      <VBox.margin>
                         <Insets left="150.0" top="25.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="15.0" />
+                     </font>
                   </TextField>
-                  <TextField fx:id="DOB" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="DOB" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="تاریخ تولد خود را وارد کنید">
                      <VBox.margin>
                         <Insets left="150.0" top="25.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="15.0" />
+                     </font>
                   </TextField>
-                  <TextField fx:id="Tpas" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="Tpas" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="تکرار رمز خود را وارد کنید">
                      <VBox.margin>
                         <Insets left="150.0" top="79.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="15.0" />
+                     </font>
                   </TextField>
                   <Label fx:id="label">
                      <VBox.margin>
@@ -54,95 +66,125 @@
             </VBox>
             <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="نام خانوادگی :">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="82.0" text="نام خانوادگی :">
                      <VBox.margin>
                         <Insets top="185.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="18.0" />
+                     </font>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="شماره تماس :">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="84.0" text="شماره تماس :">
                      <VBox.margin>
                         <Insets top="25.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="18.0" />
+                     </font>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="تاریخ تولد :">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="تاریخ تولد :">
                      <VBox.margin>
                         <Insets top="25.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="18.0" />
+                     </font>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="تکرار رمز عبور :">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="87.0" text="تکرار رمز عبور :">
                      <VBox.margin>
                         <Insets top="80.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="18.0" />
+                     </font>
                   </Label>
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="500.0" prefWidth="250.0">
                <children>
-                  <TextField fx:id="name" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="name" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="نام خود را وارد کنید       ">
                      <VBox.margin>
                         <Insets left="50.0" top="175.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="15.0" />
+                     </font>
                   </TextField>
-                  <TextField fx:id="ADD" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="ADD" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="آدرس خود را وارد کنید">
                      <VBox.margin>
                         <Insets left="50.0" top="25.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="15.0" />
+                     </font>
                   </TextField>
-                  <TextField fx:id="ID" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="ID" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="کدملی خود را وارد کنید">
                      <VBox.margin>
                         <Insets left="50.0" top="25.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="15.0" />
+                     </font>
                   </TextField>
-                  <TextField fx:id="user" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="user" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="نام کاربری خود را وارد کنید">
                      <VBox.margin>
                         <Insets left="50.0" top="25.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="15.0" />
+                     </font>
                   </TextField>
-                  <TextField fx:id="pas" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
+                  <TextField fx:id="pas" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="رمز خود را وارد کنید">
                      <VBox.margin>
                         <Insets left="50.0" top="25.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="15.0" />
+                     </font>
                   </TextField>
                </children>
             </VBox>
             <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0">
                <children>
-                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="نام :">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="نام :">
                      <VBox.margin>
                         <Insets top="175.0" />
                      </VBox.margin>
                      <font>
-                        <Font size="15.0" />
+                        <Font name="Lalezar-Regular" size="18.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="آدرس :">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="آدرس :">
                      <VBox.margin>
                         <Insets top="25.0" />
                      </VBox.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font name="Lalezar-Regular" size="18.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="کد ملی :">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="کد ملی :">
                      <VBox.margin>
                         <Insets top="25.0" />
                      </VBox.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font name="Lalezar-Regular" size="18.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="نام کاربری :">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="82.0" text="نام کاربری :">
                      <VBox.margin>
                         <Insets top="25.0" />
                      </VBox.margin>
                      <font>
-                        <Font size="14.0" />
+                        <Font name="Lalezar-Regular" size="18.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="رمز عبور :">
+                  <Label maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="75.0" text="رمز عبور :">
                      <VBox.margin>
                         <Insets top="25.0" />
                      </VBox.margin>
+                     <font>
+                        <Font name="Lalezar-Regular" size="18.0" />
+                     </font>
                   </Label>
                </children>
             </VBox>

@@ -1,0 +1,21 @@
+.button1 {
+    -fx-background-color: linear-gradient(#0D0D0D, #333333); /* Black gradient */
+    -fx-background-radius: 30;
+    -fx-background-insets: 0;
+    -fx-text-fill: #00FFFF; /* Cyan text */
+    -fx-font-size: 14pt;
+    -fx-padding: 10 20 10 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 255, 255, 0.8), 10, 0, 0, 5);
+    -fx-border-color: #00FFFF; /* Cyan border */
+    -fx-border-radius: 30;
+}
+
+.button1:hover {
+    -fx-background-color: linear-gradient(#333333, #0D0D0D);
+    -fx-cursor: hand;
+}
+
+.button1:pressed {
+    -fx-background-color: #0D0D0D;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 255, 255, 0.4), 10, 0, 0, 5);
+}

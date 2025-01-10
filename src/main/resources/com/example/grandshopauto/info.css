@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'MyFont';
+    src: url('/fonts/MyFont.ttf');
+}
+
+.label {
+    -fx-font-family: 'MyFont';
+}

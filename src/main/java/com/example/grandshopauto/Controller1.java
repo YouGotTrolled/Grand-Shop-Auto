@@ -32,6 +32,7 @@ public class Controller1 {
             File userInfo = new File("userInfo.txt");
             File products = new File("products.txt");
             File log = new File("log.txt");
+            File systemFile = new File("systemFile.txt");
             if (!userInfo.exists()) {
                 userInfo.createNewFile();
             }
@@ -40,6 +41,9 @@ public class Controller1 {
             }
             if (!log.exists()) {
                 log.createNewFile();
+            }
+            if(!systemFile.exists()){
+                systemFile.createNewFile();
             }
         }
         catch (IOException e){

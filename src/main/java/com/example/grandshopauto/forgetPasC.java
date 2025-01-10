@@ -138,9 +138,11 @@ public class forgetPasC {
         t1.play();
     }
 
+    private PrintWriter systemFile;
     @FXML
     public void login(ActionEvent actionEvent)  {
         try {
+            systemFile=new PrintWriter(new BufferedOutputStream(new FileOutputStream("systemFile.txt")));
             String bob="";
             boolean tID = false;
             boolean tekrar = false;
@@ -179,6 +181,8 @@ public class forgetPasC {
                 else  {
                     if (tekrar && tID ) {
                         bob="با موفقیت وارد سیستم شد";
+                        systemFile.print(username.getText());
+                        systemFile.close();
                         Parent root2= FXMLLoader.load(getClass().getResource("root2.fxml"));
                         Scene scene=new Scene(root2,1280,720);
                         scene.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());
@@ -193,11 +197,11 @@ public class forgetPasC {
         }catch(FileNotFoundException e) {
             e.printStackTrace();
             System.out.println("error in file finding");
-            loger.println("("+ LocalDateTime.now()+"):\""+e.getMessage()+"\"in loginC.java");
+            loger.println("("+ LocalDateTime.now()+"):\""+e.getMessage()+"\"in forgetPasC.java");
         }catch(Exception e) {
             e.printStackTrace();
             System.out.println("error");
-            loger.println("("+ LocalDateTime.now()+"):\""+e.getMessage()+"\"in loginC.java");
+            loger.println("("+ LocalDateTime.now()+"):\""+e.getMessage()+"\"in forgetPasC.java");
         }
     }
 

@@ -24,6 +24,8 @@ public class loginC {
     private PrintWriter loger;
     private BufferedReader checker;
     private StringTokenizer tokenizer;
+    private PrintWriter systemFile;
+
 
 
     @FXML
@@ -55,8 +57,6 @@ public class loginC {
 
     @FXML
     private ImageView image;
-
-    private String pUser;
 
     @FXML
     private void initialize() {
@@ -176,6 +176,7 @@ public class loginC {
     @FXML
     public void login(ActionEvent actionEvent)  {
         try {
+            systemFile=new PrintWriter(new BufferedOutputStream(new FileOutputStream("systemFile.txt")));
             String bob="";
             boolean tpas = false;
             boolean tekrar = false;
@@ -213,7 +214,8 @@ public class loginC {
                 else  {
                     if (tekrar && tpas ) {
                         bob="با موفقیت وارد سیستم شد";
-                        pUser = username.getText();
+                        systemFile.print(username.getText());
+                        systemFile.close();
                         Parent root2= FXMLLoader.load(getClass().getResource("root2.fxml"));
                         Scene scene=new Scene(root2,1280,720);
                         scene.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());

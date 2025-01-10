@@ -22,6 +22,8 @@ public class SignC {
 
     private StringTokenizer spt;
 
+    private PrintWriter systemFile;
+
     @FXML
     private TextField name;
     @FXML
@@ -45,29 +47,47 @@ public class SignC {
     @FXML
     public void sub(ActionEvent actionEvent) {
         try {
-            boolean flag=true;
             boolean flagPas1 = true;
             boolean flagPas2 = true;
             boolean flagPas3 = true;
             boolean flagPas4 = true;
+            boolean userFlag=true;
+            boolean passFlag=true;
+            boolean rePassFlag=true;
+            boolean nameFlag=true;
+            boolean lNameFlag=true;
+            boolean idFlag=true;
+            boolean phoneFlag=true;
+            boolean addFlag=true;
+            boolean birthFlag=true;
             loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream("log.txt",true)));
             checker=new BufferedReader(new FileReader("userInfo.txt"));
-            String bob="نام کاربری تکراری است";
-            for(int i=0;(flag)&&i<user.getText().length();i++){
+            systemFile=new PrintWriter(new BufferedOutputStream(new FileOutputStream("systemFile.txt")));
+            String bob;
+            //userFlag
+            for(int i=0;(userFlag)&&i<user.getText().length();i++){
                 if(user.getText().isEmpty()||(int)user.getText().charAt(i)>122||((int)user.getText().charAt(i)>90&&(int)user.getText().charAt(i)<97)||((int)user.getText().charAt(i)>57&&(int)user.getText().charAt(i)<65)||(int)user.getText().charAt(i)<48){
-                    flag=false;
+                    userFlag=false;
                     bob="یوزرنیم فقط میتواند عدد و حروف انگلیسی باشد";
                 }
             }
-            if(flag) {
-                while (flag && checker.read()!=-1) {
+            if(userFlag) {
+                while (userFlag && checker.read()!=-1) {
                     spt = new StringTokenizer(checker.readLine(), ",[]");
                     if (user.getText().equals(spt.nextToken())) {
-                        flag= false;
+                        userFlag= false;
+                        bob="نام کاربری تکراری است";
                     }
                 }
             }
-            if(flag){
+            //passwordFlag
+            for (int i = 0; (passFlag) && i < pas.getText().length(); i++) {
+                if ((int) pas.getText().charAt(i) > 122 || ((int) pas.getText().charAt(i) > 90 && (int) pas.getText().charAt(i) < 97) || ((int) pas.getText().charAt(i) > 57 && (int) pas.getText().charAt(i) < 65) || ((int) pas.getText().charAt(i) > 38 && (int) pas.getText().charAt(i) < 48)|| (int) pas.getText().charAt(i) < 33) {
+                    passFlag = false;
+                    bob = "رمز فقط میتواند عدد و حروف انگلیسی و حروف خاص باشد";
+                }
+            }
+            if(passFlag){
                 flagPas1=!(charCheck(pas.getText(),48,57));
                 if (flagPas1){
                     bob="رمز عدد ندارد";
@@ -85,71 +105,60 @@ public class SignC {
                     bob="رمز کاراکتر خاص ندارد ندارد";
                 }
                 if (flagPas4||flagPas3||flagPas2||flagPas1){
-                    flag=false;
+                    passFlag=false;
                 }
             }
-            if(flag){
-                for (int i = 0; (flag) && i < pas.getText().length(); i++) {
-                    if ((int) pas.getText().charAt(i) > 122 || ((int) pas.getText().charAt(i) > 90 && (int) pas.getText().charAt(i) < 97) || ((int) pas.getText().charAt(i) > 57 && (int) pas.getText().charAt(i) < 65) || ((int) pas.getText().charAt(i) > 38 && (int) pas.getText().charAt(i) < 48)|| (int) pas.getText().charAt(i) < 33) {
-                        flag = false;
-                        bob = "رمز فقط میتواند عدد و حروف انگلیسی و حروف خاص باشد";
-                    }
+            //rePassFlagg
+            if (!(pas.getText().equals(Tpas.getText()))) {
+                bob = "رمز ها یکی نیستن";
+                rePassFlag = false;
+            }
+            //nameFlag
+            nameFlag=!((charCheckOut(name.getText(),1740,1570)&&!charCheck(name.getText(),32,32))||name.getText().isEmpty());
+            if(!nameFlag){
+                bob="نام فقط باید حروف فارسی باشد";
+            }
+            //lNameFlag
+            lNameFlag=!((charCheckOut(Lname.getText(),1740,1570)&&!charCheck(Lname.getText(),32,32))||Lname.getText().isEmpty());
+            if(!lNameFlag){
+                bob="نام خوانوادگی فقط باید حروف فارسی باشد";
+            }
+            //idFlag
+            idFlag=!(charCheckOut(ID.getText(),57,48)||ID.getText().isEmpty());
+            if(!idFlag){
+                bob="کد ملی فقط باید عدد باشد";
+            }
+            //birthFlag
+            birthFlag=!(((charCheckOut(DOB.getText(),57,48)&&!charCheck(DOB.getText(),47,47))) || DOB.getText().isEmpty()) || !(DOB.getText().charAt(5)!='/')|| !(DOB.getText().charAt(8)!='/');
+            if(!birthFlag){
+                bob="تاریخ تولد فقط باید عدد و / باشد";
+            }
+            //phoneFlag
+            phoneFlag=!(charCheckOut(num.getText(),57,48)||num.getText().isEmpty());
+            if(!phoneFlag){
+                bob="شماره فقط باید عدد باشد";
+            }
+            //addFlag
+            if(ADD.getText().isEmpty()){
+                addFlag=false;
+                bob ="ادرس داده نشد";
+            }
+            for(int i=0;addFlag&&i<ADD.getText().length();i++) {
+                if (ADD.getText().charAt(i) == '[' || ADD.getText().charAt(i) == ']' || ADD.getText().charAt(i) == ',') {
+                    addFlag = false;
+                    bob = "از کاراکتر های غیر مجاز در ادرس استفاده نکنید";
                 }
             }
-            if(flag) {
-                if (!(pas.getText().equals(Tpas.getText()))) {
-                    bob = "رمز ها یکی نیستن";
-                    flag = false;
-                }
-            }
-            if(flag){
-                flag=!((charCheckOut(name.getText(),1740,1570)&&!charCheck(name.getText(),32,32))||name.getText().isEmpty());
-                if(!flag){
-                    bob="نام فقط باید حروف فارسی باشد";
-                }
-            }
-            if(flag){
-                flag=!((charCheckOut(Lname.getText(),1740,1570)&&!charCheck(Lname.getText(),32,32))||Lname.getText().isEmpty());
-                if(!flag){
-                    bob="نام خوانوادگی فقط باید حروف فارسی باشد";
-                }
-            }
-            if(flag){
-                flag=!(charCheckOut(ID.getText(),57,48)||ID.getText().isEmpty());
-                if(!flag){
-                    bob="کد ملی فقط باید عدد باشد";
-                }
-            }
-            if(flag){
-                flag=!(((charCheckOut(DOB.getText(),57,48)&&!charCheck(DOB.getText(),47,47))) || DOB.getText().isEmpty()) || DOB.getText().charAt(5)!='/'|| DOB.getText().charAt(8)!='/';
-                if(!flag){
-                    bob="تاریخ تولد فقط باید عدد و / باشد";
-                }
-            }
-            if(flag){
-                flag=!(charCheckOut(num.getText(),57,48)||num.getText().isEmpty());
-                if(!flag){
-                    bob="شماره فقط باید عدد باشد";
-                }
-            }
-            if(flag){
-                if(ADD.getText().isEmpty()){
-                    flag=false;
-                    bob ="ادرس داده نشد";
-                }
-                for(int i=0;flag&&i<ADD.getText().length();i++) {
-                    if (ADD.getText().charAt(i) == '[' || ADD.getText().charAt(i) == ']' || ADD.getText().charAt(i) == ',') {
-                        flag = false;
-                        bob = "از کاراکتر های غیر مجاز در ادرس استفاده نکنید";
-                    }
-                }
-            }
+            //
+            bob="خطا در ثبت نام";
             label.setText(bob);
-            if(flag){
+            if(userFlag&&passFlag&&rePassFlag&&nameFlag&&lNameFlag&&addFlag&&idFlag&&phoneFlag&&birthFlag){
                 checker.close();
                 adder=new PrintWriter(new BufferedOutputStream(new FileOutputStream("userInfo.txt",true)));
                 adder.println("["+user.getText()+","+pas.getText()+","+ID.getText()+","+DOB.getText()+","+ADD.getText()+","+num.getText()+","+name.getText()+","+Lname.getText()+"]");
                 adder.close();
+                systemFile.print(user.getText());
+                systemFile.close();
                 bob="ثبت نام با موفقیت انجام شد با اطلاعات:"+"["+user.getText()+","+pas.getText()+","+ID.getText()+","+DOB.getText()+","+ADD.getText()+","+num.getText()+","+name.getText()+","+Lname.getText()+"]";
                 Parent sign = FXMLLoader.load(getClass().getResource("root2.fxml"));
                 Scene scene=new Scene(sign,1280,720);
