@@ -62,9 +62,9 @@
    <center>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <ScrollPane prefHeight="200.0" prefWidth="200.0">
+            <ScrollPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: black;">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3500.0" prefWidth="1262.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3500.0" prefWidth="1262.0" style="-fx-background-color: black;">
                      <children>
                         <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="3500.0" prefWidth="1280.0" style="-fx-background-color: white;">
                            <children>
@@ -135,6 +135,48 @@
                                  </children>
                               </StackPane>
                               <HBox prefHeight="240.0" prefWidth="1280.0">
+                                 <children>
+                                    <AnchorPane prefHeight="240.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: yellow;">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" layoutX="582.0" layoutY="20.0" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: white;" AnchorPane.rightAnchor="260.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="581.0" layoutY="59.0" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: white;" text="Label" AnchorPane.rightAnchor="260.0" />
+                                          <Label layoutX="585.0" layoutY="97.0" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: white;" text="Label" AnchorPane.rightAnchor="260.0" />
+                                          <Button layoutX="72.0" layoutY="107.0" mnemonicParsing="false" prefHeight="50.0" text="Button" />
+                                          <Label layoutX="68.0" layoutY="173.0" text="مشاهده لیست" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="1139.2" />
+                                          <ImageView fitHeight="230.0" fitWidth="230.0" layoutX="1033.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="5.0" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets top="25.0" />
+                                       </HBox.margin>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="240.0" prefWidth="1280.0">
+                                 <children>
+                                    <AnchorPane prefHeight="240.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: yellow;">
+                                       <children>
+                                          <Label alignment="CENTER_RIGHT" layoutX="582.0" layoutY="20.0" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: white;" AnchorPane.rightAnchor="260.0">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="581.0" layoutY="59.0" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: white;" text="Label" AnchorPane.rightAnchor="260.0" />
+                                          <Label layoutX="585.0" layoutY="97.0" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: white;" text="Label" AnchorPane.rightAnchor="260.0" />
+                                          <Button layoutX="72.0" layoutY="107.0" mnemonicParsing="false" prefHeight="50.0" text="Button" />
+                                          <Label layoutX="68.0" layoutY="173.0" text="مشاهده لیست" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="1139.2" />
+                                          <ImageView fitHeight="230.0" fitWidth="230.0" layoutX="1033.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="5.0" />
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets top="25.0" />
+                                       </HBox.margin>
+                                    </AnchorPane>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="240.0" prefWidth="1280.0">
                                  <VBox.margin>
                                     <Insets top="125.0" />
                                  </VBox.margin>
@@ -156,48 +198,6 @@
                                              </image>
                                           </ImageView>
                                        </children>
-                                    </AnchorPane>
-                                 </children>
-                              </HBox>
-                              <HBox prefHeight="240.0" prefWidth="1280.0">
-                                 <children>
-                                    <AnchorPane prefHeight="240.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: yellow;">
-                                       <children>
-                                          <Label alignment="CENTER_RIGHT" layoutX="582.0" layoutY="20.0" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: white;" AnchorPane.rightAnchor="260.0">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="581.0" layoutY="59.0" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: white;" text="Label" AnchorPane.rightAnchor="260.0" />
-                                          <Label layoutX="585.0" layoutY="97.0" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: white;" text="Label" AnchorPane.rightAnchor="260.0" />
-                                          <Button layoutX="72.0" layoutY="107.0" mnemonicParsing="false" prefHeight="50.0" text="Button" />
-                                          <Label layoutX="68.0" layoutY="173.0" text="مشاهده لیست" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="1139.2" />
-                                          <ImageView fitHeight="230.0" fitWidth="230.0" layoutX="1033.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="5.0" />
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets top="25.0" />
-                                       </HBox.margin>
-                                    </AnchorPane>
-                                 </children>
-                              </HBox>
-                              <HBox prefHeight="240.0" prefWidth="1280.0">
-                                 <children>
-                                    <AnchorPane prefHeight="240.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: yellow;">
-                                       <children>
-                                          <Label alignment="CENTER_RIGHT" layoutX="582.0" layoutY="20.0" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: white;" AnchorPane.rightAnchor="260.0">
-                                             <font>
-                                                <Font size="18.0" />
-                                             </font>
-                                          </Label>
-                                          <Label layoutX="581.0" layoutY="59.0" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: white;" text="Label" AnchorPane.rightAnchor="260.0" />
-                                          <Label layoutX="585.0" layoutY="97.0" prefHeight="30.0" prefWidth="434.0" style="-fx-background-color: white;" text="Label" AnchorPane.rightAnchor="260.0" />
-                                          <Button layoutX="72.0" layoutY="107.0" mnemonicParsing="false" prefHeight="50.0" text="Button" />
-                                          <Label layoutX="68.0" layoutY="173.0" text="مشاهده لیست" AnchorPane.leftAnchor="60.0" AnchorPane.rightAnchor="1139.2" />
-                                          <ImageView fitHeight="230.0" fitWidth="230.0" layoutX="1033.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="5.0" />
-                                       </children>
-                                       <HBox.margin>
-                                          <Insets top="25.0" />
-                                       </HBox.margin>
                                     </AnchorPane>
                                  </children>
                               </HBox>

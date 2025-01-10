@@ -55,8 +55,8 @@ public class infoCntroler {
                     Id.setText(spt.nextToken());
                     temp= spt.nextToken();
                     DOB.setText(temp);
-                    temp= String.valueOf(temp.charAt(0)+temp.charAt(1)+temp.charAt(2)+temp.charAt(3));
-                    age= Integer.parseInt(temp)-1403;
+                    temp= String.valueOf(temp.charAt(0))+String.valueOf(temp.charAt(1))+String.valueOf(temp.charAt(2))+String.valueOf(temp.charAt(3));
+                    age= 1403 - Integer.parseInt(temp);
                     dobAge.setText("age="+age);
                     name.setText(spt.nextToken());
                     lastName.setText(spt.nextToken());
