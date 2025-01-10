@@ -129,9 +129,15 @@ public class SignC {
                 bob="کد ملی فقط باید عدد باشد";
             }
             //birthFlag
-            birthFlag=!(((charCheckOut(DOB.getText(),57,48)&&!charCheck(DOB.getText(),47,47))) || DOB.getText().isEmpty()) || !(DOB.getText().charAt(5)!='/')|| !(DOB.getText().charAt(8)!='/');
-            if(!birthFlag){
-                bob="تاریخ تولد فقط باید عدد و / باشد";
+            if(DOB.getText().isEmpty()){
+                birthFlag=false;
+                bob="تاریخ تولد را وارد کنید";
+            }
+            if(birthFlag) {
+                birthFlag = !(charCheckOut(DOB.getText(), 57, 48) && !charCheck(DOB.getText(), 47, 47))|| DOB.getText().charAt(5) != '/' || DOB.getText().charAt(8) != '/';
+                if (!birthFlag) {
+                    bob = "تاریخ تولد فقط باید عدد و / باشد";
+                }
             }
             //phoneFlag
             phoneFlag=!(charCheckOut(num.getText(),57,48)||num.getText().isEmpty());

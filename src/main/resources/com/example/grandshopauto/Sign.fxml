@@ -54,7 +54,7 @@
                         <Insets top="20.0" />
                      </VBox.margin>
                   </Label>
-                  <Button fx:id="SABT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#sub" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #00eeff;" text="ثبت">
+                  <Button fx:id="SABT" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#sub" prefHeight="35.0" prefWidth="80.0" styleClass="button1" stylesheets="@buttons.css" text="ثبت">
                      <VBox.margin>
                         <Insets right="150.0" top="100.0" />
                      </VBox.margin>
@@ -102,7 +102,7 @@
             </VBox>
             <VBox alignment="TOP_CENTER" maxHeight="-Infinity" prefHeight="500.0" prefWidth="250.0">
                <children>
-                  <TextField fx:id="name" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="نام خود را وارد کنید       ">
+                  <TextField fx:id="name" alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0" promptText="نام خود را وارد کنید       " styleClass="text-field">
                      <VBox.margin>
                         <Insets left="50.0" top="175.0" />
                      </VBox.margin>

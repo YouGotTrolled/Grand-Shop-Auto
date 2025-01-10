@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 import java.io.*;
+import java.util.StringTokenizer;
 
 public class infoCntroler {
     @FXML
@@ -34,7 +35,40 @@ public class infoCntroler {
     }
 
     @FXML
-    public static void initialize(){
+    public void initialize(){
+        try {
+            BufferedReader system = new BufferedReader(new FileReader("systemFile.txt"));
+            BufferedReader checker = new BufferedReader(new FileReader("userInfo.txt"));
+            StringTokenizer spt;
+            boolean userFlag=true;
+            String user = system.readLine();
+            system.close();
+            String temp;
+            int age;
+            while (userFlag&&checker.read()!=-1) {
+                spt = new StringTokenizer(checker.readLine(), ",[]");
+                if (user.equals(spt.nextToken())) {
+                    userFlag= false;
+                }
+                if(!userFlag){
+                    temp=spt.nextToken();
+                    Id.setText(spt.nextToken());
+                    temp= spt.nextToken();
+                    DOB.setText(temp);
+                    temp= String.valueOf(temp.charAt(0)+temp.charAt(1)+temp.charAt(2)+temp.charAt(3));
+                    age= Integer.parseInt(temp)-1403;
+                    dobAge.setText("age="+age);
+                    name.setText(spt.nextToken());
+                    lastName.setText(spt.nextToken());
+                    num.setText(spt.nextToken());
+                    addr.setText(spt.nextToken());
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
     public static void changeFile(int lineNum, String replacement, String file){
