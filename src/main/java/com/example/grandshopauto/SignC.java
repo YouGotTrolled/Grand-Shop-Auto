@@ -22,6 +22,8 @@ public class SignC {
 
     private StringTokenizer spt;
 
+    private PrintWriter systemFile;
+
     @FXML
     private TextField name;
     @FXML
@@ -52,6 +54,7 @@ public class SignC {
             boolean flagPas4 = true;
             loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream("log.txt",true)));
             checker=new BufferedReader(new FileReader("userInfo.txt"));
+            systemFile=new PrintWriter(new BufferedOutputStream(new FileOutputStream("systemFile.txt")));
             String bob="نام کاربری تکراری است";
             for(int i=0;(flag)&&i<user.getText().length();i++){
                 if(user.getText().isEmpty()||(int)user.getText().charAt(i)>122||((int)user.getText().charAt(i)>90&&(int)user.getText().charAt(i)<97)||((int)user.getText().charAt(i)>57&&(int)user.getText().charAt(i)<65)||(int)user.getText().charAt(i)<48){
@@ -150,6 +153,8 @@ public class SignC {
                 adder=new PrintWriter(new BufferedOutputStream(new FileOutputStream("userInfo.txt",true)));
                 adder.println("["+user.getText()+","+pas.getText()+","+ID.getText()+","+DOB.getText()+","+ADD.getText()+","+num.getText()+","+name.getText()+","+Lname.getText()+"]");
                 adder.close();
+                systemFile.print(user.getText());
+                systemFile.close();
                 bob="ثبت نام با موفقیت انجام شد با اطلاعات:"+"["+user.getText()+","+pas.getText()+","+ID.getText()+","+DOB.getText()+","+ADD.getText()+","+num.getText()+","+name.getText()+","+Lname.getText()+"]";
                 Parent sign = FXMLLoader.load(getClass().getResource("root2.fxml"));
                 Scene scene=new Scene(sign,1280,720);
