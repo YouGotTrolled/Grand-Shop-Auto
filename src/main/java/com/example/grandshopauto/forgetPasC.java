@@ -204,5 +204,18 @@ public class forgetPasC {
             loger.println("("+ LocalDateTime.now()+"):\""+e.getMessage()+"\"in forgetPasC.java");
         }
     }
-
+    @FXML
+    private void back(ActionEvent actionEvent) {
+        try {
+            Parent back1 = FXMLLoader.load(getClass().getResource("loginJ.fxml"));
+            Scene scene = new Scene(back1, 1280 ,720);
+//            scene.getStylesheets().add(getClass().getResource(".css").toExternalForm());
+            Stage back2 = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();
+            back2.setScene(scene);
+            back2.show();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

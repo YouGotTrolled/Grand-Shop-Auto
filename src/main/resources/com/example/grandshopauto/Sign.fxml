@@ -186,6 +186,11 @@
                         <Font name="Lalezar-Regular" size="18.0" />
                      </font>
                   </Label>
+                  <Button mnemonicParsing="false" onAction="#back" text="back">
+                     <VBox.margin>
+                        <Insets right="50.0" top="150.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
          </children>

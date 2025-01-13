@@ -1,8 +1,11 @@
 package com.example.grandshopauto;
 
+import javafx.animation.Animation;
+import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -15,6 +18,8 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+
+import java.awt.event.MouseEvent;
 import java.io.*;
 import java.time.LocalDateTime;
 import java.util.StringTokenizer;
@@ -54,6 +59,15 @@ public class loginC {
     private Pane hnoor2;
     @FXML
     private Pane hnoor3;
+    @FXML
+    private Button eye;
+//    @FXML
+//    private AnimationTimer timer;
+//    @FXML
+//    private long pressTime;
+    @FXML
+    private Label pastrue;
+
 
     @FXML
     private ImageView image;
@@ -61,10 +75,10 @@ public class loginC {
     @FXML
     private void initialize() {
         fp.setVisible(false);
-        Timeline t1 = new Timeline(new KeyFrame(Duration.millis(3000), event -> {
-            int j =-1000;
+        //Timeline t1 = new Timeline(new KeyFrame(Duration.millis(0), event -> {
+            int j =-700;
             for(int i = 0 ; i < 8000 ; ) {
-                j+=1000;
+                j+=700;
                 if (i%8==0) {
                     Timeline t2 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { noor.setVisible(true);}));
                     t2.play();
@@ -137,9 +151,10 @@ public class loginC {
                 }
                 i+=2;
             }
-        }));
-        t1.play();
+        //}));
+       // t1.play();
     }
+
     @FXML
     private void forget(ActionEvent actionEvent) {
         try{
@@ -171,7 +186,6 @@ public class loginC {
             System.out.println("error");
         }
     }
-
 
     @FXML
     public void login(ActionEvent actionEvent)  {
@@ -237,5 +251,4 @@ public class loginC {
             loger.println("("+ LocalDateTime.now()+"):\""+e.getMessage()+"\"in loginC.java");
         }
     }
-
 }
