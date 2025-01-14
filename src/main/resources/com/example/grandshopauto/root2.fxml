@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grandshopauto.Controller2">
+   <center>
+      <AnchorPane minHeight="1080.0" minWidth="1920.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="1080.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="300.0" />
+         </BorderPane.margin>
+         <children>
+            <ScrollPane prefHeight="1080.0" prefWidth="1920.0">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3500.0" prefWidth="1918.0">
+                     <children>
+                        <StackPane layoutX="320.0" prefHeight="720.0" prefWidth="1280.0">
+                           <children>
+                              <ImageView fitHeight="690.0" fitWidth="1280.0" pickOnBounds="true">
+                                 <StackPane.margin>
+                                    <Insets top="-10.0" />
+                                 </StackPane.margin>
+                                 <image>
+                                    <Image url="@../../../pexels-albinberlin-919073.jpg" />
+                                 </image>
+                              </ImageView>
+                              <Label prefHeight="35.0" prefWidth="250.0" text="Label">
+                                 <StackPane.margin>
+                                    <Insets right="600.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <Label prefHeight="35.0" prefWidth="250.0" text="Label">
+                                 <StackPane.margin>
+                                    <Insets right="600.0" top="100.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <Label prefHeight="35.0" prefWidth="250.0" text="Label">
+                                 <StackPane.margin>
+                                    <Insets right="600.0" top="200.0" />
+                                 </StackPane.margin>
+                              </Label>
+                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: #00ffff; -fx-background-color: blaack;" text="Button">
+                                 <StackPane.margin>
+                                    <Insets left="950.0" top="550.0" />
+                                 </StackPane.margin>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: #00ffff; -fx-background-color: black;" text="Button">
+                                 <StackPane.margin>
+                                    <Insets left="1100.0" top="550.0" />
+                                 </StackPane.margin>
+                              </Button>
+                           </children>
+                        </StackPane>
+                        <AnchorPane layoutX="1600.0" prefHeight="765.0" prefWidth="320.0" style="-fx-background-color: black;" />
+                        <AnchorPane prefHeight="765.0" prefWidth="320.0" style="-fx-background-color: black;" />
+                        <HBox layoutX="320.0" layoutY="700.0" prefHeight="65.0" prefWidth="1280.0" style="-fx-background-color: black;" />
+                        <HBox layoutX="320.0" layoutY="765.0" prefHeight="1.0" prefWidth="1280.0">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </HBox>
+                        <HBox layoutX="320.0" layoutY="840.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button">
+                                 <HBox.margin>
+                                    <Insets left="75.0" top="95.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0">
+                                 <HBox.margin>
+                                    <Insets left="240.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="220.0" fitWidth="220.0">
+                                 <image>
+                                    <Image url="@../../../images%20(1).jfif" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="50.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="320.0" layoutY="1160.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button">
+                                 <HBox.margin>
+                                    <Insets left="75.0" top="95.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0">
+                                 <HBox.margin>
+                                    <Insets left="240.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="220.0" fitWidth="220.0">
+                                 <image>
+                                    <Image url="@../../../images%20(1).jfif" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="50.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="320.0" layoutY="1480.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button">
+                                 <HBox.margin>
+                                    <Insets left="75.0" top="95.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0">
+                                 <HBox.margin>
+                                    <Insets left="240.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="220.0" fitWidth="220.0">
+                                 <image>
+                                    <Image url="@../../../images%20(1).jfif" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="50.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="320.0" layoutY="1760.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button">
+                                 <HBox.margin>
+                                    <Insets left="75.0" top="95.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0">
+                                 <HBox.margin>
+                                    <Insets left="240.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="220.0" fitWidth="220.0">
+                                 <image>
+                                    <Image url="@../../../images%20(1).jfif" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="50.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="320.0" layoutY="2060.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button">
+                                 <HBox.margin>
+                                    <Insets left="75.0" top="95.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0">
+                                 <HBox.margin>
+                                    <Insets left="240.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="220.0" fitWidth="220.0">
+                                 <image>
+                                    <Image url="@../../../images%20(1).jfif" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="50.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <HBox layoutX="320.0" layoutY="2360.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button">
+                                 <HBox.margin>
+                                    <Insets left="75.0" top="95.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0">
+                                 <HBox.margin>
+                                    <Insets left="240.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="220.0" fitWidth="220.0">
+                                 <image>
+                                    <Image url="@../../../images%20(1).jfif" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="50.0" right="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <VBox prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <right>
+                  <TextField prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #9ba8a8;" BorderPane.alignment="CENTER">
+                     <BorderPane.margin>
+                        <Insets right="15.0" />
+                     </BorderPane.margin>
+                  </TextField>
+               </right>
+               <center>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../u.png" />
+                     </image>
+                  </ImageView>
+               </center>
+               <left>
+                  <Button mnemonicParsing="false" onAction="#info" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #9ba8a8;" text="info" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <BorderPane.margin>
+                        <Insets left="15.0" />
+                     </BorderPane.margin>
+                  </Button>
+               </left>
+            </BorderPane>
+         </children></VBox>
+   </top>
+</BorderPane>

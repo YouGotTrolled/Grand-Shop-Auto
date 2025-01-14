@@ -25,14 +25,14 @@ public class Controller2 {
         }
     }
     @FXML
-    public void infoGo(ActionEvent event){
+    public void info (ActionEvent event){
         try{
-            Parent sign = FXMLLoader.load(getClass().getResource("info.fxml"));
-            Scene scene=new Scene(sign,1280,720);
+            Parent info = FXMLLoader.load(getClass().getResource("info.fxml"));
+            Scene scene=new Scene(info,1280,720);
 //            scene.getStylesheets().add(getClass().getResource("CSS.css").toExternalForm());
-            Stage sign1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            sign1.setScene(scene);
-            sign1.show();
+            Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            info1.setScene(scene);
+            info1.show();
         }
         catch (Exception e){
             e.printStackTrace();
