@@ -18,7 +18,15 @@
                         <Insets right="100.0" top="280.0" />
                      </VBox.margin>
                   </Label>
-                  <Button mnemonicParsing="false" onAction="#info" text="ویرایش اطلاعات" />
+                  <Button mnemonicParsing="false" onAction="#info" text="ویرایش اطلاعات">
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin></Button>
+                  <Button mnemonicParsing="false" onAction="#sendChat" text="چت با ادمین">
+                     <VBox.margin>
+                        <Insets top="60.0" />
+                     </VBox.margin>
+                  </Button>
                </children>
             </VBox>
             <VBox alignment="TOP_RIGHT" prefHeight="720.0" prefWidth="234.0">
