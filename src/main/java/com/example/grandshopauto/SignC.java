@@ -45,6 +45,25 @@ public class SignC {
     private TextField Tpas;
     @FXML
     private Label label;
+    @FXML
+    private Label addError;
+    @FXML
+    private Label dobError;
+    @FXML
+    private Label idError;
+    @FXML
+    private Label lNameError;
+    @FXML
+    private Label nameError;
+    @FXML
+    private Label passError;
+    @FXML
+    private Label phoneError;
+    @FXML
+    private Label tPassError;
+    @FXML
+    private Label userfError;
+
 
 
     @FXML
@@ -67,11 +86,25 @@ public class SignC {
             checker = new BufferedReader(new FileReader("userInfo.txt"));
             systemFile = new PrintWriter(new BufferedOutputStream(new FileOutputStream("systemFile.txt")));
             String bob;
+            //start
+            nameError.setText("");
+            lNameError.setText("");
+            userfError.setText("");
+            passError.setText("");
+            tPassError.setText("");
+            addError.setText("");
+            idError.setText("");
+            phoneError.setText("");
+            dobError.setText("");
             //userFlag
+            if(user.getText().isEmpty()){
+                userFlag = false;
+                userfError.setText("فیلد خالی است");
+            }
             for (int i = 0; (userFlag) && i < user.getText().length(); i++) {
-                if (user.getText().isEmpty() || (int) user.getText().charAt(i) > 122 || ((int) user.getText().charAt(i) > 90 && (int) user.getText().charAt(i) < 97) || ((int) user.getText().charAt(i) > 57 && (int) user.getText().charAt(i) < 65) || (int) user.getText().charAt(i) < 48) {
+                if ((int) user.getText().charAt(i) > 122 || ((int) user.getText().charAt(i) > 90 && (int) user.getText().charAt(i) < 97) || ((int) user.getText().charAt(i) > 57 && (int) user.getText().charAt(i) < 65) || (int) user.getText().charAt(i) < 48) {
                     userFlag = false;
-                    bob = "یوزرنیم فقط میتواند عدد و حروف انگلیسی باشد";
+                    userfError.setText("یوزرنیم فقط میتواند عدد و حروف انگلیسی باشد");
                 }
             }
             if (userFlag) {
@@ -79,88 +112,130 @@ public class SignC {
                     spt = new StringTokenizer(checker.readLine(), ",[]");
                     if (user.getText().equals(spt.nextToken())) {
                         userFlag = false;
-                        bob = "نام کاربری تکراری است";
+                        userfError.setText("نام کاربری تکراری است");
                     }
                 }
             }
             //passwordFlag
+            if(pas.getText().isEmpty()){
+                passFlag = false;
+                passError.setText("فیلد خالی است");
+            }
             for (int i = 0; (passFlag) && i < pas.getText().length(); i++) {
                 if ((int) pas.getText().charAt(i) > 122 || ((int) pas.getText().charAt(i) > 90 && (int) pas.getText().charAt(i) < 97) || ((int) pas.getText().charAt(i) > 57 && (int) pas.getText().charAt(i) < 65) || ((int) pas.getText().charAt(i) > 38 && (int) pas.getText().charAt(i) < 48) || (int) pas.getText().charAt(i) < 33) {
                     passFlag = false;
-                    bob = "رمز فقط میتواند عدد و حروف انگلیسی و حروف خاص باشد";
+                    passError.setText("رمز فقط میتواند عدد و حروف انگلیسی و حروف خاص باشد");
                 }
             }
             if (passFlag) {
                 flagPas1 = !(charCheck(pas.getText(), 48, 57));
                 if (flagPas1) {
-                    bob = "رمز عدد ندارد";
+                    passError.setText("رمز عدد ندارد");
                 }
                 flagPas2 = !(charCheck(pas.getText(), 97, 122));
                 if (flagPas2) {
-                    bob = "رمز حرف کوچک انگلیسی ندارد";
+                    passError.setText("رمز حرف کوچک انگلیسی ندارد");
                 }
                 flagPas3 = !(charCheck(pas.getText(), 65, 90));
                 if (flagPas3) {
-                    bob = "رمز حرف بزرگ انگلیسی ندارد";
+                    passError.setText("رمز حرف بزرگ انگلیسی ندارد");
                 }
                 flagPas4 = !(charCheck(pas.getText(), 33, 38));
                 if (flagPas4) {
-                    bob = "رمز کاراکتر خاص ندارد ندارد";
+                    passError.setText("رمز کاراکتر خاص ندارد ندارد");
                 }
                 if (flagPas4 || flagPas3 || flagPas2 || flagPas1) {
                     passFlag = false;
                 }
             }
             //rePassFlagg
-            if (!(pas.getText().equals(Tpas.getText()))) {
-                bob = "رمز ها یکی نیستن";
+            if(Tpas.getText().isEmpty()){
+                rePassFlag = false;
+                tPassError.setText("فیلد خالی است");
+            }
+            if (rePassFlag&&!(pas.getText().equals(Tpas.getText()))) {
+                tPassError.setText("رمز ها یکی نیستن");
                 rePassFlag = false;
             }
             //nameFlag
-            nameFlag = !((charCheckOut(name.getText(), 1740, 1570) && !charCheck(name.getText(), 32, 32)) || name.getText().isEmpty());
-            if (!nameFlag) {
-                bob = "نام فقط باید حروف فارسی باشد";
+            if(name.getText().isEmpty()){
+                nameFlag=false;
+                nameError.setText("فیلد خالی است");
+            }
+            else {
+                nameFlag = !((charCheckOut(name.getText(), 1740, 1570) && !charCheck(name.getText(), 32, 32)));
+                if (!nameFlag) {
+                    nameError.setText("نام فقط باید حروف فارسی باشد");
+                }
             }
             //lNameFlag
-            lNameFlag = !((charCheckOut(Lname.getText(), 1740, 1570) && !charCheck(Lname.getText(), 32, 32)) || Lname.getText().isEmpty());
-            if (!lNameFlag) {
-                bob = "نام خوانوادگی فقط باید حروف فارسی باشد";
+            if(Lname.getText().isEmpty()){
+                lNameFlag=false;
+                lNameError.setText("فیلد خالی است");
+            }
+            else {
+                lNameFlag = !((charCheckOut(Lname.getText(), 1740, 1570) && !charCheck(Lname.getText(), 32, 32)));
+                if (!lNameFlag) {
+                    lNameError.setText("نام خوانوادگی فقط باید حروف فارسی باشد");
+                }
             }
             //idFlag
-            idFlag = !(charCheckOut(ID.getText(), 57, 48) || ID.getText().isEmpty());
-            if (!idFlag) {
-                bob = "کد ملی فقط باید عدد باشد";
+            if(ID.getText().isEmpty()){
+                idFlag=false;
+                idError.setText("فیلد خالی است");
+            }
+            else {
+                idFlag = !(charCheckOut(ID.getText(), 57, 48));
+                if (!idFlag) {
+                    idError.setText("کد ملی فقط باید عدد باشد");
+                }
+                else if(ID.getText().length()!=10){
+                    idFlag=false;
+                    idError.setText("شماره فقط باید 10 رقم باشد");
+
+                }
             }
             //birthFlag
             if (DOB.getText().isEmpty()) {
                 birthFlag = false;
-                bob = "تاریخ تولد را وارد کنید";
+                dobError.setText("فیلد خالی است");
             }
-            if (birthFlag) {
-                birthFlag = !(charCheckOut(DOB.getText(), 57, 48) && !charCheck(DOB.getText(), 47, 47)) || DOB.getText().charAt(5) != '/' || DOB.getText().charAt(8) != '/';
-                if (!birthFlag) {
-                    bob = "تاریخ تولد فقط باید عدد و / باشد";
-                }
+            if(birthFlag&&DOB.getText().length()!=10){
+                birthFlag = false;
+                dobError.setText("غیر قابل قبول");
+            }
+            if(birthFlag&&(charCheckOut(DOB.getText(), 57, 47) || DOB.getText().charAt(4) != '/' || DOB.getText().charAt(7) != '/')){
+                dobError.setText("تاریخ تولد فقط باید عدد و / باشد");
+                birthFlag=false;
             }
             //phoneFlag
-            phoneFlag = !(charCheckOut(num.getText(), 57, 48) || num.getText().isEmpty());
-            if (!phoneFlag) {
-                bob = "شماره فقط باید عدد باشد";
+            if(num.getText().isEmpty()){
+                phoneFlag=false;
+                phoneError.setText("فیلد خالی است");
+            }
+            else {
+                phoneFlag = !(charCheckOut(num.getText(), 57, 48));
+                if (!phoneFlag) {
+                    phoneError.setText("شماره فقط باید عدد باشد");
+                }
+                else if(num.getText().length()!=11){
+                    phoneFlag=false;
+                    phoneError.setText("شماره فقط باید 11 رقم باشد");
+
+                }
             }
             //addFlag
             if (ADD.getText().isEmpty()) {
                 addFlag = false;
-                bob = "ادرس داده نشد";
+                addError.setText("ادرس داده نشد");
             }
             for (int i = 0; addFlag && i < ADD.getText().length(); i++) {
                 if (ADD.getText().charAt(i) == '[' || ADD.getText().charAt(i) == ']' || ADD.getText().charAt(i) == ',') {
                     addFlag = false;
-                    bob = "از کاراکتر های غیر مجاز در ادرس استفاده نکنید";
+                    addError.setText("از کاراکتر های غیر مجاز در ادرس استفاده نکنید");
                 }
             }
             //
-            bob = "خطا در ثبت نام";
-            label.setText(bob);
             if (userFlag && passFlag && rePassFlag && nameFlag && lNameFlag && addFlag && idFlag && phoneFlag && birthFlag) {
                 checker.close();
                 adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream("userInfo.txt", true)));
@@ -175,6 +250,10 @@ public class SignC {
                 Stage sign1 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                 sign1.setScene(scene);
                 sign1.show();
+            }
+            else{
+                label.setText("خطا در ثبت نام");
+                bob="خطا در ثبت نام";
             }
             loger.println("(" + LocalDateTime.now() + "):" + user.getText() + ":\"" + bob + "\"");
             loger.close();

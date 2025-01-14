@@ -71,6 +71,12 @@ public class infoCntroler {
         }
 
     }
+
+    @FXML
+    private void sendChat(ActionEvent event) {
+
+    }
+
     public static void changeFile(int lineNum, String replacement, String file){
         try {
             File temp =new File("temp.txt");

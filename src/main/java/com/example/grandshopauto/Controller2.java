@@ -38,7 +38,7 @@ public class Controller2 {
             e.printStackTrace();
         }
     }
-    public void button1(ActionEvent actionEvent){
+    public void button1(ActionEvent event){
         try{
             Parent info = FXMLLoader.load(getClass().getResource("info.fxml"));
             Scene scene=new Scene(info,1280,720);
