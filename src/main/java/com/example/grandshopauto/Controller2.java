@@ -42,7 +42,7 @@ public class Controller2 {
 //        try{
 //            Parent info = FXMLLoader.load(getClass().getResource("info.fxml"));
 //            Scene scene=new Scene(info,1280,720);
-////            scene.getStylesheets().add(getClass().getResource("CSS.css").toExternalForm());
+//           scene.getStylesheets().add(getClass().getResource("CSS.css").toExternalForm());
 //            Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
 //            info1.setScene(scene);
 //            info1.show();
