@@ -16,14 +16,14 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grandshopauto.Controller2">
    <center>
-      <AnchorPane minHeight="1080.0" minWidth="1920.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="1080.0" prefWidth="1920.0" BorderPane.alignment="CENTER">
+      <AnchorPane minHeight="1080.0" minWidth="1818.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="1080.0" prefWidth="1818.0" BorderPane.alignment="CENTER">
          <BorderPane.margin>
             <Insets top="300.0" />
          </BorderPane.margin>
          <children>
-            <ScrollPane prefHeight="1080.0" prefWidth="1920.0">
+            <ScrollPane layoutX="140.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="1080.0" prefWidth="1735.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3500.0" prefWidth="1918.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3000.0" prefWidth="1918.0">
                      <children>
                         <StackPane layoutX="320.0" prefHeight="720.0" prefWidth="1280.0">
                            <children>
@@ -82,7 +82,7 @@
                                     <Insets left="240.0" />
                                  </HBox.margin>
                                  <children>
-                                    <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
+                                    <Label alignment="CENTER" prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="پرطرفدارترین" />
                                     <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
                                     <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
                                     <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
