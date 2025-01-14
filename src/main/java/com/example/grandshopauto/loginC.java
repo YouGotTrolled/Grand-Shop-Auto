@@ -74,11 +74,10 @@ public class loginC {
 
     @FXML
     private void initialize() {
-        fp.setVisible(false);
         //Timeline t1 = new Timeline(new KeyFrame(Duration.millis(0), event -> {
-            int j =-700;
+            int j =0;
             for(int i = 0 ; i < 8000 ; ) {
-                j+=700;
+                j+=600;
                 if (i%8==0) {
                     Timeline t2 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { noor.setVisible(true);}));
                     t2.play();

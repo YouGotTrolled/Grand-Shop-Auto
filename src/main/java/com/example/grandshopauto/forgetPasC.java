@@ -58,10 +58,10 @@ public class forgetPasC {
     @FXML
     private void initialize() {
         //fp.setVisible(false);
-        Timeline t1 = new Timeline(new KeyFrame(Duration.millis(3000), event -> {
-            int j =-1000;
+//        Timeline t1 = new Timeline(new KeyFrame(Duration.millis(3000), event -> {
+            int j =0;
             for(int i = 0 ; i < 8000 ; ) {
-                j+=1000;
+                j+=600;
                 if (i%8==0) {
                     Timeline t2 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { noor.setVisible(true);}));
                     t2.play();
@@ -134,8 +134,8 @@ public class forgetPasC {
                 }
                 i+=2;
             }
-        }));
-        t1.play();
+//        }));
+//        t1.play();
     }
 
     private PrintWriter systemFile;
