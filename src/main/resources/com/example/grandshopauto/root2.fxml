@@ -276,4 +276,15 @@
             </BorderPane>
          </children></VBox>
    </top>
+   <right>
+      <BorderPane prefHeight="670.0" prefWidth="0.0" BorderPane.alignment="CENTER">
+         <bottom>
+            <Button fx:id="SABAD" mnemonicParsing="false" prefHeight="65.0" prefWidth="65.0" style="-fx-background-color: red;" text="سبد خرید" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="25.0" left="-130.0" />
+               </BorderPane.margin>
+            </Button>
+         </bottom>
+      </BorderPane>
+   </right>
 </BorderPane>

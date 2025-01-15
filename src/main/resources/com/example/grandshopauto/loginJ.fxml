@@ -188,24 +188,30 @@
                                        </StackPane.margin>
                                     </PasswordField>
                                  </children>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
                               </StackPane>
                            </children>
+                           <VBox.margin>
+                              <Insets top="15.0" />
+                           </VBox.margin>
                         </HBox>
-                        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="598.0">
+                        <HBox alignment="CENTER_RIGHT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="39.0" prefWidth="598.0">
                            <children>
-                              <Button fx:id="fp" minHeight="30.0" minWidth="90.0" mnemonicParsing="false" onAction="#forget" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: black;" text="فراموشی رمز" textAlignment="CENTER" textFill="#00b1f0">
+                              <Button fx:id="signUP" minHeight="30.0" mnemonicParsing="false" onAction="#signUp" prefHeight="30.0" prefWidth="90.0" text="ثبت نام">
                                  <HBox.margin>
-                                    <Insets right="125.0" top="-25.0" />
-                                 </HBox.margin>
-                              </Button>
-                              <Button fx:id="signUP" mnemonicParsing="false" onAction="#signUp" prefHeight="30.0" prefWidth="90.0" text="ثبت نام">
-                                 <HBox.margin>
-                                    <Insets right="-90.0" top="160.0" />
+                                    <Insets right="120.0" top="120.0" />
                                  </HBox.margin>
                               </Button>
                               <Button minHeight="30.0" minWidth="90.0" mnemonicParsing="false" onAction="#login" prefHeight="30.0" prefWidth="90.0" text="ورود">
                                  <HBox.margin>
-                                    <Insets right="100.0" top="15.0" />
+                                    <Insets right="-79.0" top="120.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <Button fx:id="fp" minHeight="30.0" minWidth="90.0" mnemonicParsing="false" onAction="#forget" prefHeight="30.0" prefWidth="90.0" style="-fx-background-color: black;" text="فراموشی رمز" textAlignment="CENTER" textFill="#00b1f0">
+                                 <HBox.margin>
+                                    <Insets right="86.0" top="-15.0" />
                                  </HBox.margin>
                               </Button>
                            </children>
@@ -215,7 +221,7 @@
                         </HBox>
                         <Label fx:id="label" alignment="CENTER_RIGHT" maxHeight="30.0" maxWidth="481.0" minWidth="300.0" prefHeight="30.0" prefWidth="481.0" textAlignment="RIGHT" textFill="#fa0000">
                            <VBox.margin>
-                              <Insets right="100.0" top="-5.0" />
+                              <Insets right="100.0" top="-20.0" />
                            </VBox.margin>
                         </Label>
                      </children>
