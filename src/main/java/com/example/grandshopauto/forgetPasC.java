@@ -142,14 +142,15 @@ public class forgetPasC {
     @FXML
     public void login(ActionEvent actionEvent)  {
         try {
-            systemFile=new PrintWriter(new BufferedOutputStream(new FileOutputStream("systemFile.txt")));
+            systemFile=new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\systemFiles\\cUser.txt")));
             String bob="";
             boolean tID = false;
             boolean tekrar = false;
-            loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream("log.txt",true)));
-            checker = new BufferedReader(new FileReader("userInfo.txt"));
+            loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\systemFiles\\log.txt",true)));
+            File userCheck;
             String user = username.getText();
             String ID1 = ID.getText();
+            String temp;
             if (user.isEmpty()){
                 label.setText("نام کاربری خود را وارد کنید");
             }
@@ -157,38 +158,38 @@ public class forgetPasC {
                 label.setText("کد ملی خود را وارد کنید");
             }
             else {
-                while ((checker.read()) != -1 ) {
-                    tokenizer = new StringTokenizer(checker.readLine(), ",[]");
-                    if ( user.equals(tokenizer.nextToken()) ) {
-                        tekrar = true;
-                    }
-                    else {
-                    }
-                    String temp = tokenizer.nextToken();
-                    if ( ID1.equals(tokenizer.nextToken()) ) {
-                        tID = true;
-                    }
-                }
-                if (!tekrar){
+                userCheck=new File(".\\userInfo\\"+user);
+                if (!userCheck.exists()){
                     label.setText("حسابی با این مشخصات وجود ندارد ، از بخش  ثبت نام یکی ایجاد کنید");
                     bob="حسابی با این مشخصات وجود ندارد ، از بخش  ثبت نام یکی ایجاد کنید";
                 }
-                else if (!tID) {
-                    label.setText("کد ملی اشتباه است ");
-                    bob="کد ملی اشتباه است ";
-                    fp.setVisible(true);
-                }
-                else  {
-                    if (tekrar && tID ) {
-                        bob="با موفقیت وارد سیستم شد";
-                        systemFile.print(username.getText());
+                else {
+                    checker = new BufferedReader(new FileReader(".\\userInfo\\" + user + "\\acInfo.txt"));
+                    temp = checker.readLine();
+                    temp = checker.readLine();
+                    tokenizer = new StringTokenizer(checker.readLine(), ":");
+                    temp = tokenizer.nextToken();
+                    if (ID.getText().equals(tokenizer.nextToken())) {
+                        bob = "با موفقیت وارد سیستم شد";
+                        PrintWriter pLogger = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\userInfo\\"+username.getText()+"\\pLog.txt",true)));
+                        pLogger.println("(" + LocalDateTime.now() + "):" + username.getText() + ":\""+bob+"\"");
+                        pLogger.close();
+                        //finding out if is admin
+                        for (int i = 0; i < 6; i++) {
+                            temp = checker.readLine();
+                        }
+                        //
+                        systemFile.print("username:" + username.getText() + "\n" + temp);
                         systemFile.close();
-                        Parent root2= FXMLLoader.load(getClass().getResource("root2.fxml"));
-                        Scene scene=new Scene(root2,1280,720);
+                        Parent root2 = FXMLLoader.load(getClass().getResource("root2.fxml"));
+                        Scene scene = new Scene(root2, 1280, 720);
                         scene.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());
                         Stage login1 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
                         login1.setScene(scene);
                         login1.show();
+                    } else {
+                        label.setText("رمز عبور اشتباه است ");
+                        bob = "رمز عبور اشتباه است ";
                     }
                 }
             }

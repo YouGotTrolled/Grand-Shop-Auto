@@ -16,34 +16,38 @@ public class Controller1 {
     private ImageView logo;
     @FXML
     private void initialize() throws IOException {
-        FadeTransition fadeIn = new FadeTransition(Duration.millis(3000), title);
-        fadeIn.setFromValue(0.0);
-        fadeIn.setToValue(1.0);
-        fadeIn.setCycleCount(1);
-        fadeIn.setAutoReverse(false);
-        fadeIn.play();
-        FadeTransition fadeIn1 = new FadeTransition(Duration.millis(3000), logo);
-        fadeIn1.setFromValue(0.0);
-        fadeIn1.setToValue(1.0);
-        fadeIn1.setCycleCount(1);
-        fadeIn1.setAutoReverse(false);
-        fadeIn1.play();
         try {
-            File userInfo = new File("userInfo.txt");
-            File products = new File("products.txt");
-            File log = new File("log.txt");
-            File systemFile = new File("systemFile.txt");
+            FadeTransition fadeIn = new FadeTransition(Duration.millis(3000), title);
+            fadeIn.setFromValue(0.0);
+            fadeIn.setToValue(1.0);
+            fadeIn.setCycleCount(1);
+            fadeIn.setAutoReverse(false);
+            fadeIn.play();
+            FadeTransition fadeIn1 = new FadeTransition(Duration.millis(3000), logo);
+            fadeIn1.setFromValue(0.0);
+            fadeIn1.setToValue(1.0);
+            fadeIn1.setCycleCount(1);
+            fadeIn1.setAutoReverse(false);
+            fadeIn1.play();
+            File userInfo = new File("userInfo");
+            File products = new File(".\\systemFiles\\products");
+            File log = new File(".\\systemFiles\\log.txt");
+            File systemFile = new File("systemFiles");
+            File cUser = new File(".\\systemFiles\\cUser.txt");
             if (!userInfo.exists()) {
-                userInfo.createNewFile();
+                userInfo.mkdir();
+            }
+            if(!systemFile.exists()){
+                systemFile.mkdir();
             }
             if (!products.exists()) {
-                products.createNewFile();
+                products.mkdir();
+            }
+            if(!cUser.exists()){
+                systemFile.createNewFile();
             }
             if (!log.exists()) {
                 log.createNewFile();
-            }
-            if(!systemFile.exists()){
-                systemFile.createNewFile();
             }
         }
         catch (IOException e){

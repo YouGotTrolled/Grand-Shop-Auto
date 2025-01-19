@@ -264,7 +264,7 @@
                   </ImageView>
                </center>
                <left>
-                  <Button mnemonicParsing="false" onAction="#info" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #9ba8a8;" text="info" BorderPane.alignment="CENTER">
+                  <Button fx:id="infoButtom" mnemonicParsing="false" onAction="#info" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #9ba8a8;" text="info" BorderPane.alignment="CENTER">
                      <font>
                         <Font size="14.0" />
                      </font>

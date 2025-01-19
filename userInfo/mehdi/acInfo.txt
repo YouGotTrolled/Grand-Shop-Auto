@@ -1,0 +1,9 @@
+username:mehdi
+password:Ramz1234#
+id:2960820411
+date of birth:1384/12/18
+address:ارومیه
+phone number:09036686324
+name:مهدی
+last name:علی نژاد
+administrator:false

@@ -1,0 +1,905 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grandshopauto.Controller2">
+    <center>
+        <AnchorPane minHeight="1080.0" minWidth="1818.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="1080.0" prefWidth="1818.0" BorderPane.alignment="CENTER">
+            <BorderPane.margin>
+                <Insets top="300.0" />
+            </BorderPane.margin>
+            <children>
+                <ScrollPane layoutX="140.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="1080.0" prefWidth="1735.0">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2400.0" prefWidth="1918.0">
+                            <children>
+                                <StackPane layoutX="320.0" layoutY="70.0" prefHeight="378.0" prefWidth="1280.0">
+                                    <children>
+                              <MediaView fx:id="media" fitHeight="250.0" fitWidth="350.0">
+                                 <StackPane.margin>
+                                    <Insets right="800.0" top="50.0" />
+                                 </StackPane.margin>
+                              </MediaView>
+                                        <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="420.0" text="نام برند : مرسدس بنز" textAlignment="RIGHT">
+                                            <StackPane.margin>
+                                                <Insets left="800.0" top="-155.0" />
+                                            </StackPane.margin>
+                                 <opaqueInsets>
+                                    <Insets left="120.0" />
+                                 </opaqueInsets>
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                                        </Label>
+                              <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="420.0" text="کشور سازنده : آلمان" textAlignment="RIGHT">
+                                 <StackPane.margin>
+                                    <Insets left="800.0" top="-15.0" />
+                                 </StackPane.margin>
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                              </Label>
+                                        <Label alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="535.0" text="بنیان گذاران : کارل بنز , گوتلیب دایملر ">
+                                 <StackPane.margin>
+                                    <Insets left="690.0" top="135.0" />
+                                 </StackPane.margin>
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                                        </Label>
+                                        <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="420.0" text="تاریخ تاسیس : ۲۸ ژوئن ۱۹۲۶ " textAlignment="RIGHT">
+                                            <StackPane.margin>
+                                                <Insets left="800.0" top="285.0" />
+                                            </StackPane.margin>
+                                 <font>
+                                    <Font size="29.0" />
+                                 </font>
+                                        </Label>
+                                    </children>
+                                </StackPane>
+                                <AnchorPane layoutX="1600.0" prefHeight="765.0" prefWidth="320.0" />
+                        <VBox layoutX="-25.0" layoutY="445.0" prefHeight="6.0" prefWidth="1966.0" style="-fx-background-color: black;" />
+                        <VBox layoutX="327.0" layoutY="453.0" prefHeight="2600.0" prefWidth="1280.0">
+                           <children>
+                              <AnchorPane prefHeight="300.0" prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets top="75.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <StackPane prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="125.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="510.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="895.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="85.0" prefHeight="300.0" prefWidth="200.0">
+                                 <children>
+                                    <StackPane prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="125.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="510.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="895.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="75.0" />
+                                 </VBox.margin>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="480.0" prefHeight="300.0" prefWidth="200.0">
+                                 <children>
+                                    <StackPane prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="125.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="510.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="895.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="75.0" />
+                                 </VBox.margin>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="480.0" prefHeight="300.0" prefWidth="200.0">
+                                 <children>
+                                    <StackPane prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="125.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="510.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="895.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="75.0" />
+                                 </VBox.margin>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </AnchorPane>
+    </center>
+    <top>
+        <VBox prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+            <children>
+                <BorderPane prefHeight="200.0" prefWidth="200.0">
+                    <right>
+                        <TextField prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #9ba8a8;" BorderPane.alignment="CENTER">
+                            <BorderPane.margin>
+                                <Insets right="15.0" />
+                            </BorderPane.margin>
+                        </TextField>
+                    </right>
+                    <center>
+                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                            <image>
+                                <Image url="@../../../u.png" />
+                            </image>
+                        </ImageView>
+                    </center>
+                    <left>
+                        <Button mnemonicParsing="false" onAction="#info" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #9ba8a8;" text="info" BorderPane.alignment="CENTER">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                            <BorderPane.margin>
+                                <Insets left="15.0" />
+                            </BorderPane.margin>
+                        </Button>
+                    </left>
+                </BorderPane>
+            </children></VBox>
+    </top>
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="&lt;" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+            <Button layoutX="30.0" layoutY="130.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="&gt;" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+            <Button layoutX="110.0" layoutY="130.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="سبد" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="120.0" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

@@ -17,8 +17,6 @@ import java.util.StringTokenizer;
 public class SignC {
     private PrintWriter loger;
 
-    private BufferedReader checker;
-
     private PrintWriter adder;
 
     private StringTokenizer spt;
@@ -69,6 +67,7 @@ public class SignC {
     @FXML
     public void sub(ActionEvent actionEvent) {
         try {
+            //flags
             boolean flagPas1 = true;
             boolean flagPas2 = true;
             boolean flagPas3 = true;
@@ -82,9 +81,11 @@ public class SignC {
             boolean phoneFlag = true;
             boolean addFlag = true;
             boolean birthFlag = true;
-            loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream("log.txt", true)));
-            checker = new BufferedReader(new FileReader("userInfo.txt"));
-            systemFile = new PrintWriter(new BufferedOutputStream(new FileOutputStream("systemFile.txt")));
+            //
+            loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\systemFiles\\log.txt", true)));
+            File userCheck=new File(".\\userInfo\\"+user.getText());
+            File acInfo=new File(".\\userInfo\\"+user.getText()+"\\acInfo.txt");
+            systemFile = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\systemFiles\\cUser.txt")));
             String bob;
             //start
             nameError.setText("");
@@ -107,14 +108,9 @@ public class SignC {
                     userfError.setText("یوزرنیم فقط میتواند عدد و حروف انگلیسی باشد");
                 }
             }
-            if (userFlag) {
-                while (userFlag && checker.read() != -1) {
-                    spt = new StringTokenizer(checker.readLine(), ",[]");
-                    if (user.getText().equals(spt.nextToken())) {
-                        userFlag = false;
-                        userfError.setText("نام کاربری تکراری است");
-                    }
-                }
+            if(userFlag&&userCheck.exists()){
+                userFlag = false;
+                userfError.setText("نام کاربری تکراری است");
             }
             //passwordFlag
             if(pas.getText().isEmpty()){
@@ -230,18 +226,24 @@ public class SignC {
                 addError.setText("ادرس داده نشد");
             }
             for (int i = 0; addFlag && i < ADD.getText().length(); i++) {
-                if (ADD.getText().charAt(i) == '[' || ADD.getText().charAt(i) == ']' || ADD.getText().charAt(i) == ',') {
+                if (ADD.getText().charAt(i) == ':') {
                     addFlag = false;
                     addError.setText("از کاراکتر های غیر مجاز در ادرس استفاده نکنید");
                 }
             }
             //
             if (userFlag && passFlag && rePassFlag && nameFlag && lNameFlag && addFlag && idFlag && phoneFlag && birthFlag) {
-                checker.close();
-                adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream("userInfo.txt", true)));
-                adder.println("[" + user.getText() + "," + pas.getText() + "," + ID.getText() + "," + DOB.getText() + "," + ADD.getText() + "," + num.getText() + "," + name.getText() + "," + Lname.getText() + "]");
+                userCheck.mkdir();
+                acInfo.createNewFile();
+                File pLog=new File(".\\userInfo\\"+user.getText()+"\\pLog.txt");
+                pLog.createNewFile();
+                PrintWriter pLogger = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\userInfo\\"+user.getText()+"\\pLog.txt",true)));
+                pLogger.println("(" + LocalDateTime.now() + "):" + user.getText() + "ثبت نام با موفقیت انجام شد با اطلاعات:");
+                pLogger.close();
+                adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\userInfo\\"+user.getText()+"\\acInfo.txt", true)));
+                adder.println("username:" + user.getText() + "\npassword:" + pas.getText() + "\nid:" + ID.getText() + "\ndate of birth:" + DOB.getText() + "\naddress:" + ADD.getText() + "\nphone number:" + num.getText() + "\nname:" + name.getText() + "\nlast name:" + Lname.getText()+"\nadministrator:false");
                 adder.close();
-                systemFile.print(user.getText());
+                systemFile.print("username:"+user.getText()+"\nadministrator:false");
                 systemFile.close();
                 bob = "ثبت نام با موفقیت انجام شد با اطلاعات:" + "[" + user.getText() + "," + pas.getText() + "," + ID.getText() + "," + DOB.getText() + "," + ADD.getText() + "," + num.getText() + "," + name.getText() + "," + Lname.getText() + "]";
                 Parent sign = FXMLLoader.load(getClass().getResource("root2.fxml"));
