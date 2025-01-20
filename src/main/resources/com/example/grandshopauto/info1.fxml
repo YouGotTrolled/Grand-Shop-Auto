@@ -50,7 +50,7 @@
                   <Insets top="20.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="edit" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="61.0" prefWidth="347.0" style="-fx-background-color: #1dc7dd;" text=" ویرایش اطلاعات">
+            <Button fx:id="edit" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#changeInfo" prefHeight="61.0" prefWidth="347.0" style="-fx-background-color: #1dc7dd;" text=" ویرایش اطلاعات">
                <font>
                   <Font size="23.0" />
                </font>
@@ -58,7 +58,7 @@
                   <FontAwesomeIcon glyphName="PENCIL" />
                </graphic>
             </Button>
-            <Button fx:id="lst" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" text="  لیست سفارشات  " textAlignment="CENTER">
+            <Button fx:id="lst" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#list1" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" text="  لیست سفارشات  " textAlignment="CENTER">
                <font>
                   <Font size="24.0" />
                </font>
@@ -66,7 +66,7 @@
                   <FontAwesomeIcon glyphName="LIST" />
                </graphic>
             </Button>
-            <Button fx:id="fav" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="59.0" prefWidth="347.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" stylesheets="@info.css" text=" لیست موردعلاقه  ">
+            <Button fx:id="fav" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#list2" prefHeight="59.0" prefWidth="347.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" stylesheets="@info.css" text=" لیست موردعلاقه  ">
                <font>
                   <Font size="24.0" />
                </font>
@@ -74,7 +74,7 @@
                   <FontAwesomeIcon glyphName="HEART" />
                </graphic>
             </Button>
-            <Button fx:id="chat" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="48.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" text=" چت با ادمین">
+            <Button fx:id="chat" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#chat" prefHeight="48.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" text=" چت با ادمین">
                <font>
                   <Font size="24.0" />
                </font>
@@ -82,7 +82,7 @@
                   <FontAwesomeIcon glyphName="COMMENTS" />
                </graphic>
             </Button>
-            <Button fx:id="cart" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="60.0" prefWidth="347.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" text="  سبد خرید  " textAlignment="RIGHT">
+            <Button fx:id="cart" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#card" prefHeight="60.0" prefWidth="347.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" text="  سبد خرید  " textAlignment="RIGHT">
                <font>
                   <Font size="24.0" />
                </font>
@@ -102,7 +102,7 @@
                   </Text>
                </graphic>
             </Button>
-            <Button fx:id="out" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="56.0" prefWidth="347.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" text=" خروج  ">
+            <Button fx:id="out" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#exit" prefHeight="56.0" prefWidth="347.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" text=" خروج  ">
                <font>
                   <Font size="24.0" />
                </font>
@@ -116,7 +116,7 @@
    <center>
       <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <VBox fx:id="cart_" prefHeight="200.0" prefWidth="100.0">
+            <VBox fx:id="cart_" prefHeight="200.0" prefWidth="100.0" visible="false">
                <children>
                   <AnchorPane prefHeight="721.0" prefWidth="933.0">
                      <children>
@@ -145,7 +145,7 @@
                   </AnchorPane>
                </children>
             </VBox>
-            <VBox fx:id="info_a" maxHeight="720.0" minHeight="400.0" prefHeight="705.0" prefWidth="912.0" visible="false">
+            <VBox fx:id="info_a" maxHeight="720.0" minHeight="400.0" prefHeight="705.0" prefWidth="912.0">
                <children>
                   <FontAwesomeIcon fill="#01d0ff" glyphName="USER" size="180">
                      <VBox.margin>
@@ -189,37 +189,37 @@
                               <Font size="25.0" />
                            </font>
                         </Label>
-                        <Label fx:id="dobAge" layoutX="277.0" layoutY="258.0" prefHeight="35.0" prefWidth="71.0" textAlignment="RIGHT" textFill="#24d4d7">
+                        <Label fx:id="dobAge" alignment="CENTER_RIGHT" layoutX="277.0" layoutY="258.0" prefHeight="35.0" prefWidth="71.0" textAlignment="RIGHT" textFill="#24d4d7">
                            <font>
                               <Font size="22.0" />
                            </font>
                         </Label>
-                        <Label fx:id="name" layoutX="762.0" layoutY="74.0" prefHeight="27.0" prefWidth="93.0" textAlignment="RIGHT" textFill="#24d4d7">
+                        <Label fx:id="name" alignment="CENTER_RIGHT" layoutX="408.0" layoutY="74.0" prefHeight="27.0" prefWidth="442.0" textAlignment="RIGHT" textFill="#24d4d7">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="lastName" layoutX="190.0" layoutY="74.0" prefHeight="28.0" prefWidth="60.0" textAlignment="CENTER" textFill="#24d4d7">
+                        <Label fx:id="lastName" alignment="CENTER_RIGHT" layoutX="8.0" layoutY="74.0" prefHeight="28.0" prefWidth="242.0" textAlignment="CENTER" textFill="#24d4d7">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="ID" layoutX="710.0" layoutY="166.0" prefHeight="27.0" prefWidth="103.0" textAlignment="CENTER" textFill="#24d4d7">
+                        <Label fx:id="ID" alignment="CENTER_RIGHT" layoutX="527.0" layoutY="166.0" prefHeight="27.0" prefWidth="292.0" textAlignment="CENTER" textFill="#24d4d7">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="DOB" layoutX="173.0" layoutY="162.0" prefHeight="26.0" prefWidth="94.0" textAlignment="CENTER" textFill="#24d4d7">
+                        <Label fx:id="DOB" alignment="CENTER_RIGHT" layoutX="50.0" layoutY="162.0" prefHeight="27.0" prefWidth="217.0" textAlignment="CENTER" textFill="#24d4d7">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="num" layoutX="673.0" layoutY="262.0" textAlignment="CENTER" textFill="#24d4d7">
+                        <Label fx:id="num" alignment="CENTER_RIGHT" layoutX="461.0" layoutY="262.0" prefHeight="27.0" prefWidth="331.0" textAlignment="CENTER" textFill="#24d4d7">
                            <font>
                               <Font size="18.0" />
                            </font>
                         </Label>
-                        <Label fx:id="addr" alignment="CENTER" layoutX="590.0" layoutY="371.0" prefHeight="27.0" prefWidth="68.0" textAlignment="CENTER" textFill="#24d4d7">
+                        <Label fx:id="addr" alignment="CENTER_RIGHT" layoutX="28.0" layoutY="371.0" prefHeight="27.0" prefWidth="630.0" textAlignment="CENTER" textFill="#24d4d7">
                            <font>
                               <Font size="18.0" />
                            </font>

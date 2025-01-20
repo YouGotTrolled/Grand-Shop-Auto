@@ -26,14 +26,6 @@ public class Application extends javafx.application.Application {
             Scene scene2 = new Scene(login.load(), 1280, 720);
             scene2.getStylesheets().add(getClass().getResource("loginCSS.css").toExternalForm());
 
-            FXMLLoader root2 = new FXMLLoader(Application.class.getResource("loginJ.fxml"));
-            Scene scene3 = new Scene(root2.load(), 1280, 720);
-            scene3.getStylesheets().add(getClass().getResource("app2.css").toExternalForm());
-
-            FXMLLoader forget = new FXMLLoader(Application.class.getResource("forgetPas.fxml"));
-            Scene scene4 = new Scene(forget.load(), 1280, 720);
-            //scene3.getStylesheets().add(getClass().getResource(".css").toExternalForm());
-
             loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream("log.txt",true)));
 
             Image ic = new Image("u.png");

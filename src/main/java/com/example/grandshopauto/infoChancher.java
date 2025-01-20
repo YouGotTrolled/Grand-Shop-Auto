@@ -274,7 +274,7 @@ public class infoChancher {
     @FXML
     private void back(ActionEvent actionEvent) {
         try {
-            Parent back1 = FXMLLoader.load(getClass().getResource("info.fxml"));
+            Parent back1 = FXMLLoader.load(getClass().getResource("info1.fxml"));
             Scene scene = new Scene(back1, 1280 ,720);
 //            scene.getStylesheets().add(getClass().getResource(".css").toExternalForm());
             Stage back2 = (Stage) ((Node)actionEvent.getSource()).getScene().getWindow();

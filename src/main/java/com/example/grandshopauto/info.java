@@ -1,13 +1,19 @@
 package com.example.grandshopauto;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.StringTokenizer;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 
 public class info {
@@ -142,8 +148,66 @@ public class info {
         }
 
     }
+    @FXML
+    void card(ActionEvent event) {
+
+    }
+
+    @FXML
+    private void changeInfo(ActionEvent event) {
+        try {
+            Parent back1 = FXMLLoader.load(getClass().getResource("changeInfo.fxml"));
+            Scene scene = new Scene(back1, 1280 ,720);
+            Stage back2 = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            back2.setScene(scene);
+            back2.show();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void chat(ActionEvent event) {
+        try {
+            Parent back1 = FXMLLoader.load(getClass().getResource("userChat.fxml"));
+            Scene scene = new Scene(back1, 1280 ,720);
+            Stage back2 = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            back2.setScene(scene);
+            back2.show();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void exit(ActionEvent event) {
+        try {
+            Parent back1 = FXMLLoader.load(getClass().getResource("loginJ.fxml"));
+            Scene scene = new Scene(back1, 1280 ,720);
+            Stage back2 = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            back2.setScene(scene);
+            back2.show();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void list1(ActionEvent event) {
+
+    }
+
+    @FXML
+    void list2(ActionEvent event) {
+
+    }
     private void addBalance(){
         try {
+            PrintWriter pLogger=new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\userInfo\\"+user+"\\pLog.txt",true)));
+            PrintWriter loger=new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\systemFiles\\log.txt",true)));
             String bal2=btn_charge.getText();
             if (bal2.length()>9){
                 bal2 = "1000000000";
@@ -160,8 +224,10 @@ public class info {
                 bal3=1000000000;
             }
             btn_charge.clear();
-
-
+            pLogger.println("(" + LocalDateTime.now() + "):" + user+ ":\"حساب شارژ شد\"");
+            loger.println("(" + LocalDateTime.now() + "):" + user+ ":\"حساب شارژ شد\"");
+            pLogger.close();
+            loger.close();
         } catch (Exception e){
             e.printStackTrace();
         }

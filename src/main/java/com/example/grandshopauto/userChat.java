@@ -81,7 +81,7 @@ public class userChat {
     @FXML
     private void back(ActionEvent event) {
         try {
-            Parent back1 = FXMLLoader.load(getClass().getResource("info.fxml"));
+            Parent back1 = FXMLLoader.load(getClass().getResource("info1.fxml"));
             Scene scene = new Scene(back1, 1280 ,720);
             Stage back2 = (Stage) ((Node)event.getSource()).getScene().getWindow();
             back2.setScene(scene);
