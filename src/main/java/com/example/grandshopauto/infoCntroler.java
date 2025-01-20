@@ -8,7 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
+import javafx.scene.control.TextArea;
 import java.io.*;
 import java.util.StringTokenizer;
 
@@ -16,6 +16,8 @@ public class infoCntroler {
     @FXML
     private Label DOB;
 
+    @FXML
+    private TextArea id;
     @FXML
     private Label Id;
 

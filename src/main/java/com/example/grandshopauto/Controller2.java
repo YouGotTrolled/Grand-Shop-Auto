@@ -54,7 +54,7 @@ public class Controller2 {
                 info1.setScene(scene);
                 info1.show();
             }else {
-                Parent info = FXMLLoader.load(getClass().getResource("info.fxml"));
+                Parent info = FXMLLoader.load(getClass().getResource("info1.fxml"));
                 Scene scene = new Scene(info, 1280, 720);
                 Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 info1.setScene(scene);
@@ -67,7 +67,7 @@ public class Controller2 {
     }
     public void button1(ActionEvent event){
         try{
-            Parent info = FXMLLoader.load(getClass().getResource("info.fxml"));
+            Parent info = FXMLLoader.load(getClass().getResource("info1.fxml"));
             Scene scene=new Scene(info,1280,720);
             Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
             info1.setScene(scene);

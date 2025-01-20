@@ -1,2 +1,2 @@
-username:admin
-administrator:true
+username:Abdoll
+administrator:false

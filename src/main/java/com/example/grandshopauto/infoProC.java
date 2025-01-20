@@ -2,10 +2,10 @@ package com.example.grandshopauto;
 
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.lang.classfile.Label;
 
 public class infoProC {
 

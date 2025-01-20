@@ -241,7 +241,7 @@ public class SignC {
                 pLogger.println("(" + LocalDateTime.now() + "):" + user.getText() + "ثبت نام با موفقیت انجام شد با اطلاعات:");
                 pLogger.close();
                 adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\userInfo\\"+user.getText()+"\\acInfo.txt", true)));
-                adder.println("username:" + user.getText() + "\npassword:" + pas.getText() + "\nid:" + ID.getText() + "\ndate of birth:" + DOB.getText() + "\naddress:" + ADD.getText() + "\nphone number:" + num.getText() + "\nname:" + name.getText() + "\nlast name:" + Lname.getText()+"\nadministrator:false");
+                adder.println("username:" + user.getText() + "\npassword:" + pas.getText() + "\nid:" + ID.getText() + "\ndate of birth:" + DOB.getText() + "\naddress:" + ADD.getText() + "\nphone number:" + num.getText() + "\nname:" + name.getText() + "\nlast name:" + Lname.getText()+"\nadministrator:false\nbalance:0");
                 adder.close();
                 systemFile.print("username:"+user.getText()+"\nadministrator:false");
                 systemFile.close();
