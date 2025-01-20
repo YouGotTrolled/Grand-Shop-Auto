@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
 
 public class info {
         String user;
-        String bal3;
+        int bal3;
         @FXML
         private VBox info_a;
 
@@ -111,8 +111,9 @@ public class info {
             temp = checker.readLine();
             spt=new StringTokenizer(checker.readLine(),":");
             temp= spt.nextToken();
-            bal3 = spt.nextToken();
-            balance.setText("$"+bal3);
+            temp= spt.nextToken();
+            bal3 = Integer.parseInt(temp);
+            balance.setText("$"+temp);
             checker.close();
             btn_charge.setOnAction(e -> addBalance());
         } catch (FileNotFoundException e) {
@@ -143,21 +144,20 @@ public class info {
     }
     private void addBalance(){
         try {
-            String bal4=btn_charge.getText();
-            int bal =  Integer.parseInt((bal3));
-            if (bal4.length()>9){
-                bal4 = "1000000000";
+            String bal2=btn_charge.getText();
+            if (bal2.length()>9){
+                bal2 = "1000000000";
             }
-            int bal2 =  Integer.parseInt(bal4);
-            if ((bal+bal2) < 1000000001){
-                balance.setText("$"+String.valueOf((bal+bal2)));
-                changeFile(10,"balance:"+String.valueOf((bal+bal2)),".\\userInfo\\"+user+"\\acInfo.txt");
-                bal3=String.valueOf((bal+bal2));
+            int bal =  Integer.parseInt(bal2);
+            if ((bal3+bal) < 1000000001){
+                balance.setText("$"+String.valueOf((bal3+bal)));
+                changeFile(10,"balance:"+String.valueOf((bal3+bal)),".\\userInfo\\"+user+"\\acInfo.txt");
+                bal3=bal3+bal;
             }
             else{
                 balance.setText("$"+String.valueOf((1000000000)));
                 changeFile(10,"balance:1000000000",".\\userInfo\\"+user+"\\acInfo.txt");
-                bal3=String.valueOf(1000000000);
+                bal3=1000000000;
             }
             btn_charge.clear();
 
