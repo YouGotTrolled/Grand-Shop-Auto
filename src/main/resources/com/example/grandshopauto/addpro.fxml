@@ -30,7 +30,7 @@
             </VBox>
          </right>
          <left>
-            <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="Back" BorderPane.alignment="CENTER">
+            <Button mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="75.0" text="Back" BorderPane.alignment="CENTER">
                <BorderPane.margin>
                   <Insets left="50.0" top="-50.0" />
                </BorderPane.margin>
@@ -111,7 +111,7 @@
                                     <Insets top="10.0" />
                                  </VBox.margin>
                               </TextField>
-                              <TextField fx:id="price" alignment="CENTER_RIGHT" prefHeight="35.0" promptText="ریال">
+                              <TextField fx:id="price" alignment="CENTER_RIGHT" prefHeight="35.0" promptText="دلار">
                                  <VBox.margin>
                                     <Insets top="40.0" />
                                  </VBox.margin>
@@ -159,7 +159,7 @@
                         <Insets top="25.0" />
                      </VBox.margin>
                   </HBox>
-                  <HBox prefHeight="250.0" prefWidth="200.0">
+                  <HBox alignment="TOP_RIGHT" prefHeight="250.0" prefWidth="200.0">
                      <children>
                         <TextArea maxHeight="175.0" minHeight="175.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="175.0" prefWidth="650.0">
                            <HBox.margin>
@@ -175,12 +175,15 @@
                            </HBox.margin>
                         </Label>
                      </children>
+                     <VBox.margin>
+                        <Insets right="50.0" />
+                     </VBox.margin>
                   </HBox>
                </children>
             </VBox>
          </center>
          <bottom>
-            <HBox fx:id="sapt" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
                   <Button alignment="CENTER" mnemonicParsing="false" onAction="#signpro" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: TRansparent; -fx-border-color: black;" text="ثبت">
                      <font>

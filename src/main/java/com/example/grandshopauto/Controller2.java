@@ -15,9 +15,25 @@ import java.io.FileReader;
 import java.util.StringTokenizer;
 
 public class Controller2 {
+
     String temp;
     String user;
     boolean isAdmin;
+
+    @FXML
+    private Button button1;
+    @FXML
+    private Button button2;
+    @FXML
+    private Button button3;
+    @FXML
+    private Button button4;
+    @FXML
+    private Button button5;
+    @FXML
+    private Button button6;
+
+
     @FXML
     private ListView<String> border;
     @FXML
@@ -48,11 +64,11 @@ public class Controller2 {
     public void info (ActionEvent event){
         try{
             if(isAdmin){
-                Parent info = FXMLLoader.load(getClass().getResource("admin.fxml"));
-                Scene scene = new Scene(info, 1280, 720);
-                Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                info1.setScene(scene);
-                info1.show();
+                Parent infoadmin = FXMLLoader.load(getClass().getResource("infoAdmin.fxml"));
+                Scene scene = new Scene(infoadmin, 1280, 720);
+                Stage info1admin = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                info1admin.setScene(scene);
+                info1admin.show();
             }else {
                 Parent info = FXMLLoader.load(getClass().getResource("info1.fxml"));
                 Scene scene = new Scene(info, 1280, 720);
@@ -67,14 +83,30 @@ public class Controller2 {
     }
     public void button1(ActionEvent event){
         try{
-            Parent info = FXMLLoader.load(getClass().getResource("info1.fxml"));
-            Scene scene=new Scene(info,1280,720);
-            Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            info1.setScene(scene);
-            info1.show();
+            Parent list1 = FXMLLoader.load(getClass().getResource("list1.fxml"));
+            Scene scene=new Scene(list1,1280,720);
+            Stage list = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            list.setScene(scene);
+            list.show();
         }
         catch (Exception e){
             e.printStackTrace();
         }
     }
+    public void button2(ActionEvent event){
+
+    }
+    public void button3(ActionEvent event){
+
+    }
+    public void button4(ActionEvent event){
+
+    }
+    public void button5(ActionEvent event){
+
+    }
+    public void button6(ActionEvent event){
+
+    }
+
 }

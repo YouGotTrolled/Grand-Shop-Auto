@@ -9,12 +9,14 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.media.MediaView?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grandshopauto.Controller2">
+<!--<?import javafx.scene.media.MediaView?>-->
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grandshopauto.list1C">
     <center>
         <AnchorPane minHeight="1080.0" minWidth="1818.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="1080.0" prefWidth="1818.0" BorderPane.alignment="CENTER">
             <BorderPane.margin>
@@ -27,11 +29,11 @@
                             <children>
                                 <StackPane layoutX="320.0" layoutY="70.0" prefHeight="378.0" prefWidth="1280.0">
                                     <children>
-                              <MediaView fx:id="media" fitHeight="250.0" fitWidth="350.0">
-                                 <StackPane.margin>
-                                    <Insets right="800.0" top="50.0" />
-                                 </StackPane.margin>
-                              </MediaView>
+<!--                              <MediaView fx:id="media" fitHeight="250.0" fitWidth="350.0">-->
+<!--                                 <StackPane.margin>-->
+<!--                                    <Insets right="800.0" top="50.0" />-->
+<!--                                 </StackPane.margin>-->
+<!--                              </MediaView>-->
                                         <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="420.0" text="نام برند : مرسدس بنز" textAlignment="RIGHT">
                                             <StackPane.margin>
                                                 <Insets left="800.0" top="-155.0" />
@@ -127,7 +129,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" onAction="#but1" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
                                           <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
                                              <StackPane.margin>
                                                 <Insets left="200.0" top="261.0" />
@@ -872,16 +874,33 @@
                             </image>
                         </ImageView>
                     </center>
-                    <left>
-                        <Button mnemonicParsing="false" onAction="#info" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #9ba8a8;" text="info" BorderPane.alignment="CENTER">
-                            <font>
-                                <Font size="14.0" />
-                            </font>
-                            <BorderPane.margin>
-                                <Insets left="15.0" />
-                            </BorderPane.margin>
+               <left>
+                  <HBox prefHeight="50.0" prefWidth="266.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#info" prefHeight="20.0" prefWidth="182.0" style="-fx-background-color: #9ba8a8;" text="info">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </HBox.margin>
                         </Button>
-                    </left>
+                        <StackPane maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #9ba8a8;">
+                           <children>
+                              <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../7.png" />
+                                 </image>
+                              </ImageView>
+                              <Button mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: transparent;" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </left>
                 </BorderPane>
             </children></VBox>
     </top>

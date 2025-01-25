@@ -1,5 +1,6 @@
 package com.example.grandshopauto;
 
+import de.jensd.fx.glyphs.testapps.App;
 import javafx.animation.Animation;
 import javafx.animation.AnimationTimer;
 import javafx.animation.KeyFrame;
@@ -8,6 +9,7 @@ import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.AccessibleAction;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -150,9 +152,10 @@ public class loginC {
                 }
                 i+=2;
             }
+//        username.setOnAction(e -> );
+//        pasword.setOnAction(e -> login(ActionEvent actionEvent));
+            //}));
 
-        //}));
-    fp.setVisible(false);
        // t1.play();
     }
 
@@ -189,7 +192,7 @@ public class loginC {
     }
 
     @FXML
-    public void login(ActionEvent actionEvent)  {
+    public void login(ActionEvent actionEvent) {
         try {
             systemFile=new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\systemFiles\\cUser.txt")));
             String bob="";

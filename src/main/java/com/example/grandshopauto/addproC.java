@@ -18,23 +18,21 @@ public class addproC{
     private PrintWriter adder;
 
 
-    @FXML
-    private TextField name;
+//    @FXML
+//    private TextField name;
+//
+//    @FXML
+//    private TextField year;
 
-    @FXML
-    private TextField year;
-
-    @FXML
-    private TextField berand;
+//    @FXML
+//    private TextField berand;
 
     @FXML
     private TextField information;
 
-    @FXML
-    private TextField price;
+//    @FXML
+//    private TextField price;
 
-    @FXML
-    private Button sapt;
 
     @FXML
     public void initialize(){
@@ -42,20 +40,12 @@ public class addproC{
     }
 
     @FXML
-    public void signpro (ActionEvent actionEvent) {
+    public void signpro () {
         try {
-
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-    }
-    public void sapt (ActionEvent actionEvent) {
-        try {
-            checker.close();
-            adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream("products.txt", true)));
-            adder.println("[" + name.getText() + "," + berand.getText() + "," + price.getText() + "," + year.getText() + "," + information.getText() + "]");
-            adder.close();
+//            checker.close();
+//            adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream("products.txt", true)));
+//            adder.println("[" + name.getText() + "," + berand.getText() + "," + price.getText() + "," + year.getText() + "," + information.getText() + "]");
+//            adder.close();
 //            systemFile.print(user.getText());
 //            systemFile.close();
 //            bob = "ثبت نام با موفقیت انجام شد با اطلاعات:" + "[" + name.getText() + "," + berand.getText() + "," + price.getText() + "," + year.getText() + "," + information.getText() + "]";
@@ -70,4 +60,17 @@ public class addproC{
             e.printStackTrace();
         }
     }
+    public void back (javafx.event.ActionEvent event)  {
+        try {
+            Parent info = FXMLLoader.load(getClass().getResource("infoAdmin.fxml"));
+            Scene scene = new Scene(info, 1280, 720);
+            Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            info1.setScene(scene);
+            info1.show();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
 }

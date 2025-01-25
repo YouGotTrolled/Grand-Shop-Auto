@@ -1,0 +1,10 @@
+/*#up1 {
+    -fx-background-color: linear-gradient(to bottom, #000329, #9fa2cf);
+}
+#up2 {
+    -fx-background-color: linear-gradient(to bottom, #9fa2cf, #ffffff);
+}
+*/
+#Border{
+    -fx-background-color: linear-gradient(to right, #bcc4c4 0%, #ffffff 50%, transparent 50%), linear-gradient(to left, #bcc4c4 0%, #ffffff 50%, transparent 50%);
+}

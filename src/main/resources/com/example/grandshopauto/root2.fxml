@@ -23,7 +23,7 @@
          <children>
             <ScrollPane prefHeight="1080.0" prefWidth="1920.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3500.0" prefWidth="1918.0">
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="3500.0" prefWidth="1918.0" style="-fx-background-color: white;">
                      <children>
                         <StackPane layoutX="320.0" prefHeight="720.0" prefWidth="1280.0">
                            <children>
@@ -70,16 +70,16 @@
                               <Insets />
                            </opaqueInsets>
                         </HBox>
-                        <HBox layoutX="320.0" layoutY="840.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
+                        <HBox layoutX="320.0" layoutY="840.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0" style="-fx-background-color: white;">
                            <children>
                               <Button mnemonicParsing="false" onAction="#button1" prefHeight="50.0" prefWidth="50.0" text="Button">
                                  <HBox.margin>
                                     <Insets left="75.0" top="95.0" />
                                  </HBox.margin>
                               </Button>
-                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0">
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="300.0">
                                  <HBox.margin>
-                                    <Insets left="240.0" />
+                                    <Insets left="390.0" />
                                  </HBox.margin>
                                  <children>
                                     <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
@@ -88,9 +88,9 @@
                                     <Label prefHeight="35.0" prefWidth="250.0" style="-fx-background-color: #f5e8c6;" text="Label" />
                                  </children>
                               </VBox>
-                              <ImageView fitHeight="220.0" fitWidth="220.0">
+                              <ImageView fitHeight="220.0" fitWidth="420.0">
                                  <image>
-                                    <Image url="@../../../images%20(1).jfif" />
+                                    <Image url="@../../../4.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="50.0" right="10.0" top="10.0" />
@@ -100,7 +100,7 @@
                         </HBox>
                         <HBox layoutX="320.0" layoutY="1160.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button">
+                              <Button mnemonicParsing="false" onAction="#button2" prefHeight="50.0" prefWidth="50.0" text="Button">
                                  <HBox.margin>
                                     <Insets left="75.0" top="95.0" />
                                  </HBox.margin>
@@ -118,7 +118,7 @@
                               </VBox>
                               <ImageView fitHeight="220.0" fitWidth="220.0">
                                  <image>
-                                    <Image url="@../../../images%20(1).jfif" />
+                                    <Image url="@../../../6.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="50.0" right="10.0" top="10.0" />
@@ -128,7 +128,7 @@
                         </HBox>
                         <HBox layoutX="320.0" layoutY="1480.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button">
+                              <Button mnemonicParsing="false" onAction="#button3" prefHeight="50.0" prefWidth="50.0" text="Button">
                                  <HBox.margin>
                                     <Insets left="75.0" top="95.0" />
                                  </HBox.margin>
@@ -156,7 +156,7 @@
                         </HBox>
                         <HBox layoutX="320.0" layoutY="1760.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button">
+                              <Button mnemonicParsing="false" onAction="#button4" prefHeight="50.0" prefWidth="50.0" text="Button">
                                  <HBox.margin>
                                     <Insets left="75.0" top="95.0" />
                                  </HBox.margin>
@@ -184,7 +184,7 @@
                         </HBox>
                         <HBox layoutX="320.0" layoutY="2060.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button">
+                              <Button mnemonicParsing="false" onAction="#button5" prefHeight="50.0" prefWidth="50.0" text="Button">
                                  <HBox.margin>
                                     <Insets left="75.0" top="95.0" />
                                  </HBox.margin>
@@ -212,7 +212,7 @@
                         </HBox>
                         <HBox layoutX="320.0" layoutY="2360.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="Button">
+                              <Button mnemonicParsing="false" onAction="#button6" prefHeight="50.0" prefWidth="50.0" text="Button">
                                  <HBox.margin>
                                     <Insets left="75.0" top="95.0" />
                                  </HBox.margin>

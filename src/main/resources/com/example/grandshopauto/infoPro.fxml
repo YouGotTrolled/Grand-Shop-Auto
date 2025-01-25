@@ -8,9 +8,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grandshopauto.infoProC">
    <top>
@@ -32,14 +32,35 @@
                   </ImageView>
                </center>
                <left>
-                  <Button mnemonicParsing="false" onAction="#info" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #9ba8a8;" text="info" BorderPane.alignment="CENTER">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <BorderPane.margin>
-                        <Insets left="15.0" />
-                     </BorderPane.margin>
-                  </Button>
+                  <HBox prefHeight="50.0" prefWidth="313.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <HBox prefHeight="50.0" prefWidth="294.0">
+                           <children>
+                              <Button mnemonicParsing="false" onAction="#info" prefHeight="20.0" prefWidth="182.0" style="-fx-background-color: #9ba8a8;" text="info">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="15.0" top="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <StackPane maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #9ba8a8;">
+                                 <children>
+                                    <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../../7.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: transparent;" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="10.0" top="10.0" />
+                                 </HBox.margin>
+                              </StackPane>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
                </left>
             </BorderPane>
          </children>
@@ -50,12 +71,12 @@
          <left>
             <HBox prefHeight="100.0" prefWidth="261.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#sabad" prefHeight="35.0" prefWidth="100.0" text="Button">
+                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="سبد">
                      <HBox.margin>
                         <Insets left="75.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#heart" prefHeight="35.0" prefWidth="35.0" text="Button">
+                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" text="قلب">
                      <HBox.margin>
                         <Insets left="25.0" />
                      </HBox.margin>

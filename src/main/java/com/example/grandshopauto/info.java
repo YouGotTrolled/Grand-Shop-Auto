@@ -173,6 +173,7 @@ public class info {
             Parent back1 = FXMLLoader.load(getClass().getResource("userChat.fxml"));
             Scene scene = new Scene(back1, 1280 ,720);
             Stage back2 = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            scene.getStylesheets().add(getClass().getResource("userChat.css").toExternalForm());
             back2.setScene(scene);
             back2.show();
         }
