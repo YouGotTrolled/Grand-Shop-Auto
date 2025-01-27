@@ -1,6 +1,0 @@
-name:test2
-year:2003
-berand:test
-price:800
-quantity:0
-avalebelety:false

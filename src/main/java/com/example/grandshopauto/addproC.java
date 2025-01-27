@@ -187,6 +187,12 @@ public class addproC {
                 writer.close();
                 Path destinationPath = Path.of(".\\systemFiles\\products\\" + ID, "pic.png");
                 Files.copy(picture.toPath(), destinationPath, StandardCopyOption.REPLACE_EXISTING);
+                File berands = new File(".\\systemFiles\\berands\\" + berand.getText() + ".txt");
+                if(!berands.exists())
+                    berands.createNewFile();
+                writer = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\systemFiles\\berands\\" + berand.getText() + ".txt",true)));
+                writer.println(ID);
+                writer.close();
             }
         }catch (FileNotFoundException e){
             e.printStackTrace();

@@ -34,6 +34,7 @@ public class Controller1 {
             File log = new File(".\\systemFiles\\log.txt");
             File systemFile = new File("systemFiles");
             File cUser = new File(".\\systemFiles\\cUser.txt");
+            File berand=new File(".\\systemFiles\\berands");
             if (!userInfo.exists()) {
                 userInfo.mkdir();
             }
@@ -48,6 +49,9 @@ public class Controller1 {
             }
             if (!log.exists()) {
                 log.createNewFile();
+            }
+            if (!berand.exists()) {
+                berand.mkdir();
             }
         }
         catch (IOException e){

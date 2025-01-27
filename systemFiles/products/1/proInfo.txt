@@ -1,6 +1,0 @@
-name:test
-year:2004
-berand:test
-price:900
-quantity:99
-avalebelety:true
