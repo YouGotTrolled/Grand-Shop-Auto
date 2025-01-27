@@ -41,4 +41,12 @@ public class infoAdminC {
         login1.setScene(scene);
         login1.show();
     }
+    @FXML
+    void editInfo(ActionEvent event) throws IOException {
+        Parent login = FXMLLoader.load(getClass().getResource("editPro.fxml"));
+        Scene scene = new Scene(login, 1280, 720);
+        Stage login1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        login1.setScene(scene);
+        login1.show();
+    }
 }

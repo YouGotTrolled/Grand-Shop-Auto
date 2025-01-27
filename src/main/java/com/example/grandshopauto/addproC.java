@@ -163,6 +163,7 @@ public class addproC {
                 if(year.getText().equals(tokenizer.nextToken())){
                     flag2=false;
                 }
+                reader.close();
             }
             if(!(flag1||flag2)){
                 tekrarFlag=false;
