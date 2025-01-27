@@ -1,0 +1,6 @@
+name:test
+year:1000
+berand:test
+price:898
+quantity:0
+avalebelety:false

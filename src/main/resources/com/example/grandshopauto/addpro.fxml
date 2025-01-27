@@ -44,12 +44,12 @@
          <left>
             <VBox prefHeight="450.0" prefWidth="450.0" BorderPane.alignment="CENTER">
                <children>
-                  <ImageView fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="pictureView" fitHeight="300.0" fitWidth="300.0" pickOnBounds="true" preserveRatio="true">
                      <VBox.margin>
                         <Insets left="100.0" />
                      </VBox.margin>
                   </ImageView>
-                  <Button mnemonicParsing="false" prefHeight="35.0" prefWidth="100.0" text="انتخاب عکس">
+                  <Button fx:id="addPicBut" mnemonicParsing="false" onAction="#addPicButAction" prefHeight="35.0" prefWidth="100.0" text="انتخاب عکس">
                      <VBox.margin>
                         <Insets left="300.0" top="50.0" />
                      </VBox.margin>
@@ -60,7 +60,7 @@
          <center>
             <VBox alignment="TOP_RIGHT" prefHeight="438.0" prefWidth="830.0" BorderPane.alignment="CENTER">
                <children>
-                  <HBox alignment="TOP_RIGHT" prefHeight="250.0" prefWidth="830.0">
+                  <HBox alignment="TOP_RIGHT" prefHeight="260.0" prefWidth="830.0">
                      <children>
                         <VBox prefHeight="200.0" prefWidth="250.0">
                            <children>
@@ -74,7 +74,7 @@
                                     <Insets top="40.0" />
                                  </VBox.margin>
                               </TextField>
-                              <Label alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="158.0" text="فقط عدد سال را وارد کنید!" textFill="#0033ff">
+                              <Label fx:id="yearError" alignment="CENTER_RIGHT" prefHeight="26.0" prefWidth="258.0" text="فقط عدد سال را وارد کنید!" textFill="#0033ff">
                                  <VBox.margin>
                                     <Insets left="25.0" />
                                  </VBox.margin>
@@ -104,7 +104,7 @@
                               </Label>
                            </children>
                         </VBox>
-                        <VBox prefHeight="200.0" prefWidth="250.0">
+                        <VBox prefHeight="278.0" prefWidth="250.0">
                            <children>
                               <TextField fx:id="name" prefHeight="35.0">
                                  <VBox.margin>
@@ -116,11 +116,13 @@
                                     <Insets top="40.0" />
                                  </VBox.margin>
                               </TextField>
-                              <TextField fx:id="price1" prefHeight="35.0">
+                              <Label fx:id="priceError" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="267.0" textFill="#0033ff" />
+                              <TextField fx:id="quantity" prefHeight="35.0">
                                  <VBox.margin>
-                                    <Insets top="40.0" />
+                                    <Insets top="25.0" />
                                  </VBox.margin>
                               </TextField>
+                              <Label fx:id="quantityError" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="275.0" textFill="#0033ff" />
                            </children>
                         </VBox>
                         <VBox alignment="TOP_RIGHT" prefHeight="200.0" prefWidth="150.0">
@@ -161,7 +163,7 @@
                   </HBox>
                   <HBox alignment="TOP_RIGHT" prefHeight="250.0" prefWidth="200.0">
                      <children>
-                        <TextArea maxHeight="175.0" minHeight="175.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="175.0" prefWidth="650.0">
+                        <TextArea fx:id="detail" maxHeight="175.0" minHeight="175.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="175.0" prefWidth="650.0">
                            <HBox.margin>
                               <Insets left="29.0" top="25.0" />
                            </HBox.margin>
@@ -185,7 +187,7 @@
          <bottom>
             <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#signpro" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: TRansparent; -fx-border-color: black;" text="ثبت">
+                  <Button fx:id="submit" alignment="CENTER" mnemonicParsing="false" onAction="#signpro" prefHeight="40.0" prefWidth="100.0" style="-fx-background-color: TRansparent; -fx-border-color: black;" text="ثبت">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -193,6 +195,7 @@
                         <Insets left="50.0" top="25.0" />
                      </HBox.margin>
                   </Button>
+                  <Label fx:id="error" alignment="CENTER_RIGHT" prefHeight="18.0" prefWidth="422.0" />
                </children>
             </HBox>
          </bottom>
