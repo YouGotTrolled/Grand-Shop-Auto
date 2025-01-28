@@ -222,11 +222,9 @@ public class list1C {
             File products = new File(".\\systemFiles\\products");
             String[] productCount=products.list();
             N =0;
-            for (; N < productCount.length; N++) {
-
-            }
-            page = (N/12 + 1) ;
-            String temp = "";
+            for (; N < productCount.length; N++){}
+            page = (N/12 + 1);
+            String temp="";
 
             if (numberPage == page-1 ){
                 for (int j = (N%12) ; j <=11; j++) {
@@ -279,8 +277,7 @@ public class list1C {
     }
     @FXML
     public void next (ActionEvent event) {
-        if( numberPage == N/12 ){
-            //پایان صفحه
+        if( numberPage == N/12 ){//پایان صفحه
             lastPage.setVisible(true);
             Timeline t2 = new Timeline(new KeyFrame(Duration.millis(3000), event2 -> { lastPage.setVisible(false);}));
             t2.play();
