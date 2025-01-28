@@ -10,8 +10,10 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
@@ -74,14 +76,26 @@
                   <FontAwesomeIcon glyphName="HEART" />
                </graphic>
             </Button>
-            <Button fx:id="chat" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#chat" prefHeight="48.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" text=" چت با ادمین">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIcon glyphName="COMMENTS" />
-               </graphic>
-            </Button>
+            <HBox alignment="CENTER" prefHeight="42.0" prefWidth="347.0">
+               <children>
+                  <Circle fx:id="notif" fill="#ff1f1f" radius="10.0" stroke="BLACK" strokeType="INSIDE" visible="false">
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Circle>
+                  <Button fx:id="chat" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#chat" prefHeight="48.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" text=" چت با ادمین">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <graphic>
+                        <FontAwesomeIcon glyphName="COMMENTS" />
+                     </graphic>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
             <Button fx:id="cart" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#card" prefHeight="60.0" prefWidth="347.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" text="  سبد خرید  " textAlignment="RIGHT">
                <font>
                   <Font size="24.0" />

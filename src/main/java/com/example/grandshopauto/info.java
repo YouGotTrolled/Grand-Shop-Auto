@@ -13,6 +13,7 @@ import java.io.*;
 import java.time.LocalDateTime;
 import java.util.StringTokenizer;
 import javafx.scene.control.TextField;
+import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
 
 
@@ -80,6 +81,9 @@ public class info {
         @FXML
         private Button out;
 
+        @FXML
+        private Circle notif;
+
     public void initialize(){
         try {
             String temp;
@@ -121,6 +125,8 @@ public class info {
             bal3 = Integer.parseInt(temp);
             balance.setText("$"+temp);
             checker.close();
+            if((new File(".\\userInfo\\" + user + "\\notification")).exists())
+                notif.setVisible(true);
             btn_charge.setOnAction(e -> addBalance());
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -170,6 +176,7 @@ public class info {
     @FXML
     void chat(ActionEvent event) {
         try {
+            (new File(".\\userInfo\\" + user + "\\notification")).delete();
             Parent back1 = FXMLLoader.load(getClass().getResource("userChat.fxml"));
             Scene scene = new Scene(back1, 1280 ,720);
             Stage back2 = (Stage) ((Node)event.getSource()).getScene().getWindow();

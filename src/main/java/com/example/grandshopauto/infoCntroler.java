@@ -36,6 +36,8 @@ public class infoCntroler {
     @FXML
     private Label num;
 
+    String user;
+
     @FXML
     void info(ActionEvent event) {
 
@@ -48,7 +50,7 @@ public class infoCntroler {
             BufferedReader system = new BufferedReader(new FileReader(".\\systemFiles\\cUser.txt"));
             StringTokenizer spt=new StringTokenizer(system.readLine(),":");
             temp=spt.nextToken();
-            String user = spt.nextToken();
+            user = spt.nextToken();
             system.close();
             BufferedReader checker = new BufferedReader(new FileReader(".\\userInfo\\"+user+"\\acInfo.txt"));
             int age;
