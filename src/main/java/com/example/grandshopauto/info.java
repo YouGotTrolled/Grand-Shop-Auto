@@ -1,4 +1,5 @@
 package com.example.grandshopauto;
+import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,11 +11,13 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
 
 import java.io.*;
+import javafx.util.Duration;
 import java.time.LocalDateTime;
 import java.util.StringTokenizer;
 import javafx.scene.control.TextField;
 import javafx.scene.shape.Circle;
 import javafx.stage.Stage;
+
 
 
 public class info {

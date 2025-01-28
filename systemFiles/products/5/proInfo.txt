@@ -1,0 +1,6 @@
+name:SLS AMG
+year:2015
+berand:benz
+price:9000
+quantity:1
+avalebelety:true

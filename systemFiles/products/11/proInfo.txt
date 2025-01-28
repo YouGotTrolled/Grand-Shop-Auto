@@ -1,0 +1,6 @@
+name:R8
+year:2022
+berand:audi
+price:9500
+quantity:2
+avalebelety:true

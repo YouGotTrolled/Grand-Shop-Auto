@@ -1,0 +1,6 @@
+name:elantra
+year:2007
+berand:hyundai
+price:3500
+quantity:5
+avalebelety:true

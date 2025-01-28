@@ -1,0 +1,6 @@
+name:C black series
+year:2019
+berand:benz
+price:9800
+quantity:1
+avalebelety:true

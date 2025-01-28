@@ -1,6 +1,6 @@
-name:G class
+name:C 250
 year:2024
 berand:benz
-price:9500
-quantity:3
+price:8000
+quantity:1
 avalebelety:true

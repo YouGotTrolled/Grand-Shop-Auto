@@ -1,0 +1,6 @@
+name:C SLH60
+year:2013
+berand:benz
+price:4600
+quantity:1
+avalebelety:true

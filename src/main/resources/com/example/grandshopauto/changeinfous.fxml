@@ -15,7 +15,7 @@
     <center>
         <HBox alignment="TOP_RIGHT" prefHeight="720.0" prefWidth="882.0" BorderPane.alignment="CENTER">
          <children>
-            <AnchorPane prefHeight="720.0" prefWidth="772.0">
+            <AnchorPane prefHeight="720.0" prefWidth="818.0">
                <children>
                   <TextField fx:id="Lname" alignment="CENTER_RIGHT" editable="false" layoutX="105.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="40.0" prefWidth="200.0">
                      <font>
@@ -92,7 +92,6 @@
                         <Font name="Lalezar-Regular" size="18.0" />
                      </font>
                   </Label>
-                  <Button layoutX="666.0" layoutY="595.0" mnemonicParsing="false" onAction="#back" prefHeight="7.0" prefWidth="49.0" text="back" />
                   <Label layoutX="691.0" layoutY="102.0" prefHeight="46.0" prefWidth="74.0" text="نام کاربری:">
                      <font>
                         <Font name="Lalezar-Regular" size="19.0" />
@@ -112,6 +111,23 @@
                      <font>
                         <Font size="16.0" />
                      </font></Label>
+                  <Label fx:id="nemp" layoutX="540.0" layoutY="285.0" text="*نام نمیتواند خالی باشد " textFill="#d90000" visible="false" />
+                  <Label fx:id="lenp" layoutX="131.0" layoutY="285.0" text="*نام خانوادگی نمیتواند خالی باشد " textFill="#d90000" visible="false" />
+                  <Label fx:id="ademp" layoutX="550.0" layoutY="367.0" text="*آدرس نمیتواند خالی باشد " textFill="#d90000" visible="false" />
+                  <Label fx:id="idemp" layoutX="165.0" layoutY="367.0" text="*کدملی نمیتواند خالی باشد " textFill="#d90000" visible="false" />
+                  <Label fx:id="nemp3" layoutX="542.0" layoutY="446.0" text="*شماره نمیتواند خالی باشد " textFill="#d90000" visible="false" />
+                  <Label fx:id="bremp" layoutX="151.0" layoutY="446.0" text="*تاریخ تولد نمیتواند خالی باشد " textFill="#d90000" visible="false" />
+                  <Label fx:id="remp" layoutX="536.0" layoutY="525.0" text="*رمز عبور نمیتواند خالی باشد " textFill="#d90000" visible="false" />
+                  <Label fx:id="nemp1" layoutX="150.0" layoutY="358.0" text="*کد ملی فقط عددی باید باشد" textFill="#d90000" visible="false" />
+                  <Label fx:id="nemp2" layoutX="522.0" layoutY="437.0" text="*شماره نمیتواند غیرعددی باشد " textFill="#d90000" visible="false" />
+                  <Label fx:id="nemp21" layoutX="129.0" layoutY="446.0" text="*تاریخ تولد نمیتواند غیرعددی باشد " textFill="#d90000" visible="false" />
+                  <Label fx:id="nemp31" layoutX="542.0" layoutY="455.0" text="*شماره فقظ 11 عدد است. " textFill="#d90000" visible="false" />
+                  <Label fx:id="nemp311" layoutX="157.0" layoutY="376.0" text="*کد ملی فقظ 10 عدد است. " textFill="#d90000" visible="false" />
+                  <Button fx:id="SABT1" layoutX="620.0" layoutY="583.0" maxHeight="-Infinity" maxWidth="-Infinity" mnemonicParsing="false" onAction="#back" prefHeight="50.0" prefWidth="102.0" styleClass="button1" stylesheets="@buttons.css" text="بازگشت">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
                </children>
             </AnchorPane>
          </children>

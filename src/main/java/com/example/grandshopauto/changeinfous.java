@@ -2,9 +2,14 @@ package com.example.grandshopauto;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.io.*;
 import java.util.StringTokenizer;
@@ -37,7 +42,31 @@ public class changeinfous {
 
     @FXML
     private Label idError;
+    @FXML
+    private Label ademp;
 
+    @FXML
+    private Label bremp;
+
+    @FXML
+    private Label idemp;
+
+    @FXML
+    private Label nemp;
+
+    @FXML
+    private Label nemp1;
+
+    @FXML
+    private Label nemp2;
+    @FXML
+    private Label nemp3;
+
+    @FXML
+    private Label remp;
+
+    @FXML
+    private Label lenp;
     @FXML
     private Label lNameError;
 
@@ -52,6 +81,12 @@ public class changeinfous {
 
     @FXML
     private Label nameError;
+
+    @FXML
+    private Label nemp31;
+
+    @FXML
+    private Label nemp311;
 
     @FXML
     private TextField num;
@@ -73,11 +108,7 @@ public class changeinfous {
 
 
 
-    @FXML
-    void back(ActionEvent event) {
 
-
-    }
 
     @FXML
     private   void sub(ActionEvent event)  {
@@ -129,12 +160,48 @@ public class changeinfous {
 
         lines[0] = t.nextToken() +":"+ t.nextToken();
         TextField [] arr = {pass,ID,DOB,ADD,num,name,Lname};
+        Label[] arrl = {remp,idemp,bremp,ademp,nemp3,nemp,lenp};
 
         while (p<7){
             String line = checker.readLine();
             StringTokenizer tokenizer = new StringTokenizer(line , ":");
             String temp1 = tokenizer.nextToken();
             String temp2 = tokenizer.nextToken();
+
+
+
+                arrl[p].setVisible(false);
+                nemp1.setVisible(false);
+                nemp311.setVisible(false);
+                nemp31.setVisible(false);
+                nemp2.setVisible(false);
+
+
+
+            if(!ID.getText().isEmpty()){
+                boolean idFlag = !(charCheckOut(ID.getText(), 57, 48));
+                if (!idFlag) {
+                    nemp1.setVisible(true);
+                }
+                if(ID.getText().length()!=10){
+                    nemp311.setVisible(true);
+                }}
+            if(!num.getText().isEmpty()){
+                boolean idFlag = !(charCheckOut(num.getText(), 57, 48));
+                if (!idFlag) {
+                    nemp2.setVisible(true);
+                }
+                if(num.getText().length()!=11){
+                    nemp31.setVisible(true);
+                }}
+
+
+            if (arr[p].getText().isEmpty()){
+                arrl[p].setVisible(true);
+                lines[p+1] = line;
+                p++;
+                continue;
+            }
 
             line = temp1 +":" +arr[p].getText();
 
@@ -160,6 +227,31 @@ public class changeinfous {
         catch (IOException e){
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    void back(ActionEvent event) {
+        try {
+            Parent info = FXMLLoader.load(getClass().getResource("infoAdmin.fxml"));
+            Scene scene = new Scene(info, 1280, 720);
+            Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            info1.setScene(scene);
+            info1.show();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
+
+    private boolean charCheckOut(String a, int b, int c) {
+        boolean an = false;
+        for (int i = 0; (!an) && i < a.length(); i++) {
+            if ((int) a.charAt(i) > b || (int) a.charAt(i) < c) {
+                an = true;
+            }
+        }
+        return an;
     }
 
 

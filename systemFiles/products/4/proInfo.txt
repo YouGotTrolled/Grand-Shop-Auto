@@ -1,0 +1,6 @@
+name:AMG SL63
+year:2025
+berand:benz
+price:6000
+quantity:1
+avalebelety:true

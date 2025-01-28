@@ -1,0 +1,6 @@
+name:C v19
+year:2017
+berand:benz
+price:5000
+quantity:1
+avalebelety:true

@@ -179,7 +179,6 @@ public class infoChancher {
                     idError.setText("کد ملی فقط باید عدد باشد");
                 }
                 else if(ID.getText().length()!=10){
-                    idFlag=false;
                     idError.setText("شماره فقط باید 10 رقم باشد");
 
                 }else{
