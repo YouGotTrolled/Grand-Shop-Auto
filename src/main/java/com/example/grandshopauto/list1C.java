@@ -149,12 +149,22 @@ public class list1C {
 
     int page;
 
+    StackPane[] boxs;
+
+    ImageView[] images;
+
+    Label[] names;
+
+    Label[] prices;
+
+    Label[] years;
+
 
     @FXML
     private void initialize() {
         try {
             lastPage.setVisible(false);
-            StackPane[] boxs = new StackPane[12];
+            boxs = new StackPane[12];
             boxs[0] = box1;
             boxs[1] = box2;
             boxs[2] = box3;
@@ -167,7 +177,7 @@ public class list1C {
             boxs[9] = box10;
             boxs[10] = box11;
             boxs[11] = box12;
-            ImageView[] images = new ImageView[12];
+            images = new ImageView[12];
             images[0] = image1;
             images[1] = image2;
             images[2] = image3;
@@ -180,7 +190,7 @@ public class list1C {
             images[9] = image10;
             images[10] = image11;
             images[11] = image12;
-            Label[] names = new Label[12];
+            names = new Label[12];
             names[0] = name1;
             names[1] = name2;
             names[2] = name3;
@@ -193,7 +203,7 @@ public class list1C {
             names[9] = name10;
             names[10] = name11;
             names[11] = name12;
-            Label[] prices = new Label[12];
+            prices = new Label[12];
             prices[0] = price1;
             prices[1] = price2;
             prices[2] = price3;
@@ -206,7 +216,7 @@ public class list1C {
             prices[9] = price10;
             prices[10] = price11;
             prices[11] = price12;
-            Label[] years = new Label[12];
+            years= new Label[12];
             years[0] = year1;
             years[1] = year2;
             years[2] = year3;
@@ -221,31 +231,13 @@ public class list1C {
             years[11] = year12;
             File products = new File(".\\systemFiles\\products");
             String[] productCount=products.list();
-            N =0;
-            for (; N < productCount.length; N++){}
+            if(productCount!=null) {
+                N = productCount.length;
+            }else{
+                N=0;
+            }
             page = (N/12 + 1);
-            String temp="";
-
-            if (numberPage == page-1 ){
-                for (int j = (N%12) ; j <=11; j++) {
-                    boxs[j].setVisible(false);
-                }
-            }
-            if (numberPage < page-1) {
-                for (int j = 0 ; j <=11; j++) {
-                    boxs[j].setVisible(true);
-                }
-            }
-            for (int i = 0 ; i < 12 && (numberPage*12+i) < N ; i++ ) {
-                File fileimage1 = new File(".\\systemFiles\\products\\" + ((numberPage*12)+i+1) + "\\pic.png");
-                Image image = new Image(fileimage1.toURI().toString());
-                images[i].setImage(image);
-                BufferedReader reader = new BufferedReader(new FileReader(".\\systemFiles\\products\\" + ((numberPage*12)+i+1) + "\\proInfo.txt"));
-                names[i].setText(reader.readLine());
-                years[i].setText(reader.readLine());
-                temp = reader.readLine();
-                prices[i].setText(reader.readLine());
-            }
+            loadPage();
         }
         catch (Exception e){
             e.printStackTrace();
@@ -284,18 +276,46 @@ public class list1C {
         }
         else  if (numberPage < page) {
             numberPage+=1;
-            initialize();
+            loadPage();
         }
     }
     @FXML
     public void back2(ActionEvent event) {
         if (numberPage>=1){
             numberPage--;
-            initialize();
+            loadPage();
         }
     }
     @FXML
     private void method1() {
 
+    }
+
+    public void loadPage(){
+        try {
+            if (numberPage == page-1 ){
+                for (int j = (N%12) ; j <=11; j++) {
+                    boxs[j].setVisible(false);
+                }
+            }
+            if (numberPage < page-1) {
+                for (int j = 0 ; j <=11; j++) {
+                    boxs[j].setVisible(true);
+                }
+            }
+            for (int i = 0; i < 12 && (numberPage * 12 + i) < N; i++) {
+                String temp="";
+                File fileimage1 = new File(".\\systemFiles\\products\\" + ((numberPage * 12) + i + 1) + "\\pic.png");
+                Image image = new Image(fileimage1.toURI().toString());
+                images[i].setImage(image);
+                BufferedReader reader = new BufferedReader(new FileReader(".\\systemFiles\\products\\" + ((numberPage * 12) + i + 1) + "\\proInfo.txt"));
+                names[i].setText(reader.readLine());
+                years[i].setText(reader.readLine());
+                temp = reader.readLine();
+                prices[i].setText(reader.readLine());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
