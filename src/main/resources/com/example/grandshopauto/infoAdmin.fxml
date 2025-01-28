@@ -49,14 +49,14 @@
                         <Insets />
                      </VBox.margin>
                      <children>
-                        <VBox alignment="TOP_RIGHT" prefHeight="270.0" prefWidth="144.0">
+                        <VBox alignment="TOP_RIGHT" prefHeight="270.0" prefWidth="213.0">
                            <children>
-                              <Label prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #ffeab0;">
+                              <Label fx:id="ID" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="213.0" style="-fx-background-color: #ffeab0;">
                                  <VBox.margin>
                                     <Insets top="75.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="150.0" style="-fx-background-color: #ffeab0;">
+                              <Label fx:id="addr" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="215.0" style="-fx-background-color: #ffeab0;">
                                  <VBox.margin>
                                     <Insets top="75.0" />
                                  </VBox.margin>
@@ -88,12 +88,12 @@
                         </VBox>
                         <VBox alignment="TOP_RIGHT" prefHeight="270.0" prefWidth="234.0">
                            <children>
-                              <Label prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #ffeab0;">
+                              <Label fx:id="lastName" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #ffeab0;">
                                  <VBox.margin>
                                     <Insets top="75.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #ffeab0;">
+                              <Label fx:id="DOB" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #ffeab0;">
                                  <VBox.margin>
                                     <Insets top="75.0" />
                                  </VBox.margin>
@@ -110,7 +110,7 @@
                                     <Font size="16.0" />
                                  </font>
                               </Label>
-                              <Label prefHeight="35.0" prefWidth="125.0" text="شماره تلفن :">
+                              <Label prefHeight="35.0" prefWidth="125.0" text="تاریخ تولد:">
                                  <VBox.margin>
                                     <Insets left="5.0" top="75.0" />
                                  </VBox.margin>
@@ -125,12 +125,12 @@
                         </VBox>
                         <VBox alignment="TOP_RIGHT" prefHeight="270.0" prefWidth="231.0">
                            <children>
-                              <Label prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #ffeab0;">
+                              <Label fx:id="name" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #ffeab0;">
                                  <VBox.margin>
                                     <Insets top="75.0" />
                                  </VBox.margin>
                               </Label>
-                              <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #ffeab0;">
+                              <Label fx:id="num" alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #ffeab0;">
                                  <VBox.margin>
                                     <Insets top="75.0" />
                                  </VBox.margin>
@@ -139,7 +139,7 @@
                         </VBox>
                         <VBox prefHeight="270.0" prefWidth="175.0">
                            <children>
-                              <Label prefHeight="35.0" prefWidth="125.0" text="نام خانوادگی :">
+                              <Label prefHeight="35.0" prefWidth="125.0" text="نام :">
                                  <VBox.margin>
                                     <Insets left="5.0" top="75.0" />
                                  </VBox.margin>
