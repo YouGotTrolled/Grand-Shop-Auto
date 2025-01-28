@@ -56,7 +56,7 @@
          <right>
             <HBox alignment="TOP_RIGHT" prefHeight="98.0" prefWidth="281.0" BorderPane.alignment="CENTER">
                <children>
-                  <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="141.0" text="چت با ادمین">
+                  <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="141.0" text="چت">
                      <HBox.margin>
                         <Insets right="15.0" top="30.0" />
                      </HBox.margin>
@@ -66,7 +66,7 @@
                   </Label>
                   <ImageView fitHeight="75.0" fitWidth="75.0" pickOnBounds="true">
                      <image>
-                        <Image url="@../../../admin.png" />
+                        <Image url="@../../../messenger.png" />
                      </image>
                      <HBox.margin>
                         <Insets right="25.0" top="15.0" />
@@ -85,6 +85,22 @@
                </image>
             </ImageView>
          </left>
+         <center>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <TextField fx:id="loadUser" prefHeight="27.0" prefWidth="382.0" style="-fx-border-color: black;">
+                     <HBox.margin>
+                        <Insets top="50.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="loadUserButtomItself" mnemonicParsing="false" onAction="#loadUserButton" style="-fx-border-color: black; -fx-background-color: transparent;" text="load chat">
+                     <HBox.margin>
+                        <Insets top="50.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </center>
       </BorderPane>
    </top>
    <center>

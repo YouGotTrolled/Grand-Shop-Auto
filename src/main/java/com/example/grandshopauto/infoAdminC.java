@@ -49,4 +49,28 @@ public class infoAdminC {
         login1.setScene(scene);
         login1.show();
     }
+    @FXML
+    void edituser(ActionEvent event) throws IOException {
+        Parent login = FXMLLoader.load(getClass().getResource("changeinfous.fxml"));
+        Scene scene = new Scene(login, 1280, 720);
+        Stage login1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        login1.setScene(scene);
+        login1.show();
+    }
+    @FXML
+    private void chat(ActionEvent event) throws IOException {
+        Parent info = FXMLLoader.load(getClass().getResource("userChat.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void log(ActionEvent event) throws IOException {
+        Parent info = FXMLLoader.load(getClass().getResource("adminLog.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
 }

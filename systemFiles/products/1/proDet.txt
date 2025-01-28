@@ -1,0 +1,26 @@
+بگا رفتم
+
+username:moji
+password:12
+id:1234567891
+date of birth:1383/08/11
+address:کده
+phone number:09390213951
+name:موجی
+last name:عبداله نیا
+administrator:false
+balance:1000000000
+
+
+
+
+username:Abdoll
+password:1234
+id:4271800260
+date of birth:1384/12/28
+address:زنجان شهرک امیر کبیر
+phone number:09936439691
+name:محمد امین
+last name:عبداله نیا
+administrator:false
+balance:1000000000

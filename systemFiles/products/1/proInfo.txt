@@ -1,0 +1,6 @@
+name:be
+year:2006
+berand:bee
+price:2345
+quantity:25
+avalebelety:true

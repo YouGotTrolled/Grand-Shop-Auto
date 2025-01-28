@@ -171,7 +171,7 @@
                      <children>
                         <VBox alignment="CENTER" prefHeight="300.0" prefWidth="640.0">
                            <children>
-                              <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="225.0" text="گزارشات :">
+                              <Button mnemonicParsing="false" onAction="#log" prefHeight="40.0" prefWidth="225.0" text="گزارشات :">
                                  <VBox.margin>
                                     <Insets left="-50.0" />
                                  </VBox.margin>
@@ -199,7 +199,7 @@
                         </VBox>
                         <VBox alignment="CENTER" prefHeight="300.0" prefWidth="640.0">
                            <children>
-                              <Button mnemonicParsing="false" prefWidth="225.0" text="چت با کاربر :">
+                              <Button mnemonicParsing="false" onAction="#chat" prefWidth="225.0" text="چت با کاربر :">
                                  <VBox.margin>
                                     <Insets left="50.0" />
                                  </VBox.margin>
@@ -207,7 +207,7 @@
                                     <Font size="18.0" />
                                  </font>
                               </Button>
-                              <Button mnemonicParsing="false" prefWidth="225.0" text="مدیریت کاربران :">
+                              <Button mnemonicParsing="false" onAction="#edituser" prefWidth="225.0" text="مدیریت کاربران :">
                                  <VBox.margin>
                                     <Insets left="50.0" top="50.0" />
                                  </VBox.margin>
