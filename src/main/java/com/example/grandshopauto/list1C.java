@@ -10,22 +10,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.ImageView;
-
 import javafx.scene.layout.StackPane;
-import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
-import javafx.fxml.FXML;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
-import javax.swing.*;
-import java.awt.*;
 import java.io.*;
-import javax.swing.ImageIcon;
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JPanel;
-import javax.swing.text.Element;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
 
@@ -157,6 +145,10 @@ public class list1C {
 
     int numberPage = 0 ;
 
+    int N;
+
+    int page;
+
 
     @FXML
     private void initialize() {
@@ -175,7 +167,6 @@ public class list1C {
             boxs[9] = box10;
             boxs[10] = box11;
             boxs[11] = box12;
-            //ImageView[] images = {image1, image2};
             ImageView[] images = new ImageView[12];
             images[0] = image1;
             images[1] = image2;
@@ -228,21 +219,13 @@ public class list1C {
             years[9] = year10;
             years[10] = year11;
             years[11] = year12;
-
-
-//            BufferedReader checker = new BufferedReader(new FileReader(".\\systemFiles\\products"));
-//            int N = 0 ;
-//            for (;checker.readLine() == null ; N++) {
-//
-//            }
-//            int page = N/12;
             File products = new File(".\\systemFiles\\products");
             String[] productCount=products.list();
-            int N =0;
+            N =0;
             for (; N < productCount.length; N++) {
 
             }
-            int page = (N/12 + 1) ;
+            page = (N/12 + 1) ;
             String temp = "";
 
             if (numberPage == page-1 ){
@@ -280,75 +263,31 @@ public class list1C {
 
     }
     @FXML
-    public void info (ActionEvent event){
-        try{
-//            if(isAdmin){
-//                Parent infoadmin = FXMLLoader.load(getClass().getResource("infoAdmin.fxml"));
-//                Scene scene = new Scene(infoadmin, 1280, 720);
-//                Stage info1admin = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//                info1admin.setScene(scene);
-//                info1admin.show();
-//            }else {
-                Parent info = FXMLLoader.load(getClass().getResource("info1.fxml"));
-                Scene scene = new Scene(info, 1280, 720);
-                Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                info1.setScene(scene);
-                info1.show();
-//            }
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
+    public void info (ActionEvent event) throws IOException {
+        Parent info = FXMLLoader.load(getClass().getResource("info1.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
     }
-    public void but1 (ActionEvent event) {
-        try {
-//            if(isAdmin){
-//                Parent info = FXMLLoader.load(getClass().getResource("admin.fxml"));
-//                Scene scene = new Scene(info, 1280, 720);
-//                Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//                info1.setScene(scene);
-//                info1.show();
-//            }else {
-            Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
-            Scene scene = new Scene(info, 1280, 720);
-            Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            info1.setScene(scene);
-            info1.show();
-//            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void but1 (ActionEvent event) throws IOException {
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
     }
     @FXML
     public void next (ActionEvent event) {
-        try {
-//            BufferedReader checker = new BufferedReader(new FileReader(".\\systemFiles\\products"));
-            File products = new File(".\\systemFiles\\products");
-            String[] productCount=products.list();
-            int N =0;
-            for (; N < productCount.length; N++) {
-
-            }
-            int page = (N/12 + 1) ;
-//            int numberPage = N;
-//            for (; checker.readLine() == null; N++) {
-//
-//            }
-//            int page = N / 12;
-
-            if( numberPage == N/12 ){
-                //پایان صفحه
-                lastPage.setVisible(true);
-                Timeline t2 = new Timeline(new KeyFrame(Duration.millis(3000), event2 -> { lastPage.setVisible(false);}));
-                t2.play();
-            }
-            else  if (numberPage < page) {
-                numberPage+=1;
-                initialize();
-            }
+        if( numberPage == N/12 ){
+            //پایان صفحه
+            lastPage.setVisible(true);
+            Timeline t2 = new Timeline(new KeyFrame(Duration.millis(3000), event2 -> { lastPage.setVisible(false);}));
+            t2.play();
         }
-        catch (Exception e){
-            e.printStackTrace();
+        else  if (numberPage < page) {
+            numberPage+=1;
+            initialize();
         }
     }
     @FXML
