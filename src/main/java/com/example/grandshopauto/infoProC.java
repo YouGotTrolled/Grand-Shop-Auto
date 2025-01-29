@@ -45,6 +45,12 @@ public class infoProC {
     @FXML
     private Button infoButtom;
 
+    @FXML
+    private Button cardbut;
+
+    @FXML
+    private Button cardbutt;
+
     String pro;
 
     String user;
@@ -96,6 +102,10 @@ public class infoProC {
             tokenizer=new StringTokenizer(reader.readLine(),":");
             temp=tokenizer.nextToken();
             stock.setText(tokenizer.nextToken());
+            if(Integer.parseInt(stock.getText())==0){
+                cardbut.setDisable(true);
+                cardbutt.setDisable(true);
+            }
             reader.close();
             reader = new BufferedReader(new FileReader(".\\systemFiles\\products\\"+pro+"\\proDet.txt"));
             temp= reader.readLine();

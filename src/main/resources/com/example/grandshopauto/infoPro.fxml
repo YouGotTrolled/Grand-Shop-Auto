@@ -72,12 +72,12 @@
          <left>
             <HBox prefHeight="64.0" prefWidth="574.0" BorderPane.alignment="CENTER">
                <children>
-                  <Button mnemonicParsing="false" onAction="#delete" prefHeight="34.0" prefWidth="95.0" text="حذف از سبد">
+                  <Button fx:id="cardbutt" mnemonicParsing="false" onAction="#delete" prefHeight="34.0" prefWidth="95.0" text="حذف از سبد">
                      <HBox.margin>
                         <Insets left="20.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" onAction="#card" prefHeight="35.0" prefWidth="100.0" text="افزودن به سبد">
+                  <Button fx:id="cardbut" mnemonicParsing="false" onAction="#card" prefHeight="35.0" prefWidth="100.0" text="افزودن به سبد">
                      <HBox.margin>
                         <Insets left="40.0" />
                      </HBox.margin>
