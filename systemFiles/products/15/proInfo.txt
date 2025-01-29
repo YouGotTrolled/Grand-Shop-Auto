@@ -1,0 +1,6 @@
+name:CHR
+year:2024
+berand:toyota
+price:9500
+quantity:1
+avalebelety:true

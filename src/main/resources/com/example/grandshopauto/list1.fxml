@@ -27,50 +27,6 @@
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2400.0" prefWidth="1918.0">
                             <children>
-                                <StackPane layoutX="320.0" layoutY="70.0" prefHeight="378.0" prefWidth="1280.0">
-                                    <children>
-<!--                              <MediaView fx:id="media" fitHeight="250.0" fitWidth="350.0">-->
-<!--                                 <StackPane.margin>-->
-<!--                                    <Insets right="800.0" top="50.0" />-->
-<!--                                 </StackPane.margin>-->
-<!--                              </MediaView>-->
-                                        <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="420.0" text="نام برند : مرسدس بنز" textAlignment="RIGHT">
-                                            <StackPane.margin>
-                                                <Insets left="800.0" top="-155.0" />
-                                            </StackPane.margin>
-                                 <opaqueInsets>
-                                    <Insets left="120.0" />
-                                 </opaqueInsets>
-                                 <font>
-                                    <Font size="29.0" />
-                                 </font>
-                                        </Label>
-                              <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="420.0" text="کشور سازنده : آلمان" textAlignment="RIGHT">
-                                 <StackPane.margin>
-                                    <Insets left="800.0" top="-15.0" />
-                                 </StackPane.margin>
-                                 <font>
-                                    <Font size="29.0" />
-                                 </font>
-                              </Label>
-                                        <Label alignment="CENTER_RIGHT" prefHeight="43.0" prefWidth="535.0" text="بنیان گذاران : کارل بنز , گوتلیب دایملر ">
-                                 <StackPane.margin>
-                                    <Insets left="690.0" top="135.0" />
-                                 </StackPane.margin>
-                                 <font>
-                                    <Font size="29.0" />
-                                 </font>
-                                        </Label>
-                                        <Label alignment="CENTER_RIGHT" prefHeight="35.0" prefWidth="420.0" text="تاریخ تاسیس : ۲۸ ژوئن ۱۹۲۶ " textAlignment="RIGHT">
-                                            <StackPane.margin>
-                                                <Insets left="800.0" top="285.0" />
-                                            </StackPane.margin>
-                                 <font>
-                                    <Font size="29.0" />
-                                 </font>
-                                        </Label>
-                                    </children>
-                                </StackPane>
                                 <AnchorPane layoutX="1600.0" prefHeight="765.0" prefWidth="320.0" />
                         <VBox layoutX="-25.0" layoutY="445.0" prefHeight="6.0" prefWidth="1966.0" style="-fx-background-color: black;" />
                         <VBox layoutX="327.0" layoutY="453.0" prefHeight="2600.0" prefWidth="1280.0">
@@ -130,16 +86,6 @@
                                              </children>
                                           </VBox>
                                           <Button mnemonicParsing="false" onAction="#but1" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
-                                             <StackPane.margin>
-                                                <Insets left="200.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
-                                             <StackPane.margin>
-                                                <Insets left="-180.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
                                        </children>
                                     </StackPane>
                                     <StackPane fx:id="box2" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="510.0">
@@ -191,17 +137,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
-                                             <StackPane.margin>
-                                                <Insets left="200.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
-                                             <StackPane.margin>
-                                                <Insets left="-180.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#but2" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
                                        </children>
                                     </StackPane>
                                     <StackPane fx:id="box3" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="895.0">
@@ -253,17 +189,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
-                                             <StackPane.margin>
-                                                <Insets left="200.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
-                                             <StackPane.margin>
-                                                <Insets left="-180.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#but3" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
                                        </children>
                                     </StackPane>
                                  </children>
@@ -319,17 +245,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
-                                             <StackPane.margin>
-                                                <Insets left="200.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
-                                             <StackPane.margin>
-                                                <Insets left="-180.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#but4" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
                                        </children>
                                     </StackPane>
                                     <StackPane fx:id="box5" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="510.0">
@@ -381,17 +297,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
-                                             <StackPane.margin>
-                                                <Insets left="200.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
-                                             <StackPane.margin>
-                                                <Insets left="-180.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#but5" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
                                        </children>
                                     </StackPane>
                                     <StackPane fx:id="box6" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="895.0">
@@ -443,17 +349,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
-                                             <StackPane.margin>
-                                                <Insets left="200.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
-                                             <StackPane.margin>
-                                                <Insets left="-180.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#but6" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
                                        </children>
                                     </StackPane>
                                  </children>
@@ -512,17 +408,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
-                                             <StackPane.margin>
-                                                <Insets left="200.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
-                                             <StackPane.margin>
-                                                <Insets left="-180.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#but7" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
                                        </children>
                                     </StackPane>
                                     <StackPane fx:id="box8" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="510.0">
@@ -574,17 +460,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
-                                             <StackPane.margin>
-                                                <Insets left="200.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
-                                             <StackPane.margin>
-                                                <Insets left="-180.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#but8" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
                                        </children>
                                     </StackPane>
                                     <StackPane fx:id="box9" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="895.0">
@@ -636,17 +512,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
-                                             <StackPane.margin>
-                                                <Insets left="200.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
-                                             <StackPane.margin>
-                                                <Insets left="-180.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#but9" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
                                        </children>
                                     </StackPane>
                                  </children>
@@ -705,17 +571,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
-                                             <StackPane.margin>
-                                                <Insets left="200.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
-                                             <StackPane.margin>
-                                                <Insets left="-180.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#but10" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
                                        </children>
                                     </StackPane>
                                     <StackPane fx:id="box11" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="510.0">
@@ -767,17 +623,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
-                                             <StackPane.margin>
-                                                <Insets left="200.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
-                                             <StackPane.margin>
-                                                <Insets left="-180.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#but11" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
                                        </children>
                                     </StackPane>
                                     <StackPane fx:id="box12" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="895.0">
@@ -829,17 +675,7 @@
                                                 </StackPane>
                                              </children>
                                           </VBox>
-                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
-                                             <StackPane.margin>
-                                                <Insets left="200.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
-                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
-                                             <StackPane.margin>
-                                                <Insets left="-180.0" top="261.0" />
-                                             </StackPane.margin>
-                                          </Button>
+                                          <Button mnemonicParsing="false" onAction="#but12" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
                                        </children>
                                     </StackPane>
                                  </children>

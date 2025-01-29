@@ -1,0 +1,6 @@
+name:R7
+year:2024
+berand:audi
+price:7500
+quantity:1
+avalebelety:true

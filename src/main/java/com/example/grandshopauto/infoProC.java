@@ -12,8 +12,8 @@ import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
-
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.StringTokenizer;
 
 public class infoProC {
@@ -50,6 +50,10 @@ public class infoProC {
     String user;
 
     boolean isAdmin;
+
+    PrintWriter plog;
+
+    PrintWriter log;
 
     @FXML
     private void initialize(){
@@ -131,6 +135,12 @@ public class infoProC {
                 writer.println(pro);
                 writer.close();
             }
+            log=new PrintWriter(new FileOutputStream(".\\systemFiles\\log.txt",true));
+            plog=new PrintWriter(new FileOutputStream(".\\userInfo\\"+user+"\\pLog.txt",true));
+            log.println("("+ LocalDateTime.now()+"):"+user+":"+pro+"را به لیست مورد علاقه ها اضافه کرد");
+            plog.println("("+ LocalDateTime.now()+"):"+user+":"+pro+"را به لیست مورد علاقه ها اضافه کرد");
+            log.close();
+            plog.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (Exception e) {
@@ -167,6 +177,12 @@ public class infoProC {
                     deleteLineFromFile(--i, (".\\userInfo\\" + user + "\\card.txt"));
                 }
             }
+            log=new PrintWriter(new FileOutputStream(".\\systemFiles\\log.txt",true));
+            plog=new PrintWriter(new FileOutputStream(".\\userInfo\\"+user+"\\pLog.txt",true));
+            log.println("("+ LocalDateTime.now()+"):"+user+":"+pro+"را از لیست خرید کم کرد");
+            plog.println("("+ LocalDateTime.now()+"):"+user+":"+pro+"را از لیست خرید کم کرد");
+            log.close();
+            plog.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (Exception e) {
@@ -206,6 +222,12 @@ public class infoProC {
                 writer.println((pro + ":" + quantity.getText()));
                 writer.close();
             }
+            log=new PrintWriter(new FileOutputStream(".\\systemFiles\\log.txt",true));
+            plog=new PrintWriter(new FileOutputStream(".\\userInfo\\"+user+"\\pLog.txt",true));
+            log.println("("+ LocalDateTime.now()+"):"+user+":"+pro+"("+quantity.getText()+")"+"را به لیست خرید اضافه کرد");
+            plog.println("("+ LocalDateTime.now()+"):"+user+":"+pro+"("+quantity.getText()+")"+"را به لیست خرید اضافه کرد");
+            log.close();
+            plog.close();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (Exception e) {
@@ -321,5 +343,6 @@ public class infoProC {
         }
 
     }
+
 
 }

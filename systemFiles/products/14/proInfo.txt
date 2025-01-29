@@ -1,0 +1,6 @@
+name:X3
+year:2022
+berand:bmw
+price:8200
+quantity:2
+avalebelety:true

@@ -21,13 +21,12 @@ public class Application extends javafx.application.Application {
             FXMLLoader root1 = new FXMLLoader(Application.class.getResource("root1.fxml"));
             Scene scene1 = new Scene(root1.load(), 1280, 720);
             scene1.getStylesheets().add(getClass().getResource("app1.css").toExternalForm());
-
+            //
             FXMLLoader login = new FXMLLoader(Application.class.getResource("loginJ.fxml"));
             Scene scene2 = new Scene(login.load(), 1280, 720);
             scene2.getStylesheets().add(getClass().getResource("loginCSS.css").toExternalForm());
-
+            //
             loger = new PrintWriter(new BufferedOutputStream(new FileOutputStream("log.txt",true)));
-
             Image ic = new Image("u.png");
             stage.setMinHeight(720);
             stage.setMinWidth(1280);
@@ -36,7 +35,6 @@ public class Application extends javafx.application.Application {
             stage.setScene(scene1);
             stage.show();
             Timeline timeline = new Timeline(new KeyFrame(Duration.millis(4000), event -> {stage.setScene(scene2);}));
-
             timeline.play();
             loger.close();
         }catch(FileNotFoundException e) {

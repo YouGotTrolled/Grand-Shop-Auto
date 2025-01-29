@@ -283,7 +283,6 @@ public class list1C {
             }
             page = (N / 12 + 1);
             loadPage();
-
         }
         catch (Exception e){
             e.printStackTrace();
@@ -306,13 +305,7 @@ public class list1C {
         info1.setScene(scene);
         info1.show();
     }
-    public void but1 (ActionEvent event) throws IOException {
-        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
-        Scene scene = new Scene(info, 1280, 720);
-        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        info1.setScene(scene);
-        info1.show();
-    }
+
     @FXML
     public void next (ActionEvent event) {
         if( numberPage == N/12 ){//پایان صفحه
@@ -387,6 +380,130 @@ public class list1C {
                 }
             }
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    private void but1 (ActionEvent event) throws IOException {
+        idPrint(1);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but2 (ActionEvent event) throws IOException {
+        idPrint(2);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but3 (ActionEvent event) throws IOException {
+        idPrint(3);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but4 (ActionEvent event) throws IOException {
+        idPrint(4);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but5 (ActionEvent event) throws IOException {
+        idPrint(5);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but6 (ActionEvent event) throws IOException {
+        idPrint(6);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but7 (ActionEvent event) throws IOException {
+        idPrint(7);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but8 (ActionEvent event) throws IOException {
+        idPrint(8);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but9 (ActionEvent event) throws IOException {
+        idPrint(9);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but10 (ActionEvent event) throws IOException {
+        idPrint(10);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but11 (ActionEvent event) throws IOException {
+        idPrint(11);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but12 (ActionEvent event) throws IOException {
+        idPrint(12);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    private void idPrint(int i){
+        try{
+            int j=(numberPage*12)+i-1;
+            PrintWriter printWriter=new PrintWriter(new FileOutputStream(".\\systemFiles\\cPro.txt"));
+            if(AAA[j]!=null) {
+                printWriter.println(AAA[j]);
+            }else{
+                printWriter.println((j+1));
+            }
+            printWriter.close();
+        }catch(FileNotFoundException e) {
+            e.printStackTrace();
+        }catch (Exception e) {
             e.printStackTrace();
         }
     }
