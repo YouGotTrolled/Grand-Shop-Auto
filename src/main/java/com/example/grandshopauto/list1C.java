@@ -299,11 +299,19 @@ public class list1C {
     }
     @FXML
     public void info (ActionEvent event) throws IOException {
-        Parent info = FXMLLoader.load(getClass().getResource("info1.fxml"));
-        Scene scene = new Scene(info, 1280, 720);
-        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        info1.setScene(scene);
-        info1.show();
+        if(isAdmin){
+            Parent info = FXMLLoader.load(getClass().getResource("infoAdmin.fxml"));
+            Scene scene = new Scene(info, 1280, 720);
+            Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            info1.setScene(scene);
+            info1.show();
+        }else{
+            Parent info = FXMLLoader.load(getClass().getResource("info1.fxml"));
+            Scene scene = new Scene(info, 1280, 720);
+            Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            info1.setScene(scene);
+            info1.show();
+        }
     }
 
     @FXML
@@ -332,7 +340,7 @@ public class list1C {
 
     @FXML
     private void card(ActionEvent event) throws IOException {
-        Parent info = FXMLLoader.load(getClass().getResource("sabad.fxml"));
+        Parent info = FXMLLoader.load(getClass().getResource("card.fxml"));
         Scene scene = new Scene(info, 1280, 720);
         Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
         info1.setScene(scene);

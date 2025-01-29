@@ -9,11 +9,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 import javafx.scene.image.Image;
 import java.io.*;
+import java.time.LocalDateTime;
 import java.util.StringTokenizer;
 
 import javafx.scene.control.Label;
@@ -144,6 +146,12 @@ public class sabadC {
     private StackPane box12;
     @FXML
     private Label lastPage;
+    @FXML
+    private Button infoButtom;
+    @FXML
+    private Label balance;
+    @FXML
+    private Label total;
 
     int numberPage = 0 ;
 
@@ -165,11 +173,28 @@ public class sabadC {
 
     String[] tokens;
     String[] tokens2;
-
+    String user;
+    boolean isAdmin;
+    int totalP=0;
 
     @FXML
     private void initialize() {
         try {
+            String temp;
+            BufferedReader reader = new BufferedReader(new FileReader(".\\systemFiles\\cUser.txt"));
+            StringTokenizer tokenizer =new StringTokenizer(reader.readLine(),":");
+            temp=tokenizer.nextToken();
+            user=tokenizer.nextToken();
+            tokenizer =new StringTokenizer(reader.readLine(),":");
+            temp=tokenizer.nextToken();
+            isAdmin=Boolean.parseBoolean(tokenizer.nextToken());
+            if(isAdmin){
+                infoButtom.setText("رابطه کاربری ادمین");
+            }else{
+                infoButtom.setText("اطلاعات"+user);
+            }
+            reader.close();
+            //
             lastPage.setVisible(false);
             boxs = new StackPane[12];
             boxs[0] = box1;
@@ -236,16 +261,9 @@ public class sabadC {
             years[9] = year10;
             years[10] = year11;
             years[11] = year12;
-            BufferedReader rd = new BufferedReader(new FileReader(".\\systemFiles\\cUser.txt"));
-            StringTokenizer st = new StringTokenizer(rd.readLine(),":");
-            String tempuser = st.nextToken();
-            String user = st.nextToken();
-            rd.close();
             try {
-//                String filePath =;
-                StringTokenizer tokenizer;
                 BufferedReader br = new BufferedReader(new FileReader(".\\userInfo\\" + user + "\\card.txt"));
-                String temp=br.readLine();
+                temp=br.readLine();
                 while(temp!=null){
                     NN++;
                     temp=br.readLine();
@@ -269,8 +287,26 @@ public class sabadC {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-
+            for (int i = 0; i < tokens.length ; i++ ) {
+                reader = new BufferedReader(new FileReader(".\\systemFiles\\products\\" + tokens[i] + "\\proInfo.txt"));
+                for(int j=0;j<4;j++)
+                    temp = reader.readLine();
+                tokenizer=new StringTokenizer(temp,":");
+                temp=tokenizer.nextToken();
+                temp=tokenizer.nextToken();
+                totalP+=((Integer.parseInt(temp))*(Integer.parseInt(tokens2[i])));
+                reader.close();
+            }
+            total.setText(String.valueOf(totalP));
+            //
+            reader = new BufferedReader(new FileReader(".\\userInfo\\" + user + "\\acInfo.txt"));
+            for(int j=0;j<10;j++)
+                temp = reader.readLine();
+            reader.close();
+            tokenizer=new StringTokenizer(temp,":");
+            temp=tokenizer.nextToken();
+            balance.setText(tokenizer.nextToken());
+            reader.close();
             page = (NN/12 + 1);
             loadPage();
         }
@@ -288,22 +324,55 @@ public class sabadC {
 
     }
     @FXML
-    public void info (ActionEvent event) throws IOException {
-        Parent info = FXMLLoader.load(getClass().getResource("info1.fxml"));
-        Scene scene = new Scene(info, 1280, 720);
-        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        info1.setScene(scene);
-        info1.show();
-    }
-    public void but1 (ActionEvent event) throws IOException {
-        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
-        Scene scene = new Scene(info, 1280, 720);
-        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        info1.setScene(scene);
-        info1.show();
+    public void card (ActionEvent event){
+        try {
+            if (totalP <= Integer.parseInt(balance.getText())) {
+                PrintWriter log;
+                PrintWriter plog;
+                balance.setText(String.valueOf((Integer.parseInt(balance.getText()) - totalP)));
+                changeFile(10, "balance:" + balance.getText(), ".\\userInfo\\" + user + "\\acInfo.txt");
+                PrintWriter writer = new PrintWriter(new FileOutputStream(".\\userInfo\\" + user + "\\cardH.txt",true));
+                BufferedReader reader=new BufferedReader(new FileReader(".\\userInfo\\" + user + "\\card.txt"));
+                String temp= reader.readLine();
+                while (temp!=null){
+                    log=new PrintWriter(new FileOutputStream(".\\systemFiles\\log.txt",true));
+                    plog=new PrintWriter(new FileOutputStream(".\\userInfo\\"+user+"\\pLog.txt",true));
+                    log.println("("+ LocalDateTime.now()+"):"+user+":("+temp+")"+"را خرید");
+                    plog.println("("+ LocalDateTime.now()+"):"+user+":("+temp+")"+"را خرید");
+                    log.close();
+                    plog.close();
+                    writer.println(temp);
+                    temp= reader.readLine();
+                }
+                reader.close();
+                writer.close();
+                (new File(".\\userInfo\\" + user + "\\card.txt")).delete();
+                back(event);
+            }
+        }catch (FileNotFoundException e){
+            e.printStackTrace();
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
     @FXML
-    public void next2 (ActionEvent event) {
+    public void info (ActionEvent event) throws IOException {
+        if(isAdmin){
+            Parent info = FXMLLoader.load(getClass().getResource("infoAdmin.fxml"));
+            Scene scene = new Scene(info, 1280, 720);
+            Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            info1.setScene(scene);
+            info1.show();
+        }else{
+            Parent info = FXMLLoader.load(getClass().getResource("info1.fxml"));
+            Scene scene = new Scene(info, 1280, 720);
+            Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            info1.setScene(scene);
+            info1.show();
+        }
+    }
+    @FXML
+    public void next (ActionEvent event) {
         if( numberPage == NN/12 ){
             //پایان صفحه
             lastPage.setVisible(true);
@@ -359,5 +428,165 @@ public class sabadC {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+    @FXML
+    private void but1 (ActionEvent event) throws IOException {
+        idPrint(1);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but2 (ActionEvent event) throws IOException {
+        idPrint(2);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but3 (ActionEvent event) throws IOException {
+        idPrint(3);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but4 (ActionEvent event) throws IOException {
+        idPrint(4);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but5 (ActionEvent event) throws IOException {
+        idPrint(5);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but6 (ActionEvent event) throws IOException {
+        idPrint(6);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but7 (ActionEvent event) throws IOException {
+        idPrint(7);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but8 (ActionEvent event) throws IOException {
+        idPrint(8);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but9 (ActionEvent event) throws IOException {
+        idPrint(9);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but10 (ActionEvent event) throws IOException {
+        idPrint(10);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but11 (ActionEvent event) throws IOException {
+        idPrint(11);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    @FXML
+    private void but12 (ActionEvent event) throws IOException {
+        idPrint(12);
+        Parent info = FXMLLoader.load(getClass().getResource("infopro.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+    private void idPrint(int i){
+        try{
+            int j=(numberPage*12)+i-1;
+            PrintWriter printWriter=new PrintWriter(new FileOutputStream(".\\systemFiles\\cPro.txt"));
+            printWriter.println(tokens[j]);
+            printWriter.close();
+        }catch(FileNotFoundException e) {
+            e.printStackTrace();
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public static void changeFile(int lineNum, String replacement, String file){
+        try {
+            File temp =new File(".\\systemFiles\\temp.txt");
+            temp.createNewFile();
+            BufferedReader reader=new BufferedReader(new FileReader(file));
+            PrintWriter adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\systemFiles\\temp.txt")));
+            String read =reader.readLine();
+            while(read!=null){
+                adder.println(read);
+                read =reader.readLine();
+            }
+            reader.close();
+            adder.close();
+            reader=new BufferedReader(new FileReader(".\\systemFiles\\temp.txt"));
+            adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream(file)));
+            int i=1;
+            read =reader.readLine();
+            while(read!=null){
+                if(i!=lineNum){
+                    adder.println(read);
+                    read =reader.readLine();
+                }
+                else{
+                    adder.println(replacement);
+                    read =reader.readLine();
+                }
+                i++;
+            }
+            reader.close();
+            adder.close();
+            temp.delete();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
     }
 }
