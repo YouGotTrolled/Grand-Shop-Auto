@@ -1,6 +1,5 @@
 package com.example.grandshopauto;
 
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,83 +7,308 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.util.StringTokenizer;
 
 public class infoProC {
+
+    @FXML
+    private Label berand;
+
+    @FXML
+    private TextArea detail;
+
+    @FXML
+    private ImageView image;
 
     @FXML
     private Label name;
 
     @FXML
-    private Label information;
-
-    @FXML
-    private Label Vmax;
-
-    @FXML
-    private Label VS;
-
-    @FXML
-    private Label G;
-
-    @FXML
-    private Label P;
-
-    @FXML
-    private Label A;
-
-    @FXML
-    private Label Ms;
-
-    @FXML
-    private Label W;
-
-    @FXML
     private Label price;
 
+    @FXML
+    private Label stock;
 
     @FXML
-    public void initialize() {
+    private Label year;
+
+    @FXML
+    private Label quantity;
+
+    String pro;
+
+    String user;
+
+    boolean isAdmin;
+
+    @FXML
+    private void initialize(){
         try {
-            BufferedReader checker1 = new BufferedReader(new FileReader("infopro.txt"));
-            BufferedReader checker2 = new BufferedReader(new FileReader("proNum.txt"));
+            detail.setEditable(false);
+            String temp;
+            //
+            BufferedReader reader = new BufferedReader(new FileReader(".\\systemFiles\\cUser.txt"));
+            StringTokenizer tokenizer=new StringTokenizer(reader.readLine(),":");
+            temp=tokenizer.nextToken();
+            user=tokenizer.nextToken();
+            tokenizer=new StringTokenizer(reader.readLine(),":");
+            temp=tokenizer.nextToken();
+            isAdmin=Boolean.parseBoolean(tokenizer.nextToken());
+            reader.close();
+            //
+            reader = new BufferedReader(new FileReader(".\\systemFiles\\cPro.txt"));
+            pro=reader.readLine();
+            reader.close();
+            reader = new BufferedReader(new FileReader(".\\systemFiles\\products\\"+pro+"\\proInfo.txt"));
+            tokenizer=new StringTokenizer(reader.readLine(),":");
+            temp=tokenizer.nextToken();
+            name.setText(tokenizer.nextToken());
+            tokenizer=new StringTokenizer(reader.readLine(),":");
+            temp=tokenizer.nextToken();
+            year.setText(tokenizer.nextToken());
+            tokenizer=new StringTokenizer(reader.readLine(),":");
+            temp=tokenizer.nextToken();
+            berand.setText(tokenizer.nextToken());
+            tokenizer=new StringTokenizer(reader.readLine(),":");
+            temp=tokenizer.nextToken();
+            price.setText(tokenizer.nextToken());
+            tokenizer=new StringTokenizer(reader.readLine(),":");
+            temp=tokenizer.nextToken();
+            stock.setText(tokenizer.nextToken());
+            reader.close();
+            reader = new BufferedReader(new FileReader(".\\systemFiles\\products\\"+pro+"\\proDet.txt"));
+            temp= reader.readLine();
+            while(temp!=null){
+                detail.appendText(temp+"\n");
+                temp= reader.readLine();
+            }
+            reader.close();
+            image.setImage(new Image((new File(".\\systemFiles\\products\\"+pro+"\\pic.png")).toURI().toString()));
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 
-        }
-        catch (Exception e) {
-            e.printStackTrace();
-        }
-    }
-    public void info (ActionEvent event){
-        try{
-//            if(isAdmin){
-//                Parent infoadmin = FXMLLoader.load(getClass().getResource("infoAdmin.fxml"));
-//                Scene scene = new Scene(infoadmin, 1280, 720);
-//                Stage info1admin = (Stage) ((Node) event.getSource()).getScene().getWindow();
-//                info1admin.setScene(scene);
-//                info1admin.show();
-//            }else {
-                Parent info = FXMLLoader.load(getClass().getResource("info1.fxml"));
-                Scene scene = new Scene(info, 1280, 720);
-                Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                info1.setScene(scene);
-                info1.show();
-//            }
-        }
-        catch (Exception e){
-            e.printStackTrace();
-        }
-    }
     @FXML
-    private void back(ActionEvent event) throws IOException {
-        Parent info = FXMLLoader.load(getClass().getResource("root2.fxml"));
+    void ATF(ActionEvent event) {
+        try {
+            if((new File(".\\userInfo\\"+user+"\\fav.txt")).exists()){
+                BufferedReader reader = new BufferedReader(new FileReader(".\\userInfo\\" + user + "\\fav.txt"));
+                String temp = reader.readLine();
+                boolean flag = true;
+                while(temp != null && flag) {
+                    if (pro.equals(temp)) {
+                        flag = false;
+                    }
+                    temp = reader.readLine();
+                }
+                if (flag) {
+                    PrintWriter writer = new PrintWriter(new FileOutputStream(".\\userInfo\\" + user + "\\fav.txt", true));
+                    writer.println(pro);
+                    writer.close();
+                }
+            }else {
+                PrintWriter writer = new PrintWriter(new FileOutputStream(".\\userInfo\\" + user + "\\fav.txt", true));
+                writer.println(pro);
+                writer.close();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void back(ActionEvent event) throws IOException {
+        Parent info = FXMLLoader.load(getClass().getResource("list1.fxml"));
         Scene scene = new Scene(info, 1280, 720);
         Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
         info1.setScene(scene);
         info1.show();
+    }
+
+    @FXML
+    private void delete(ActionEvent event) {
+        try {
+            if((new File(".\\userInfo\\"+user+"\\card.txt")).exists()){
+                BufferedReader reader = new BufferedReader(new FileReader(".\\userInfo\\" + user + "\\card.txt"));
+                int i;
+                StringTokenizer tokenizer;
+                String temp = reader.readLine();
+                boolean flag = true;
+                for (i = 1; temp != null && flag; i++) {
+                    tokenizer=new StringTokenizer(temp,":");
+                    if (pro.equals(tokenizer.nextToken())) {
+                        flag = false;
+                    }
+                    temp = reader.readLine();
+                }
+                if (!flag) {
+                    deleteLineFromFile(--i, (".\\userInfo\\" + user + "\\card.txt"));
+                }
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    private void card(ActionEvent event) {
+        try {
+            if((new File(".\\userInfo\\"+user+"\\card.txt")).exists()){
+                BufferedReader reader = new BufferedReader(new FileReader(".\\userInfo\\" + user + "\\card.txt"));
+                int i;
+                StringTokenizer tokenizer;
+                String temp = reader.readLine();
+                boolean flag = true;
+                boolean flagg = true;
+                for (i = 1; temp != null && flag; i++) {
+                    tokenizer=new StringTokenizer(temp,":");
+                    if (pro.equals(tokenizer.nextToken())) {
+                        flag = false;
+                    }
+                    if (pro.equals(temp)){
+                        flagg = false;
+                    }
+                    temp = reader.readLine();
+                }
+                if (flag) {
+                    PrintWriter writer = new PrintWriter(new FileOutputStream(".\\userInfo\\" + user + "\\card.txt", true));
+                    writer.println((pro + ":" + quantity.getText()));
+                    writer.close();
+                } else if(!flag&&flagg) {
+                    changeFile(--i, (pro + ":" + quantity.getText()), (".\\userInfo\\" + user + "\\card.txt"));
+                }
+            }else {
+                PrintWriter writer = new PrintWriter(new FileOutputStream(".\\userInfo\\" + user + "\\card.txt", true));
+                writer.println((pro + ":" + quantity.getText()));
+                writer.close();
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
+    void info(ActionEvent event) throws IOException {
+        if(isAdmin){
+            Parent info = FXMLLoader.load(getClass().getResource("infoAdmin.fxml"));
+            Scene scene = new Scene(info, 1280, 720);
+            Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            info1.setScene(scene);
+            info1.show();
+        }else{
+            Parent info = FXMLLoader.load(getClass().getResource("info1.fxml"));
+            Scene scene = new Scene(info, 1280, 720);
+            Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            info1.setScene(scene);
+            info1.show();
+        }
+    }
+
+    @FXML
+    void maines(ActionEvent event) {
+        if(Integer.parseInt(quantity.getText())>1){
+            quantity.setText(String.valueOf((Integer.parseInt(quantity.getText()))-1));
+        }
+    }
+
+    @FXML
+    void plus(ActionEvent event) {
+        if(Integer.parseInt(quantity.getText())<Integer.parseInt(stock.getText())){
+            quantity.setText(String.valueOf((Integer.parseInt(quantity.getText()))+1));
+        }
+    }
+
+    public static void changeFile(int lineNum, String replacement, String file){
+        try {
+            File temp =new File(".\\systemFiles\\temp.txt");
+            temp.createNewFile();
+            BufferedReader reader=new BufferedReader(new FileReader(file));
+            PrintWriter adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\systemFiles\\temp.txt")));
+            String read =reader.readLine();
+            while(read!=null){
+                adder.println(read);
+                read =reader.readLine();
+            }
+            reader.close();
+            adder.close();
+            reader=new BufferedReader(new FileReader(".\\systemFiles\\temp.txt"));
+            adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream(file)));
+            int i=1;
+            read =reader.readLine();
+            while(read!=null){
+                if(i!=lineNum){
+                    adder.println(read);
+                    read =reader.readLine();
+                }
+                else{
+                    adder.println(replacement);
+                    read =reader.readLine();
+                }
+                i++;
+            }
+            reader.close();
+            adder.close();
+            temp.delete();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
 
     }
+
+    public void deleteLineFromFile(int lineNum, String file){
+        try {
+            File temp =new File(".\\systemFiles\\temp.txt");
+            temp.createNewFile();
+            BufferedReader reader=new BufferedReader(new FileReader(file));
+            PrintWriter adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\systemFiles\\temp.txt")));
+            String read =reader.readLine();
+            while(read!=null){
+                adder.println(read);
+                read =reader.readLine();
+            }
+            reader.close();
+            adder.close();
+            reader=new BufferedReader(new FileReader(".\\systemFiles\\temp.txt"));
+            adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream(file)));
+            int i=1;
+            read =reader.readLine();
+            while(read!=null){
+                if(i!=lineNum){
+                    adder.println(read);
+                }
+                read =reader.readLine();
+                i++;
+            }
+            reader.close();
+            adder.close();
+            temp.delete();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+
 }
