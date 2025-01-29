@@ -337,6 +337,15 @@ public class list1C {
 
     }
 
+    @FXML
+    private void card(ActionEvent event) throws IOException {
+        Parent info = FXMLLoader.load(getClass().getResource("sabad.fxml"));
+        Scene scene = new Scene(info, 1280, 720);
+        Stage info1 = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        info1.setScene(scene);
+        info1.show();
+    }
+
     public void loadPage(){
         try {
             if (numberPage == page-1 ){

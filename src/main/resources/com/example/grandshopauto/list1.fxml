@@ -918,7 +918,7 @@
                </font>
             </Button>
             <Label fx:id="lastPage" alignment="CENTER" layoutX="585.0" layoutY="162.4" maxHeight="38.0" minHeight="35.0" prefHeight="38.0" prefWidth="150.0" text="محصولات دیگری وجود ندارد" textFill="RED" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="150.0" />
-            <Button layoutX="110.0" layoutY="130.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="60.0" text="سبد" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="120.0" />
+            <Button layoutX="110.0" layoutY="130.0" mnemonicParsing="false" onAction="#card" prefHeight="60.0" prefWidth="60.0" text="سبد" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="120.0" />
          </children>
       </AnchorPane>
    </bottom>
