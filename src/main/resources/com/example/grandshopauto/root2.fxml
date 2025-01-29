@@ -118,7 +118,7 @@
                               </VBox>
                               <ImageView fitHeight="220.0" fitWidth="220.0">
                                  <image>
-                                    <Image url="@../../../6.png" />
+                                    <Image url="@../../../B1.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="50.0" right="10.0" top="10.0" />
@@ -146,7 +146,7 @@
                               </VBox>
                               <ImageView fitHeight="220.0" fitWidth="220.0">
                                  <image>
-                                    <Image url="@../../../images%20(1).jfif" />
+                                    <Image url="@../../../B2.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="50.0" right="10.0" top="10.0" />
@@ -174,7 +174,7 @@
                               </VBox>
                               <ImageView fitHeight="220.0" fitWidth="220.0">
                                  <image>
-                                    <Image url="@../../../images%20(1).jfif" />
+                                    <Image url="@../../../B5.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="50.0" right="10.0" top="10.0" />
@@ -202,7 +202,7 @@
                               </VBox>
                               <ImageView fitHeight="220.0" fitWidth="220.0">
                                  <image>
-                                    <Image url="@../../../images%20(1).jfif" />
+                                    <Image url="@../../../B4.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="50.0" right="10.0" top="10.0" />
@@ -230,7 +230,7 @@
                               </VBox>
                               <ImageView fitHeight="220.0" fitWidth="220.0">
                                  <image>
-                                    <Image url="@../../../images%20(1).jfif" />
+                                    <Image url="@../../../B3.png" />
                                  </image>
                                  <HBox.margin>
                                     <Insets left="50.0" right="10.0" top="10.0" />

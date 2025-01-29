@@ -6,6 +6,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
@@ -41,6 +42,9 @@ public class infoProC {
     @FXML
     private Label quantity;
 
+    @FXML
+    private Button infoButtom;
+
     String pro;
 
     String user;
@@ -60,6 +64,13 @@ public class infoProC {
             tokenizer=new StringTokenizer(reader.readLine(),":");
             temp=tokenizer.nextToken();
             isAdmin=Boolean.parseBoolean(tokenizer.nextToken());
+            reader.close();
+            //
+            if(isAdmin){
+                infoButtom.setText("رابطه کاربری ادمین");
+            }else{
+                infoButtom.setText("اطلاعات"+user);
+            }
             reader.close();
             //
             reader = new BufferedReader(new FileReader(".\\systemFiles\\cPro.txt"));

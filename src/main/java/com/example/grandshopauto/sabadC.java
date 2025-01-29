@@ -9,7 +9,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
@@ -20,7 +19,7 @@ import java.util.StringTokenizer;
 import javafx.scene.control.Label;
 import javafx.util.Duration;
 
-public class list1C {
+public class sabadC {
 
 
     @FXML
@@ -162,34 +161,15 @@ public class list1C {
 
     Label[] years;
 
-    String[] AAA = new String[100];
+    int NN = 0;
 
-    String temp;
+    String[] tokens;
+    String[] tokens2;
 
-    String user;
-
-    boolean isAdmin;
-
-    @FXML
-    private Button infoButtom;
 
     @FXML
     private void initialize() {
         try {
-            BufferedReader reader = new BufferedReader(new FileReader(".\\systemFiles\\cUser.txt"));
-            StringTokenizer tokenizer =new StringTokenizer(reader.readLine(),":");
-            temp=tokenizer.nextToken();
-            user=tokenizer.nextToken();
-            tokenizer =new StringTokenizer(reader.readLine(),":");
-            temp=tokenizer.nextToken();
-            isAdmin=Boolean.parseBoolean(tokenizer.nextToken());
-            if(isAdmin){
-                infoButtom.setText("رابطه کاربری ادمین");
-            }else{
-                infoButtom.setText("اطلاعات"+user);
-            }
-            reader.close();
-            //
             lastPage.setVisible(false);
             boxs = new StackPane[12];
             boxs[0] = box1;
@@ -243,7 +223,7 @@ public class list1C {
             prices[9] = price10;
             prices[10] = price11;
             prices[11] = price12;
-            years = new Label[12];
+            years= new Label[12];
             years[0] = year1;
             years[1] = year2;
             years[2] = year3;
@@ -256,34 +236,43 @@ public class list1C {
             years[9] = year10;
             years[10] = year11;
             years[11] = year12;
-
-            BufferedReader checker = new BufferedReader(new FileReader(".\\systemFiles\\cBerand.txt"));
-            temp = checker.readLine();
-            checker.close();
-
-            if (temp.equals("all")) {
-                File products = new File(".\\systemFiles\\products");
-                String[] productCount = products.list();
-                if (productCount != null) {
-                    N = productCount.length;
-                } else {
-                    N = 0;
+            BufferedReader rd = new BufferedReader(new FileReader(".\\systemFiles\\cUser.txt"));
+            StringTokenizer st = new StringTokenizer(rd.readLine(),":");
+            String tempuser = st.nextToken();
+            String user = st.nextToken();
+            rd.close();
+            try {
+//                String filePath =;
+                StringTokenizer tokenizer;
+                BufferedReader br = new BufferedReader(new FileReader(".\\userInfo\\" + user + "\\card.txt"));
+                String temp=br.readLine();
+                while(temp!=null){
+                    NN++;
+                    temp=br.readLine();
                 }
-            }
-            else {
-                BufferedReader benz1 = new BufferedReader(new FileReader(".\\systemFiles\\berands\\" +temp+ ".txt"));
-                int l = 0;
-                AAA[l] = benz1.readLine();
-                while ( AAA[l] != null ) {
-                    l+=1;
-                    AAA[l] = benz1.readLine();
+                if(NN==0){
+                    NN=1;
                 }
-                benz1.close();
-                N = l ;
+                tokens = new String[NN];
+                tokens2 = new String[NN];
+                br.close();
+                br = new BufferedReader(new FileReader(".\\userInfo\\" + user + "\\card.txt"));
+                temp=br.readLine();
+                for(int i=0; i<NN; i++){
+                    tokenizer = new StringTokenizer(temp,":");
+                    tokens[i] = tokenizer.nextToken();
+                    tokens2[i] = tokenizer.nextToken();
+                    temp=br.readLine();
+                }
+                br.close();
+
+            } catch (Exception e) {
+                e.printStackTrace();
             }
-            page = (N / 12 + 1);
+
+
+            page = (NN/12 + 1);
             loadPage();
-
         }
         catch (Exception e){
             e.printStackTrace();
@@ -314,8 +303,9 @@ public class list1C {
         info1.show();
     }
     @FXML
-    public void next (ActionEvent event) {
-        if( numberPage == N/12 ){//پایان صفحه
+    public void next2 (ActionEvent event) {
+        if( numberPage == NN/12 ){
+            //پایان صفحه
             lastPage.setVisible(true);
             Timeline t2 = new Timeline(new KeyFrame(Duration.millis(3000), event2 -> { lastPage.setVisible(false);}));
             t2.play();
@@ -337,10 +327,12 @@ public class list1C {
 
     }
 
+
     public void loadPage(){
         try {
-            if (numberPage == page-1 ){
-                for (int j = (N%12) ; j <=11; j++) {
+            System.out.println("*");
+            if (numberPage >= page-1 ){
+                for (int j = (NN%12) ; j <=11; j++) {
                     boxs[j].setVisible(false);
                 }
             }
@@ -349,34 +341,21 @@ public class list1C {
                     boxs[j].setVisible(true);
                 }
             }
-            if(temp.equals("all")) {
-                for (int i = 0; i < 12 && (numberPage * 12 + i) < N; i++) {
-                    String temp = "";
-                    File fileimage1 = new File(".\\systemFiles\\products\\" + ((numberPage * 12) + i + 1) + "\\pic.png");
-                    Image image = new Image(fileimage1.toURI().toString());
-                    images[i].setImage(image);
-                    BufferedReader reader = new BufferedReader(new FileReader(".\\systemFiles\\products\\" + ((numberPage * 12) + i + 1) + "\\proInfo.txt"));
-                    names[i].setText(reader.readLine());
-                    years[i].setText(reader.readLine());
-                    temp = reader.readLine();
-                    prices[i].setText(reader.readLine());
-                    reader.close();
-                }
+
+// ///////
+            for (int i = 0; i < 12 && (numberPage * 12 + i) < NN ; i++ ) {
+                String temp= "" ;
+                File fileimage1 = new File(".\\systemFiles\\products\\" + tokens[i] + "\\pic.png");
+                Image image = new Image(fileimage1.toURI().toString());
+                images[i].setImage(image);
+                BufferedReader reader = new BufferedReader(new FileReader(".\\systemFiles\\products\\" + tokens[i] + "\\proInfo.txt"));
+                names[i].setText(reader.readLine() + " ("+tokens2[i]+") ");
+                years[i].setText(reader.readLine());
+                temp = reader.readLine();
+                prices[i].setText(reader.readLine());
+                reader.close();
             }
-            else {
-                for(int i = 0 ; i < N && i < 12 ; i++){
-//                    int num = Integer.parseInt(AAA[i]);
-                    File fileimage2 = new File(".\\systemFiles\\products\\" + AAA[i] + "\\pic.png");
-                    Image image = new Image(fileimage2.toURI().toString());
-                    images[i].setImage(image);
-                    BufferedReader reader2 = new BufferedReader(new FileReader(".\\systemFiles\\products\\" + AAA[i] + "\\proInfo.txt"));
-                    names[i].setText(reader2.readLine());
-                    years[i].setText(reader2.readLine());
-                    temp = reader2.readLine();
-                    prices[i].setText(reader2.readLine());
-                    reader2.close();
-                }
-            }
+
         } catch (Exception e) {
             e.printStackTrace();
         }

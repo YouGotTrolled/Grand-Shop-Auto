@@ -9,9 +9,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.stage.Stage;
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+
+import java.io.*;
 import java.util.StringTokenizer;
 
 public class Controller2 {
@@ -38,6 +37,9 @@ public class Controller2 {
     private ListView<String> border;
     @FXML
     private Button infoButtom;
+
+    PrintWriter writer1;
+
     @FXML
     public void initialize() {
         try {
@@ -53,6 +55,7 @@ public class Controller2 {
             }else{
                 infoButtom.setText("اطلاعات"+user);
             }
+            reader.close();
         }catch(FileNotFoundException e) {
             e.printStackTrace();
         }catch (Exception e) {
@@ -83,6 +86,7 @@ public class Controller2 {
     }
     public void button1(ActionEvent event){
         try{
+            print("all");
             Parent list1 = FXMLLoader.load(getClass().getResource("list1.fxml"));
             Scene scene=new Scene(list1,1280,720);
             Stage list = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -94,19 +98,78 @@ public class Controller2 {
         }
     }
     public void button2(ActionEvent event){
-
+        try{
+            print("benz");
+            Parent list1 = FXMLLoader.load(getClass().getResource("list1.fxml"));
+            Scene scene=new Scene(list1,1280,720);
+            Stage list = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            list.setScene(scene);
+            list.show();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
     public void button3(ActionEvent event){
-
+        try{
+            print("bmw");
+            Parent list1 = FXMLLoader.load(getClass().getResource("list1.fxml"));
+            Scene scene=new Scene(list1,1280,720);
+            Stage list = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            list.setScene(scene);
+            list.show();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
     public void button4(ActionEvent event){
-
+        try{
+            print("audi");
+            Parent list1 = FXMLLoader.load(getClass().getResource("list1.fxml"));
+            Scene scene=new Scene(list1,1280,720);
+            Stage list = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            list.setScene(scene);
+            list.show();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
     public void button5(ActionEvent event){
-
+        try{
+            print("hyundai");
+            Parent list1 = FXMLLoader.load(getClass().getResource("list1.fxml"));
+            Scene scene=new Scene(list1,1280,720);
+            Stage list = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            list.setScene(scene);
+            list.show();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
     public void button6(ActionEvent event){
-
+        try{
+            print("toyota");
+            Parent list1 = FXMLLoader.load(getClass().getResource("list1.fxml"));
+            Scene scene=new Scene(list1,1280,720);
+            Stage list = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            list.setScene(scene);
+            list.show();
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+    public void print(String berand){
+        try {
+            writer1 = new PrintWriter((new FileOutputStream(".\\systemFiles\\cBerand.txt")));
+            writer1.println(berand);
+            writer1.close();
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 
 }

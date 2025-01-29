@@ -37,7 +37,7 @@
                      <children>
                         <HBox prefHeight="50.0" prefWidth="294.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#info" prefHeight="20.0" prefWidth="182.0" style="-fx-background-color: #9ba8a8;" text="info">
+                              <Button fx:id="infoButtom" mnemonicParsing="false" onAction="#info" prefHeight="20.0" prefWidth="182.0" style="-fx-background-color: #9ba8a8;" text="info">
                                  <font>
                                     <Font size="14.0" />
                                  </font>

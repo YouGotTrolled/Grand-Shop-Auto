@@ -62,11 +62,7 @@ public class loginC {
     @FXML
     private Pane hnoor3;
     @FXML
-    private Button eye;
-//    @FXML
-//    private AnimationTimer timer;
-//    @FXML
-//    private long pressTime;
+    private Label Leye;
     @FXML
     private Label pastrue;
 
@@ -76,56 +72,56 @@ public class loginC {
 
     @FXML
     private void initialize() {
-        //Timeline t1 = new Timeline(new KeyFrame(Duration.millis(0), event -> {
-            int j =0;
-            for(int i = 0 ; i < 8000 ; ) {
-                j+=600;
-                if (i%8==0) {
-                    Timeline t2 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { noor.setVisible(true);}));
-                    t2.play();
-                    Timeline vt2 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor.setVisible(true);}));
-                    vt2.play();
-                    Timeline ht2 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor.setVisible(true);}));
-                    ht2.play();
+        Leye.setVisible(false);
+        int j =0;
+        for(int i = 0 ; i < 8000 ; ) {
+            j+=600;
+            if (i%8==0) {
+                Timeline t2 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { noor.setVisible(true);}));
+                t2.play();
+                Timeline vt2 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor.setVisible(true);}));
+                vt2.play();
+                Timeline ht2 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor.setVisible(true);}));
+                ht2.play();
 
-                    Timeline t3 = new Timeline(new KeyFrame(Duration.millis(j), event3 -> { noor2.setVisible(false);}));
-                    t3.play();
-                    Timeline vt3 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor2.setVisible(false);}));
-                    vt3.play();
-                    Timeline ht3 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor2.setVisible(false);}));
-                    ht3.play();
+                Timeline t3 = new Timeline(new KeyFrame(Duration.millis(j), event3 -> { noor2.setVisible(false);}));
+                t3.play();
+                Timeline vt3 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor2.setVisible(false);}));
+                vt3.play();
+                Timeline ht3 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor2.setVisible(false);}));
+                ht3.play();
 
-                    Timeline t4 = new Timeline(new KeyFrame(Duration.millis(j), event3 -> { noor3.setVisible(false);}));
-                    t4.play();
-                    Timeline vt4 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor3.setVisible(false);}));
-                    vt4.play();
-                    Timeline ht4 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor3.setVisible(false);}));
-                    ht4.play();
+                Timeline t4 = new Timeline(new KeyFrame(Duration.millis(j), event3 -> { noor3.setVisible(false);}));
+                t4.play();
+                Timeline vt4 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor3.setVisible(false);}));
+                vt4.play();
+                Timeline ht4 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor3.setVisible(false);}));
+                ht4.play();
+            }
+            else{
+                if (i%4==0) {
+                    Timeline t22 = new Timeline(new KeyFrame(Duration.millis(j), event4 -> { noor.setVisible(false);}));
+                    t22.play();
+                    Timeline vt22 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor.setVisible(false);}));
+                    vt22.play();
+                    Timeline ht22 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor.setVisible(false);}));
+                    ht22.play();
+
+                    Timeline t33 = new Timeline(new KeyFrame(Duration.millis(j), event5 -> { noor2.setVisible(true);}));
+                    t33.play();
+                    Timeline vt33 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor2.setVisible(true);}));
+                    vt33.play();
+                    Timeline ht33 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor2.setVisible(true);}));
+                    ht33.play();
+
+                    Timeline t44 = new Timeline(new KeyFrame(Duration.millis(j), event6 -> { noor3.setVisible(false);}));
+                    t44.play();
+                    Timeline vt44 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor3.setVisible(false);}));
+                    vt44.play();
+                    Timeline ht44 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor3.setVisible(false);}));
+                    ht44.play();
                 }
-                else{
-                    if (i%4==0) {
-                        Timeline t22 = new Timeline(new KeyFrame(Duration.millis(j), event4 -> { noor.setVisible(false);}));
-                        t22.play();
-                        Timeline vt22 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor.setVisible(false);}));
-                        vt22.play();
-                        Timeline ht22 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor.setVisible(false);}));
-                        ht22.play();
-
-                        Timeline t33 = new Timeline(new KeyFrame(Duration.millis(j), event5 -> { noor2.setVisible(true);}));
-                        t33.play();
-                        Timeline vt33 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor2.setVisible(true);}));
-                        vt33.play();
-                        Timeline ht33 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor2.setVisible(true);}));
-                        ht33.play();
-
-                        Timeline t44 = new Timeline(new KeyFrame(Duration.millis(j), event6 -> { noor3.setVisible(false);}));
-                        t44.play();
-                        Timeline vt44 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { vnoor3.setVisible(false);}));
-                        vt44.play();
-                        Timeline ht44 = new Timeline(new KeyFrame(Duration.millis(j), event2 -> { hnoor3.setVisible(false);}));
-                        ht44.play();
-                    }
-                    else {
+                else {
                     if (i%2==0) {
                         Timeline t222 = new Timeline(new KeyFrame(Duration.millis(j), event7 -> {noor.setVisible(false);}));
                         t222.play();
@@ -152,11 +148,6 @@ public class loginC {
                 }
                 i+=2;
             }
-//        username.setOnAction(e -> );
-//        pasword.setOnAction(e -> login(ActionEvent actionEvent));
-            //}));
-
-       // t1.play();
     }
 
     @FXML
@@ -164,7 +155,6 @@ public class loginC {
         try{
             Parent forget = FXMLLoader.load(getClass().getResource("forgetPas.fxml"));
             Scene scene=new Scene(forget,1280,720);
-            //scene.getStylesheets().add(getClass().getResource("SignCSS.css").toExternalForm());
             Stage sign1 = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
             sign1.setScene(scene);
             sign1.show();
@@ -225,7 +215,6 @@ public class loginC {
                         PrintWriter pLogger = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\userInfo\\"+username.getText()+"\\pLog.txt",true)));
                         pLogger.println("(" + LocalDateTime.now() + "):" + username.getText() + ":\""+bob+"\"");
                         pLogger.close();
-                        //finding out if is admin
                         for(int i=0;i<7;i++){
                             temp=checker.readLine();
                         }
@@ -256,6 +245,20 @@ public class loginC {
             e.printStackTrace();
             System.out.println("error");
             loger.println("("+ LocalDateTime.now()+"):\""+e.getMessage()+"\"in loginC.java");
+        }
+    }
+    int i=0;
+    @FXML
+    private void eye1(ActionEvent actionEvent) {
+        if(i%2==0){
+            String temp = pasword.getText();
+            Leye.setText(temp);
+            Leye.setVisible(true);
+            i+=1;
+        }
+        else {
+            Leye.setVisible(false);
+            i+=1;
         }
     }
 }
