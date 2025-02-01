@@ -270,7 +270,18 @@ public class list1C {
                     N = 0;
                 }
             }
-            else {
+            else if(temp.equals("fav")){
+                BufferedReader benz1 = new BufferedReader(new FileReader(".\\userInfo\\" +user+ "\\fav.txt"));
+                int l = 0;
+                AAA[l] = benz1.readLine();
+                while ( AAA[l] != null ) {
+                    l+=1;
+                    AAA[l] = benz1.readLine();
+                }
+                benz1.close();
+                N = l ;
+
+            } else{
                 BufferedReader benz1 = new BufferedReader(new FileReader(".\\systemFiles\\berands\\" +temp+ ".txt"));
                 int l = 0;
                 AAA[l] = benz1.readLine();

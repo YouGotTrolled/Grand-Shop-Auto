@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.*;
@@ -31,7 +32,8 @@ public class Controller2 {
     private Button button5;
     @FXML
     private Button button6;
-
+    @FXML
+    private TextField text;
 
     @FXML
     private ListView<String> border;
@@ -83,6 +85,20 @@ public class Controller2 {
         catch (Exception e){
             e.printStackTrace();
         }
+    }
+    @FXML
+    public void search(ActionEvent event) throws IOException {
+        if(!text.getText().isEmpty()) {
+            PrintWriter writer=new PrintWriter(new FileOutputStream(".\\systemFiles\\tem.txt"));
+            writer.println(text.getText());
+            writer.close();
+            Parent list1 = FXMLLoader.load(getClass().getResource("search.fxml"));
+            Scene scene = new Scene(list1, 1280, 720);
+            Stage list = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            list.setScene(scene);
+            list.show();
+        }
+
     }
     public void button1(ActionEvent event){
         try{

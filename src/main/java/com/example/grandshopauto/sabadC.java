@@ -354,6 +354,54 @@ public class sabadC {
         }catch (IOException e){
             e.printStackTrace();
         }
+//        try {
+//            if (totalP <= Integer.parseInt(balance.getText())) {
+//                PrintWriter log;
+//                PrintWriter plog;
+//                balance.setText(String.valueOf((Integer.parseInt(balance.getText()) - totalP)));
+//                changeFile(10, "balance:" + balance.getText(), ".\\userInfo\\" + user + "\\acInfo.txt");
+//                PrintWriter writer = new PrintWriter(new FileOutputStream(".\\userInfo\\" + user + "\\cardH.txt",true));
+//                BufferedReader reader=new BufferedReader(new FileReader(".\\userInfo\\" + user + "\\card.txt"));
+//                String tempp= reader.readLine();
+//                String temp = "";
+//                int i=0;
+//                boolean flag=true;
+//                while (tempp!=null){
+//                    StringTokenizer tokenizer=new StringTokenizer(temp,":");
+//                    String loc=tokenizer.nextToken();
+//                    BufferedReader reader2=new BufferedReader(new FileReader(".\\systemFiles\\products\\" + loc + "\\proInfo.txt"));
+//                    for(int j=0;j<5;j++)
+//                        temp = reader2.readLine();
+//                    reader2.close();
+//                    StringTokenizer stringTokenizer=new StringTokenizer(temp,":");
+//                    temp=stringTokenizer.nextToken();
+//                    temp=stringTokenizer.nextToken();
+//                    if(Integer.parseInt(tokens2[i])>Integer.parseInt(temp)){
+//                        log=new PrintWriter(new FileOutputStream(".\\systemFiles\\log.txt",true));
+//                        plog=new PrintWriter(new FileOutputStream(".\\userInfo\\"+user+"\\pLog.txt",true));
+//                        log.println("("+ LocalDateTime.now()+"):"+user+":("+tempp+")"+"را خرید");
+//                        plog.println("("+ LocalDateTime.now()+"):"+user+":("+tempp+")"+"را خرید");
+//                        log.close();
+//                        plog.close();
+//                        writer.println(tempp);
+//
+//                    }else if(Integer.parseInt(tokens2[i])==Integer.parseInt(temp)){
+//                        deleteLineFromFile(i++,".\\systemFiles\\products\\" + loc + "\\proInfo.txt");
+//                    }else{
+//
+//                    }
+//
+//                    tempp= reader.readLine();
+//                }
+//                reader.close();
+//                writer.close();
+//                back(event);
+//            }
+//        }catch (FileNotFoundException e){
+//            e.printStackTrace();
+//        }catch (IOException e){
+//            e.printStackTrace();
+//        }
     }
     @FXML
     public void info (ActionEvent event) throws IOException {
@@ -575,6 +623,42 @@ public class sabadC {
                     adder.println(replacement);
                     read =reader.readLine();
                 }
+                i++;
+            }
+            reader.close();
+            adder.close();
+            temp.delete();
+        }
+        catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+        catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+    public void deleteLineFromFile(int lineNum, String file){
+        try {
+            File temp =new File(".\\systemFiles\\temp.txt");
+            temp.createNewFile();
+            BufferedReader reader=new BufferedReader(new FileReader(file));
+            PrintWriter adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream(".\\systemFiles\\temp.txt")));
+            String read =reader.readLine();
+            while(read!=null){
+                adder.println(read);
+                read =reader.readLine();
+            }
+            reader.close();
+            adder.close();
+            reader=new BufferedReader(new FileReader(".\\systemFiles\\temp.txt"));
+            adder = new PrintWriter(new BufferedOutputStream(new FileOutputStream(file)));
+            int i=1;
+            read =reader.readLine();
+            while(read!=null){
+                if(i!=lineNum){
+                    adder.println(read);
+                }
+                read =reader.readLine();
                 i++;
             }
             reader.close();

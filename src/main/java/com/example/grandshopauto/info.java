@@ -159,7 +159,16 @@ public class info {
     }
     @FXML
     void card(ActionEvent event) {
-
+        try {
+            Parent back1 = FXMLLoader.load(getClass().getResource("card.fxml"));
+            Scene scene = new Scene(back1, 1280 ,720);
+            Stage back2 = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            back2.setScene(scene);
+            back2.show();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @FXML
@@ -213,7 +222,19 @@ public class info {
 
     @FXML
     void list2(ActionEvent event) {
-
+        try {
+            PrintWriter writer=new PrintWriter(new FileOutputStream(".\\systemFiles\\cBerand.txt"));
+            writer.println("fav");
+            writer.close();
+            Parent back1 = FXMLLoader.load(getClass().getResource("list1.fxml"));
+            Scene scene = new Scene(back1, 1280 ,720);
+            Stage back2 = (Stage) ((Node)event.getSource()).getScene().getWindow();
+            back2.setScene(scene);
+            back2.show();
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
     }
     private void addBalance(){
         try {

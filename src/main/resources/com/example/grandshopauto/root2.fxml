@@ -35,30 +35,13 @@
                                     <Image url="@../../../pexels-albinberlin-919073.jpg" />
                                  </image>
                               </ImageView>
-                              <Label prefHeight="35.0" prefWidth="250.0" text="Label">
+                              <Button fx:id="bott" mnemonicParsing="false" onAction="#search" prefHeight="26.0" prefWidth="67.0" style="-fx-background-color: black;" text="search" textFill="#f4f2f2">
                                  <StackPane.margin>
-                                    <Insets right="600.0" />
+                                    <Insets left="-1200.0" top="-600.0" />
                                  </StackPane.margin>
-                              </Label>
-                              <Label prefHeight="35.0" prefWidth="250.0" text="Label">
-                                 <StackPane.margin>
-                                    <Insets right="600.0" top="100.0" />
-                                 </StackPane.margin>
-                              </Label>
-                              <Label prefHeight="35.0" prefWidth="250.0" text="Label">
-                                 <StackPane.margin>
-                                    <Insets right="600.0" top="200.0" />
-                                 </StackPane.margin>
-                              </Label>
-                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: #00ffff; -fx-background-color: blaack;" text="Button">
-                                 <StackPane.margin>
-                                    <Insets left="950.0" top="550.0" />
-                                 </StackPane.margin>
-                              </Button>
-                              <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-color: #00ffff; -fx-background-color: black;" text="Button">
-                                 <StackPane.margin>
-                                    <Insets left="1100.0" top="550.0" />
-                                 </StackPane.margin>
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
                               </Button>
                            </children>
                         </StackPane>
@@ -72,12 +55,12 @@
                         </HBox>
                         <HBox layoutX="320.0" layoutY="840.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0" style="-fx-background-color: white;">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#button1" prefHeight="50.0" prefWidth="50.0" text="Button">
+                              <Button mnemonicParsing="false" onAction="#button1" prefHeight="50.0" prefWidth="225.0" text="مشاهده لیست --&gt;">
                                  <HBox.margin>
                                     <Insets left="75.0" top="95.0" />
                                  </HBox.margin>
                               </Button>
-                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="300.0">
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="300.0" visible="false">
                                  <HBox.margin>
                                     <Insets left="390.0" />
                                  </HBox.margin>
@@ -100,12 +83,12 @@
                         </HBox>
                         <HBox layoutX="320.0" layoutY="1160.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#button2" prefHeight="50.0" prefWidth="50.0" text="Button">
+                              <Button mnemonicParsing="false" onAction="#button2" prefHeight="50.0" prefWidth="225.0" text="مشاهده لیست --&gt;">
                                  <HBox.margin>
                                     <Insets left="75.0" top="95.0" />
                                  </HBox.margin>
                               </Button>
-                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0">
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0" visible="false">
                                  <HBox.margin>
                                     <Insets left="240.0" />
                                  </HBox.margin>
@@ -128,12 +111,12 @@
                         </HBox>
                         <HBox layoutX="320.0" layoutY="1480.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#button3" prefHeight="50.0" prefWidth="50.0" text="Button">
+                              <Button mnemonicParsing="false" onAction="#button3" prefHeight="50.0" prefWidth="225.0" text="مشاهده لیست --&gt;">
                                  <HBox.margin>
                                     <Insets left="75.0" top="95.0" />
                                  </HBox.margin>
                               </Button>
-                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0">
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0" visible="false">
                                  <HBox.margin>
                                     <Insets left="240.0" />
                                  </HBox.margin>
@@ -156,12 +139,12 @@
                         </HBox>
                         <HBox layoutX="320.0" layoutY="1760.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#button4" prefHeight="50.0" prefWidth="50.0" text="Button">
+                              <Button mnemonicParsing="false" onAction="#button4" prefHeight="50.0" prefWidth="225.0" text="مشاهده لیست --&gt;">
                                  <HBox.margin>
                                     <Insets left="75.0" top="95.0" />
                                  </HBox.margin>
                               </Button>
-                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0">
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0" visible="false">
                                  <HBox.margin>
                                     <Insets left="240.0" />
                                  </HBox.margin>
@@ -184,12 +167,12 @@
                         </HBox>
                         <HBox layoutX="320.0" layoutY="2060.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#button5" prefHeight="50.0" prefWidth="50.0" text="Button">
+                              <Button mnemonicParsing="false" onAction="#button5" prefHeight="50.0" prefWidth="225.0" text="مشاهده لیست --&gt;">
                                  <HBox.margin>
                                     <Insets left="75.0" top="95.0" />
                                  </HBox.margin>
                               </Button>
-                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0">
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0" visible="false">
                                  <HBox.margin>
                                     <Insets left="240.0" />
                                  </HBox.margin>
@@ -212,12 +195,12 @@
                         </HBox>
                         <HBox layoutX="320.0" layoutY="2360.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="240.0" prefWidth="1280.0">
                            <children>
-                              <Button mnemonicParsing="false" onAction="#button6" prefHeight="50.0" prefWidth="50.0" text="Button">
+                              <Button mnemonicParsing="false" onAction="#button6" prefHeight="50.0" prefWidth="225.0" text="مشاهده لیست --&gt;">
                                  <HBox.margin>
                                     <Insets left="75.0" top="95.0" />
                                  </HBox.margin>
                               </Button>
-                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0">
+                              <VBox alignment="CENTER_RIGHT" prefHeight="240.0" prefWidth="633.0" visible="false">
                                  <HBox.margin>
                                     <Insets left="240.0" />
                                  </HBox.margin>
@@ -250,7 +233,7 @@
          <children>
             <BorderPane prefHeight="200.0" prefWidth="200.0">
                <right>
-                  <TextField prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #9ba8a8;" BorderPane.alignment="CENTER">
+                  <TextField fx:id="text" prefHeight="30.0" prefWidth="250.0" style="-fx-background-color: #9ba8a8;" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets right="15.0" />
                      </BorderPane.margin>

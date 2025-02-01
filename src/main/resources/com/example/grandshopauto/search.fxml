@@ -1,130 +1,702 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.net.URL?>
 <?import javafx.geometry.Insets?>
-<?import javafx.geometry.Point3D?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="707.0" prefWidth="1216.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grandshopauto.info">
-   <children>
-      <VBox fx:id="phu2" prefHeight="719.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" AnchorPane.leftAnchor="1050.0">
+<!--<?import javafx.scene.media.MediaView?>-->
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grandshopauto.search">
+   <center>
+      <AnchorPane minHeight="1080.0" minWidth="1818.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="1080.0" prefWidth="1818.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets top="300.0" />
+         </BorderPane.margin>
          <children>
-            <ImageView fitHeight="196.0" fitWidth="221.0" pickOnBounds="true" preserveRatio="true">
-               <VBox.margin>
-                  <Insets left="85.0" right="70.0" top="30.0" />
-               </VBox.margin>
-               <image>
-                  <Image url="@../../../u.png" />
-               </image>
-            </ImageView>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Grand Shop Auto" wrappingWidth="283.11865234375">
-               <font>
-                  <Font size="37.0" />
-               </font>
-               <VBox.margin>
-                  <Insets left="35.0" top="10.0" />
-               </VBox.margin>
-            </Text>
-            <Button fx:id="info" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#switchform" prefHeight="60.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" text=" اطلاعات کاربری  " textFill="#1b0202a8">
-               <VBox.margin>
-                  <Insets />
-               </VBox.margin>
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIcon glyphName="USER" layoutX="78.0" text="" wrappingWidth="22.85714340209961">
-                     <rotationAxis>
-                        <Point3D x="5.0" z="1.0" />
-                     </rotationAxis>
-                  </FontAwesomeIcon>
-               </graphic>
-            </Button>
-            <Button fx:id="edit" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#switchform" prefHeight="47.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" text=" ویرایش اطلاعات">
-               <font>
-                  <Font size="23.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIcon glyphName="PENCIL" />
-               </graphic>
-            </Button>
-            <Button fx:id="lst" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="40.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" text="  لیست سفارشات  " textAlignment="CENTER">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIcon glyphName="LIST" />
-               </graphic>
-            </Button>
-            <Button fx:id="fav" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="43.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" stylesheets="@info.css" text=" لیست موردعلاقه  ">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIcon glyphName="HEART" />
-               </graphic>
-            </Button>
-            <Button fx:id="chat" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="48.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" text=" چت با ادمین">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIcon glyphName="COMMENTS" />
-               </graphic>
-            </Button>
-            <Button fx:id="cart" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="45.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" text="  سبد خرید  " textAlignment="RIGHT">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIcon glyphName="SHOPPING_CART" text="" wrappingWidth="27.619028091430664" />
-               </graphic>
-            </Button>
-            <Button fx:id="kif" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="41.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" text=" کیف پول  ">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <graphic>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="\$">
-                     <font>
-                        <Font size="27.0" />
-                     </font>
-                  </Text>
-               </graphic>
-            </Button>
-            <Button fx:id="out" contentDisplay="RIGHT" mnemonicParsing="false" prefHeight="52.0" prefWidth="350.0" style="-fx-background-color: #1dc7dd;" styleClass="ex" text=" خروج  ">
-               <font>
-                  <Font size="24.0" />
-               </font>
-               <graphic>
-                  <FontAwesomeIcon glyphName="POWER_OFF" />
-               </graphic>
-            </Button>
+            <ScrollPane layoutX="140.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="1080.0" prefWidth="1735.0">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="2400.0" prefWidth="1918.0" style="-fx-background-color: #03e1ff;">
+                     <children>
+                        <StackPane layoutX="320.0" layoutY="70.0" prefHeight="203.0" prefWidth="881.0" AnchorPane.leftAnchor="320.0">
+                           <children>
+                              <FontAwesomeIcon fill="#03d4ff" fontSmoothingType="LCD" glyphName="SEARCH" text="" wrappingWidth="13.809545516967773">
+                                 <font>
+                                    <Font size="49.0" />
+                                 </font>
+                                 <StackPane.margin>
+                                    <Insets left="700.0" top="-250.0" />
+                                 </StackPane.margin>
+                              </FontAwesomeIcon>
+                           </children>
+                        </StackPane>
+                        <AnchorPane layoutX="1600.0" prefHeight="765.0" prefWidth="320.0" />
+                        <VBox layoutX="327.0" layoutY="453.0" prefHeight="2600.0" prefWidth="1280.0" AnchorPane.topAnchor="200.0">
+                           <children>
+                              <AnchorPane prefHeight="300.0" prefWidth="200.0">
+                                 <VBox.margin>
+                                    <Insets top="75.0" />
+                                 </VBox.margin>
+                                 <children>
+                                    <StackPane fx:id="box1" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="125.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fx:id="image1" fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="name1" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="year1" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="price1" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" onAction="#but1" pickOnBounds="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" stylesheets="@../../../style.css" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="box2" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="510.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fx:id="image2" fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="name2" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="year2" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="price2" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" stylesheets="@../../../style.css" textAlignment="CENTER" textFill="#e91a1a" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="box3" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="895.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fx:id="image3" fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="name3" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="year3" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="price3" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transpa#168031rent;" textFill="#168031">
+                                             <stylesheets>
+                                                <URL value="@../../../style.css" />
+                                                <URL value="@../../../style.css" />
+                                             </stylesheets>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="85.0" prefHeight="300.0" prefWidth="200.0">
+                                 <children>
+                                    <StackPane fx:id="box4" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="125.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fx:id="image4" fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="name4" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="year4" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="price4" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="box5" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="510.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fx:id="image5" fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="name5" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="year5" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="price5" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="box6" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="895.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fx:id="image6" fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="name6" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="year6" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="price6" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="75.0" />
+                                 </VBox.margin>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="480.0" prefHeight="300.0" prefWidth="200.0">
+                                 <children>
+                                    <StackPane fx:id="box10" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="125.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fx:id="image10" fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="name10" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="year10" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="price10" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                                <Button mnemonicParsing="false" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #0f363c;" stylesheets="@../../../style.css" text="خرید" textFill="#268998">
+                                                   <font>
+                                                      <Font size="24.0" />
+                                                   </font>
+                                                </Button>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="box11" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="510.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fx:id="image11" fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="name11" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="year11" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="price11" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                    <StackPane fx:id="box12" prefHeight="320.0" prefWidth="260.0" AnchorPane.leftAnchor="895.0">
+                                       <children>
+                                          <VBox prefHeight="300.0" prefWidth="260.0" style="-fx-border-color: black;">
+                                             <children>
+                                                <ImageView fx:id="image12" fitHeight="150.0" fitWidth="240.0" pickOnBounds="true">
+                                                   <VBox.margin>
+                                                      <Insets left="10.0" top="10.0" />
+                                                   </VBox.margin>
+                                                </ImageView>
+                                                <Label fx:id="name12" alignment="TOP_CENTER" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="year12" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <Label fx:id="price12" alignment="TOP_CENTER" layoutX="11.0" layoutY="182.0" prefHeight="18.0" prefWidth="331.0" text="Label">
+                                                   <opaqueInsets>
+                                                      <Insets />
+                                                   </opaqueInsets>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Label>
+                                                <StackPane prefHeight="150.0" prefWidth="200.0">
+                                                   <children>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                      <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                         <StackPane.margin>
+                                                            <Insets left="200.0" top="15.0" />
+                                                         </StackPane.margin>
+                                                      </ImageView>
+                                                   </children>
+                                                </StackPane>
+                                             </children>
+                                          </VBox>
+                                          <Button mnemonicParsing="false" prefHeight="320.0" prefWidth="260.0" style="-fx-background-color: transparent;" />
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;">
+                                             <StackPane.margin>
+                                                <Insets left="200.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="48.0" text="خرید">
+                                             <StackPane.margin>
+                                                <Insets left="-180.0" top="261.0" />
+                                             </StackPane.margin>
+                                          </Button>
+                                       </children>
+                                    </StackPane>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="75.0" />
+                                 </VBox.margin>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </ScrollPane>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <VBox prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <BorderPane prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                     <image>
+                        <Image url="@../../../u.png" />
+                     </image>
+                  </ImageView>
+               </center>
+               <left>
+                  <HBox prefHeight="50.0" prefWidth="287.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#info" prefHeight="20.0" prefWidth="182.0" style="-fx-background-color: #9ba8a8;" text="info">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="15.0" top="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <StackPane maxHeight="30.0" minHeight="30.0" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: #9ba8a8;">
+                           <children>
+                              <ImageView fitHeight="28.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../7.png" />
+                                 </image>
+                              </ImageView>
+                              <Button mnemonicParsing="false" onAction="#back" prefHeight="30.0" prefWidth="45.0" style="-fx-background-color: transparent;" />
+                           </children>
+                           <HBox.margin>
+                              <Insets left="10.0" top="10.0" />
+                           </HBox.margin>
+                        </StackPane>
+                     </children>
+                  </HBox>
+               </left>
+               <right>
+                  <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <TextField fx:id="box" alignment="CENTER_RIGHT" prefHeight="38.0" prefWidth="288.0" style="-fx-background-color: #9ba8a8;">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </TextField>
+                        <Button alignment="CENTER" contentDisplay="CENTER" minWidth="40.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#method1" prefHeight="43.0" prefWidth="20.0" style="-fx-background-color: black;">
+                           <StackPane.margin>
+                              <Insets left="-250.0" />
+                           </StackPane.margin>
+                           <graphic>
+                              <FontAwesomeIcon caretBias="false" fill="#03e1ff" glyphName="SEARCH" layoutX="20.0" selectionFill="#d01c1c" size="30" text="" wrappingWidth="36.92056608200073">
+                                 <font>
+                                    <Font size="34.0" />
+                                 </font>
+                              </FontAwesomeIcon>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </StackPane>
+               </right>
+            </BorderPane>
          </children>
       </VBox>
-      <AnchorPane fx:id="edit_a" layoutY="7.0" prefHeight="706.0" prefWidth="1050.0">
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="info" AnchorPane.topAnchor="100.0">
+            <Button mnemonicParsing="false" onAction="#next" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #0f363c;" stylesheets="@../../../style.css" text="&lt;" textFill="#268998" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="120.0">
                <font>
-                  <Font size="70.0" />
+                  <Font size="28.0" />
                </font>
-            </Text>
+            </Button>
+            <Button layoutX="30.0" layoutY="130.0" mnemonicParsing="false" onAction="#back2" prefHeight="60.0" prefWidth="60.0" style="-fx-background-color: #0f363c;" stylesheets="@../../../style.css" text="&gt;" textFill="#268998" AnchorPane.leftAnchor="100.0" AnchorPane.topAnchor="120.0">
+               <font>
+                  <Font size="28.0" />
+               </font>
+            </Button>
+            <Label fx:id="lastPage" alignment="CENTER" layoutX="585.0" layoutY="162.4" maxHeight="38.0" minHeight="35.0" prefHeight="38.0" prefWidth="150.0" text="محصولات دیگری وجود ندارد" textFill="#ff0037" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="585.0" AnchorPane.topAnchor="150.0" />
+            <Button layoutX="1180.0" layoutY="110.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="88.0" style="-fx-background-color: #0f363c;" stylesheets="@../../../style.css" text="سبد" textFill="#268998" AnchorPane.topAnchor="125.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
          </children>
       </AnchorPane>
-      <AnchorPane fx:id="info_a" layoutX="-6.0" layoutY="-1.0" prefHeight="708.0" prefWidth="1054.0" visible="false">
-         <children>
-            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="edit" AnchorPane.topAnchor="200.0">
-               <font>
-                  <Font size="70.0" />
-               </font>
-            </Text>
-         </children>
-      </AnchorPane>
-   </children>
-</AnchorPane>
+   </bottom>
+</BorderPane>
